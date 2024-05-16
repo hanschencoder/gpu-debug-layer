@@ -43,7 +43,7 @@ public:
 namespace {
 
 std::unordered_map<std::string, EGLFuncPointer> functionMap;
-char mDebugMessage[4096];
+char mDebugMessage[8192];
 uint64_t mCmdIndex = 0;
 
 void logMessage(const char* message) {
