@@ -1,5 +1,6 @@
 # gpu-debug-layer
 
+环境设置:
 
 ```bash
 # 打开调试层
@@ -13,4 +14,13 @@ adb install layer-debug.apk
 adb shell settings put global gpu_debug_layer_app site.hanschen.gpu
 # 设置调试层 so 名
 adb shell settings put global gpu_debug_layers_gles libGLESDebugLayer.so
+```
+
+环境恢复:
+
+```bash
+adb shell settings delete global enable_gpu_debug_layers
+adb shell settings delete global gpu_debug_app
+adb shell settings delete global gpu_debug_layers_gles
+adb shell settings delete global gpu_debug_layer_app
 ```
