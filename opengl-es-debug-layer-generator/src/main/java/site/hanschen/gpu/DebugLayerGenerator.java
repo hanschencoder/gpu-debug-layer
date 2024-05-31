@@ -197,17 +197,34 @@ public class DebugLayerGenerator {
         }
 
         builder.append(String.format(
-                "    memset(mDebugMessage, 0, sizeof(mDebugMessage));\n" +
-                        "    sprintf(mDebugMessage, \"%%\" PRIu64 \": debug_%%s(%s)\", mCmdIndex++, \"%s\"%s%s);\n" +
-                        "    ATRACE_NAME(mDebugMessage);\n" +
-                        "    logMessage(mDebugMessage);\n" +
+                        "    memset(mDebugMessage, 0, sizeof(mDebugMessage));\n" +
+                        "    if (mEnableLogParams) {\n" +
+                        "        if (mEnableIndex) {\n" +
+                        "            sprintf(mDebugMessage, \"%%\" PRIu64 \": d_%%s(%s)\", mCmdIndex++, \"%s\"%s%s);\n" +
+                        "        } else {\n" +
+                        "            sprintf(mDebugMessage, \"d_%%s(%s)\", \"%s\"%s%s);\n" +
+                        "        }\n" +
+                        "    } else {\n" +
+                        "        if (mEnableIndex) {\n" +
+                        "            sprintf(mDebugMessage, \"%%\" PRIu64 \": d_%%s\", mCmdIndex++, \"%s\");\n" +
+                        "        } else {\n" +
+                        "            sprintf(mDebugMessage, \"d_%%s\", \"%s\");\n" +
+                        "        }\n" +
+                        "    }\n" +
+                        "    ATRACE_NAME_IF(mEnableTrace, mDebugMessage);\n" +
+                        "    logMessageIf(mEnableLog, mDebugMessage);\n" +
                         "    auto it = functionMap.find(\"%s\");\n" +
                         "    if (it == functionMap.end()) {\n" +
                         "        ALOGE(\"%%s\", \"Unable to find functionMap entry for %s\");\n" +
                         "    }\n\n" +
                         "    typedef %s (*PFN%sPROC)(%s);\n" +
                         "    PFN%sPROC next = reinterpret_cast<PFN%sPROC>(it->second);\n" +
-                        "    return next(%s);\n", formatStr, funcName, (valueStr.length() > 0 ? ", " : ""), formatValueStr, funcName,
+                        "    return next(%s);\n",
+                formatStr, funcName, (valueStr.length() > 0 ? ", " : ""),formatValueStr,
+                formatStr, funcName, (valueStr.length() > 0 ? ", " : ""),formatValueStr,
+                funcName,
+                funcName,
+                funcName,
                 funcName,
                 returnType,
                 funcName.toUpperCase(), paramsStr, funcName.toUpperCase(), funcName.toUpperCase(), valueStr));

@@ -48,3 +48,15 @@ adb shell setprop debug.gles.layers libGLESDebugLayer.so
 adb push lib/arm64-v8a/libGLESDebugLayer.so /data/local/debug/gles/
 adb shell stop && adb shell start
 ```
+
+## 3.3 一些配置指令
+```bash
+# 配置是否在 gl 命令前面添加 index 前缀
+[debug.gpu.enable_index]: [1]
+# 配置是否输出 logcat
+[debug.gpu.enable_log]: [1]
+# 配置是否添加 trace 监控
+[debug.gpu.enable_trace]: [1]
+# 配置是否输出参数值
+[debug.gpu.log_params]: [1]
+```

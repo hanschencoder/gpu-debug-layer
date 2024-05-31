@@ -10,6 +10,8 @@
 #include <unordered_map>
 #include <android/trace.h>
 #include <inttypes.h>
+#include <sys/system_properties.h>
+
 
 #define LOG_TAG "OpenGLESDebugLayer"
 
@@ -26,27 +28,40 @@ typedef void *(*PFNEGLGETNEXTLAYERPROCADDRESSPROC)(void *, const char *);
 
 class ScopedTrace {
 public:
-    inline ScopedTrace(const char* name) {
-        ATrace_beginSection(name);
+    inline ScopedTrace(bool cond, const char* name) : mTrace(cond) {
+        if (mTrace) {
+            ATrace_beginSection(name);
+        }
+
     }
 
     inline ~ScopedTrace() {
-        ATrace_endSection();
+        if (mTrace) {
+            ATrace_endSection();
+        }
     }
+private:
+    bool mTrace;
 };
 
 #define _PASTE(x, y) x ## y
 #define PASTE(x, y) _PASTE(x,y)
-#define ATRACE_NAME(name) ScopedTrace PASTE(___tracer, __LINE__)(name)
-#define ATRACE_CALL() ATRACE_NAME(__FUNCTION__)
+#define ATRACE_NAME_IF(cond, name) ScopedTrace PASTE(___tracer, __LINE__)(cond, name)
 
 namespace {
 
 std::unordered_map<std::string, EGLFuncPointer> functionMap;
 char mDebugMessage[8192];
 uint64_t mCmdIndex = 0;
+bool mEnableLog = true;
+bool mEnableLogParams = true;
+bool mEnableTrace = true;
+bool mEnableIndex = true;
 
-void logMessage(const char* message) {
+void logMessageIf(bool cond, const char* message) {
+    if (!cond) {
+        return;
+    }
     auto string = std::string(message);
     size_t pos = 0;
     // Perfetto ignores \n, so split up manually into separate ALOGD statements.
@@ -61,7 +76,21 @@ void logMessage(const char* message) {
 #include "opengl_es_layer_function.h"
 
 EGLAPI void EGLAPIENTRY opengl_es_layer_InitializeLayer(void *layer_id, PFNEGLGETNEXTLAYERPROCADDRESSPROC get_next_layer_proc_address) {
-    ALOGD("opengl_es_layer_InitializeLayer called with layer_id %p", layer_id);
+    char valueBuf[PROP_VALUE_MAX];
+    if (__system_property_get("debug.gpu.enable_log", valueBuf) > 0) {
+        mEnableLog = atoi(valueBuf) != 0;
+    }
+    if (__system_property_get("debug.gpu.log_params", valueBuf) > 0) {
+        mEnableLogParams = atoi(valueBuf) != 0;
+    }
+    if (__system_property_get("debug.gpu.enable_trace", valueBuf) > 0) {
+        mEnableTrace = atoi(valueBuf) != 0;
+    }
+    if (__system_property_get("debug.gpu.enable_index", valueBuf) > 0) {
+        mEnableIndex = atoi(valueBuf) != 0;
+    }
+
+    ALOGD("opengl_es_layer_InitializeLayer called with layer_id %p, mEnableLog=%d, mEnableLogParams=%d, mEnableTrace=%d, mEnableIndex=%d", layer_id, mEnableLog, mEnableLogParams, mEnableTrace, mEnableIndex);
 }
 
 EGLAPI EGLFuncPointer EGLAPIENTRY opengl_es_layer_GetLayerProcAddress(const char *funcName, EGLFuncPointer next) {
