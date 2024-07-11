@@ -212,6 +212,7 @@ public class DebugLayerGenerator {
                         "        }\n" +
                         "    }\n" +
                         "    ATRACE_NAME_IF(mEnableTrace, mDebugMessage);\n" +
+                        "    GL_FINISH_IF(mEnableGlFinish, \"%s\");\n" +
                         "    logMessageIf(mEnableLog, mDebugMessage);\n" +
                         "    auto it = functionMap.find(\"%s\");\n" +
                         "    if (it == functionMap.end()) {\n" +
@@ -222,6 +223,7 @@ public class DebugLayerGenerator {
                         "    return next(%s);\n",
                 formatStr, funcName, (valueStr.length() > 0 ? ", " : ""),formatValueStr,
                 formatStr, funcName, (valueStr.length() > 0 ? ", " : ""),formatValueStr,
+                funcName,
                 funcName,
                 funcName,
                 funcName,

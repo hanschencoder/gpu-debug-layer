@@ -14,6 +14,7 @@ EGLDisplay opengl_es_layer_eglGetDisplay(EGLNativeDisplayType param0) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglGetDisplay");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglGetDisplay");
     if (it == functionMap.end()) {
@@ -41,6 +42,7 @@ EGLDisplay opengl_es_layer_eglGetPlatformDisplay(EGLenum param0, EGLNativeDispla
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglGetPlatformDisplay");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglGetPlatformDisplay");
     if (it == functionMap.end()) {
@@ -68,6 +70,7 @@ EGLBoolean opengl_es_layer_eglInitialize(EGLDisplay param0, EGLint* param1, EGLi
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglInitialize");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglInitialize");
     if (it == functionMap.end()) {
@@ -95,6 +98,7 @@ EGLBoolean opengl_es_layer_eglTerminate(EGLDisplay param0) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglTerminate");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglTerminate");
     if (it == functionMap.end()) {
@@ -122,6 +126,7 @@ EGLBoolean opengl_es_layer_eglGetConfigs(EGLDisplay param0, EGLConfig* param1, E
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglGetConfigs");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglGetConfigs");
     if (it == functionMap.end()) {
@@ -149,6 +154,7 @@ EGLBoolean opengl_es_layer_eglChooseConfig(EGLDisplay param0, EGLint* param1, EG
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglChooseConfig");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglChooseConfig");
     if (it == functionMap.end()) {
@@ -176,6 +182,7 @@ EGLBoolean opengl_es_layer_eglGetConfigAttrib(EGLDisplay param0, EGLConfig param
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglGetConfigAttrib");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglGetConfigAttrib");
     if (it == functionMap.end()) {
@@ -203,6 +210,7 @@ EGLSurface opengl_es_layer_eglCreateWindowSurface(EGLDisplay param0, EGLConfig p
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglCreateWindowSurface");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglCreateWindowSurface");
     if (it == functionMap.end()) {
@@ -230,6 +238,7 @@ EGLSurface opengl_es_layer_eglCreatePlatformWindowSurface(EGLDisplay param0, EGL
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglCreatePlatformWindowSurface");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglCreatePlatformWindowSurface");
     if (it == functionMap.end()) {
@@ -257,6 +266,7 @@ EGLSurface opengl_es_layer_eglCreatePixmapSurface(EGLDisplay param0, EGLConfig p
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglCreatePixmapSurface");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglCreatePixmapSurface");
     if (it == functionMap.end()) {
@@ -284,6 +294,7 @@ EGLSurface opengl_es_layer_eglCreatePlatformPixmapSurface(EGLDisplay param0, EGL
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglCreatePlatformPixmapSurface");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglCreatePlatformPixmapSurface");
     if (it == functionMap.end()) {
@@ -311,6 +322,7 @@ EGLSurface opengl_es_layer_eglCreatePbufferSurface(EGLDisplay param0, EGLConfig 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglCreatePbufferSurface");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglCreatePbufferSurface");
     if (it == functionMap.end()) {
@@ -338,6 +350,7 @@ EGLBoolean opengl_es_layer_eglDestroySurface(EGLDisplay param0, EGLSurface param
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglDestroySurface");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglDestroySurface");
     if (it == functionMap.end()) {
@@ -365,6 +378,7 @@ EGLBoolean opengl_es_layer_eglQuerySurface(EGLDisplay param0, EGLSurface param1,
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglQuerySurface");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglQuerySurface");
     if (it == functionMap.end()) {
@@ -392,6 +406,7 @@ void opengl_es_layer_eglBeginFrame(EGLDisplay param0, EGLSurface param1) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglBeginFrame");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglBeginFrame");
     if (it == functionMap.end()) {
@@ -419,6 +434,7 @@ EGLContext opengl_es_layer_eglCreateContext(EGLDisplay param0, EGLConfig param1,
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglCreateContext");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglCreateContext");
     if (it == functionMap.end()) {
@@ -446,6 +462,7 @@ EGLBoolean opengl_es_layer_eglDestroyContext(EGLDisplay param0, EGLContext param
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglDestroyContext");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglDestroyContext");
     if (it == functionMap.end()) {
@@ -473,6 +490,7 @@ EGLBoolean opengl_es_layer_eglMakeCurrent(EGLDisplay param0, EGLSurface param1, 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglMakeCurrent");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglMakeCurrent");
     if (it == functionMap.end()) {
@@ -500,6 +518,7 @@ EGLBoolean opengl_es_layer_eglQueryContext(EGLDisplay param0, EGLContext param1,
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglQueryContext");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglQueryContext");
     if (it == functionMap.end()) {
@@ -527,6 +546,7 @@ EGLContext opengl_es_layer_eglGetCurrentContext(void ) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglGetCurrentContext");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglGetCurrentContext");
     if (it == functionMap.end()) {
@@ -554,6 +574,7 @@ EGLSurface opengl_es_layer_eglGetCurrentSurface(EGLint param0) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglGetCurrentSurface");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglGetCurrentSurface");
     if (it == functionMap.end()) {
@@ -581,6 +602,7 @@ EGLDisplay opengl_es_layer_eglGetCurrentDisplay(void ) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglGetCurrentDisplay");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglGetCurrentDisplay");
     if (it == functionMap.end()) {
@@ -608,6 +630,7 @@ EGLBoolean opengl_es_layer_eglWaitGL(void ) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglWaitGL");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglWaitGL");
     if (it == functionMap.end()) {
@@ -635,6 +658,7 @@ EGLBoolean opengl_es_layer_eglWaitNative(EGLint param0) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglWaitNative");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglWaitNative");
     if (it == functionMap.end()) {
@@ -662,6 +686,7 @@ EGLint opengl_es_layer_eglGetError(void ) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglGetError");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglGetError");
     if (it == functionMap.end()) {
@@ -689,6 +714,7 @@ __eglMustCastToProperFunctionPointerType opengl_es_layer_eglGetProcAddress(char*
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglGetProcAddress");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglGetProcAddress");
     if (it == functionMap.end()) {
@@ -716,6 +742,7 @@ EGLBoolean opengl_es_layer_eglSwapBuffersWithDamageKHR(EGLDisplay param0, EGLSur
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglSwapBuffersWithDamageKHR");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglSwapBuffersWithDamageKHR");
     if (it == functionMap.end()) {
@@ -743,6 +770,7 @@ EGLBoolean opengl_es_layer_eglSwapBuffers(EGLDisplay param0, EGLSurface param1) 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglSwapBuffers");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglSwapBuffers");
     if (it == functionMap.end()) {
@@ -770,6 +798,7 @@ EGLBoolean opengl_es_layer_eglCopyBuffers(EGLDisplay param0, EGLSurface param1, 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglCopyBuffers");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglCopyBuffers");
     if (it == functionMap.end()) {
@@ -797,6 +826,7 @@ const char* opengl_es_layer_eglQueryString(EGLDisplay param0, EGLint param1) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglQueryString");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglQueryString");
     if (it == functionMap.end()) {
@@ -824,6 +854,7 @@ const char* opengl_es_layer_eglQueryStringImplementationANDROID(EGLDisplay param
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglQueryStringImplementationANDROID");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglQueryStringImplementationANDROID");
     if (it == functionMap.end()) {
@@ -851,6 +882,7 @@ EGLBoolean opengl_es_layer_eglSurfaceAttrib(EGLDisplay param0, EGLSurface param1
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglSurfaceAttrib");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglSurfaceAttrib");
     if (it == functionMap.end()) {
@@ -878,6 +910,7 @@ EGLBoolean opengl_es_layer_eglBindTexImage(EGLDisplay param0, EGLSurface param1,
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglBindTexImage");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglBindTexImage");
     if (it == functionMap.end()) {
@@ -905,6 +938,7 @@ EGLBoolean opengl_es_layer_eglReleaseTexImage(EGLDisplay param0, EGLSurface para
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglReleaseTexImage");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglReleaseTexImage");
     if (it == functionMap.end()) {
@@ -932,6 +966,7 @@ EGLBoolean opengl_es_layer_eglSwapInterval(EGLDisplay param0, EGLint param1) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglSwapInterval");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglSwapInterval");
     if (it == functionMap.end()) {
@@ -959,6 +994,7 @@ EGLBoolean opengl_es_layer_eglWaitClient(void ) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglWaitClient");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglWaitClient");
     if (it == functionMap.end()) {
@@ -986,6 +1022,7 @@ EGLBoolean opengl_es_layer_eglBindAPI(EGLenum param0) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglBindAPI");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglBindAPI");
     if (it == functionMap.end()) {
@@ -1013,6 +1050,7 @@ EGLenum opengl_es_layer_eglQueryAPI(void ) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglQueryAPI");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglQueryAPI");
     if (it == functionMap.end()) {
@@ -1040,6 +1078,7 @@ EGLBoolean opengl_es_layer_eglReleaseThread(void ) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglReleaseThread");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglReleaseThread");
     if (it == functionMap.end()) {
@@ -1067,6 +1106,7 @@ EGLSurface opengl_es_layer_eglCreatePbufferFromClientBuffer(EGLDisplay param0, E
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglCreatePbufferFromClientBuffer");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglCreatePbufferFromClientBuffer");
     if (it == functionMap.end()) {
@@ -1094,6 +1134,7 @@ EGLBoolean opengl_es_layer_eglLockSurfaceKHR(EGLDisplay param0, EGLSurface param
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglLockSurfaceKHR");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglLockSurfaceKHR");
     if (it == functionMap.end()) {
@@ -1121,6 +1162,7 @@ EGLBoolean opengl_es_layer_eglUnlockSurfaceKHR(EGLDisplay param0, EGLSurface par
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglUnlockSurfaceKHR");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglUnlockSurfaceKHR");
     if (it == functionMap.end()) {
@@ -1148,6 +1190,7 @@ EGLImage opengl_es_layer_eglCreateImage(EGLDisplay param0, EGLContext param1, EG
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglCreateImage");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglCreateImage");
     if (it == functionMap.end()) {
@@ -1175,6 +1218,7 @@ EGLBoolean opengl_es_layer_eglDestroyImage(EGLDisplay param0, EGLImage param1) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglDestroyImage");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglDestroyImage");
     if (it == functionMap.end()) {
@@ -1202,6 +1246,7 @@ EGLImageKHR opengl_es_layer_eglCreateImageKHR(EGLDisplay param0, EGLContext para
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglCreateImageKHR");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglCreateImageKHR");
     if (it == functionMap.end()) {
@@ -1229,6 +1274,7 @@ EGLBoolean opengl_es_layer_eglDestroyImageKHR(EGLDisplay param0, EGLImageKHR par
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglDestroyImageKHR");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglDestroyImageKHR");
     if (it == functionMap.end()) {
@@ -1256,6 +1302,7 @@ EGLSync opengl_es_layer_eglCreateSync(EGLDisplay param0, EGLenum param1, EGLAttr
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglCreateSync");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglCreateSync");
     if (it == functionMap.end()) {
@@ -1283,6 +1330,7 @@ EGLBoolean opengl_es_layer_eglDestroySync(EGLDisplay param0, EGLSync param1) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglDestroySync");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglDestroySync");
     if (it == functionMap.end()) {
@@ -1310,6 +1358,7 @@ EGLint opengl_es_layer_eglClientWaitSync(EGLDisplay param0, EGLSync param1, EGLi
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglClientWaitSync");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglClientWaitSync");
     if (it == functionMap.end()) {
@@ -1337,6 +1386,7 @@ EGLBoolean opengl_es_layer_eglGetSyncAttrib(EGLDisplay param0, EGLSyncKHR param1
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglGetSyncAttrib");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglGetSyncAttrib");
     if (it == functionMap.end()) {
@@ -1364,6 +1414,7 @@ EGLSyncKHR opengl_es_layer_eglCreateSyncKHR(EGLDisplay param0, EGLenum param1, E
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglCreateSyncKHR");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglCreateSyncKHR");
     if (it == functionMap.end()) {
@@ -1391,6 +1442,7 @@ EGLBoolean opengl_es_layer_eglDestroySyncKHR(EGLDisplay param0, EGLSyncKHR param
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglDestroySyncKHR");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglDestroySyncKHR");
     if (it == functionMap.end()) {
@@ -1418,6 +1470,7 @@ EGLBoolean opengl_es_layer_eglSignalSyncKHR(EGLDisplay param0, EGLSyncKHR param1
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglSignalSyncKHR");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglSignalSyncKHR");
     if (it == functionMap.end()) {
@@ -1445,6 +1498,7 @@ EGLint opengl_es_layer_eglClientWaitSyncKHR(EGLDisplay param0, EGLSyncKHR param1
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglClientWaitSyncKHR");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglClientWaitSyncKHR");
     if (it == functionMap.end()) {
@@ -1472,6 +1526,7 @@ EGLBoolean opengl_es_layer_eglGetSyncAttribKHR(EGLDisplay param0, EGLSyncKHR par
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglGetSyncAttribKHR");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglGetSyncAttribKHR");
     if (it == functionMap.end()) {
@@ -1499,6 +1554,7 @@ EGLStreamKHR opengl_es_layer_eglCreateStreamKHR(EGLDisplay param0, EGLint* param
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglCreateStreamKHR");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglCreateStreamKHR");
     if (it == functionMap.end()) {
@@ -1526,6 +1582,7 @@ EGLBoolean opengl_es_layer_eglDestroyStreamKHR(EGLDisplay param0, EGLStreamKHR p
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglDestroyStreamKHR");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglDestroyStreamKHR");
     if (it == functionMap.end()) {
@@ -1553,6 +1610,7 @@ EGLBoolean opengl_es_layer_eglStreamAttribKHR(EGLDisplay param0, EGLStreamKHR pa
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglStreamAttribKHR");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglStreamAttribKHR");
     if (it == functionMap.end()) {
@@ -1580,6 +1638,7 @@ EGLBoolean opengl_es_layer_eglQueryStreamKHR(EGLDisplay param0, EGLStreamKHR par
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglQueryStreamKHR");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglQueryStreamKHR");
     if (it == functionMap.end()) {
@@ -1607,6 +1666,7 @@ EGLBoolean opengl_es_layer_eglQueryStreamu64KHR(EGLDisplay param0, EGLStreamKHR 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglQueryStreamu64KHR");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglQueryStreamu64KHR");
     if (it == functionMap.end()) {
@@ -1634,6 +1694,7 @@ EGLBoolean opengl_es_layer_eglQueryStreamTimeKHR(EGLDisplay param0, EGLStreamKHR
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglQueryStreamTimeKHR");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglQueryStreamTimeKHR");
     if (it == functionMap.end()) {
@@ -1661,6 +1722,7 @@ EGLSurface opengl_es_layer_eglCreateStreamProducerSurfaceKHR(EGLDisplay param0, 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglCreateStreamProducerSurfaceKHR");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglCreateStreamProducerSurfaceKHR");
     if (it == functionMap.end()) {
@@ -1688,6 +1750,7 @@ EGLBoolean opengl_es_layer_eglStreamConsumerGLTextureExternalKHR(EGLDisplay para
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglStreamConsumerGLTextureExternalKHR");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglStreamConsumerGLTextureExternalKHR");
     if (it == functionMap.end()) {
@@ -1715,6 +1778,7 @@ EGLBoolean opengl_es_layer_eglStreamConsumerAcquireKHR(EGLDisplay param0, EGLStr
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglStreamConsumerAcquireKHR");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglStreamConsumerAcquireKHR");
     if (it == functionMap.end()) {
@@ -1742,6 +1806,7 @@ EGLBoolean opengl_es_layer_eglStreamConsumerReleaseKHR(EGLDisplay param0, EGLStr
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglStreamConsumerReleaseKHR");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglStreamConsumerReleaseKHR");
     if (it == functionMap.end()) {
@@ -1769,6 +1834,7 @@ EGLNativeFileDescriptorKHR opengl_es_layer_eglGetStreamFileDescriptorKHR(EGLDisp
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglGetStreamFileDescriptorKHR");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglGetStreamFileDescriptorKHR");
     if (it == functionMap.end()) {
@@ -1796,6 +1862,7 @@ EGLStreamKHR opengl_es_layer_eglCreateStreamFromFileDescriptorKHR(EGLDisplay par
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglCreateStreamFromFileDescriptorKHR");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglCreateStreamFromFileDescriptorKHR");
     if (it == functionMap.end()) {
@@ -1823,6 +1890,7 @@ EGLint opengl_es_layer_eglWaitSync(EGLDisplay param0, EGLSync param1, EGLint par
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglWaitSync");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglWaitSync");
     if (it == functionMap.end()) {
@@ -1850,6 +1918,7 @@ EGLint opengl_es_layer_eglWaitSyncKHR(EGLDisplay param0, EGLSyncKHR param1, EGLi
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglWaitSyncKHR");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglWaitSyncKHR");
     if (it == functionMap.end()) {
@@ -1877,6 +1946,7 @@ EGLint opengl_es_layer_eglDupNativeFenceFDANDROID(EGLDisplay param0, EGLSyncKHR 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglDupNativeFenceFDANDROID");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglDupNativeFenceFDANDROID");
     if (it == functionMap.end()) {
@@ -1904,6 +1974,7 @@ EGLBoolean opengl_es_layer_eglPresentationTimeANDROID(EGLDisplay param0, EGLSurf
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglPresentationTimeANDROID");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglPresentationTimeANDROID");
     if (it == functionMap.end()) {
@@ -1931,6 +2002,7 @@ EGLClientBuffer opengl_es_layer_eglGetNativeClientBufferANDROID(AHardwareBuffer*
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglGetNativeClientBufferANDROID");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglGetNativeClientBufferANDROID");
     if (it == functionMap.end()) {
@@ -1958,6 +2030,7 @@ EGLuint64NV opengl_es_layer_eglGetSystemTimeFrequencyNV(void ) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglGetSystemTimeFrequencyNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglGetSystemTimeFrequencyNV");
     if (it == functionMap.end()) {
@@ -1985,6 +2058,7 @@ EGLuint64NV opengl_es_layer_eglGetSystemTimeNV(void ) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglGetSystemTimeNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglGetSystemTimeNV");
     if (it == functionMap.end()) {
@@ -2012,6 +2086,7 @@ EGLBoolean opengl_es_layer_eglSetDamageRegionKHR(EGLDisplay param0, EGLSurface p
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglSetDamageRegionKHR");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglSetDamageRegionKHR");
     if (it == functionMap.end()) {
@@ -2039,6 +2114,7 @@ EGLBoolean opengl_es_layer_eglGetNextFrameIdANDROID(EGLDisplay param0, EGLSurfac
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglGetNextFrameIdANDROID");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglGetNextFrameIdANDROID");
     if (it == functionMap.end()) {
@@ -2066,6 +2142,7 @@ EGLBoolean opengl_es_layer_eglGetCompositorTimingANDROID(EGLDisplay param0, EGLS
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglGetCompositorTimingANDROID");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglGetCompositorTimingANDROID");
     if (it == functionMap.end()) {
@@ -2093,6 +2170,7 @@ EGLBoolean opengl_es_layer_eglGetCompositorTimingSupportedANDROID(EGLDisplay par
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglGetCompositorTimingSupportedANDROID");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglGetCompositorTimingSupportedANDROID");
     if (it == functionMap.end()) {
@@ -2120,6 +2198,7 @@ EGLBoolean opengl_es_layer_eglGetFrameTimestampsANDROID(EGLDisplay param0, EGLSu
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglGetFrameTimestampsANDROID");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglGetFrameTimestampsANDROID");
     if (it == functionMap.end()) {
@@ -2147,6 +2226,7 @@ EGLBoolean opengl_es_layer_eglGetFrameTimestampSupportedANDROID(EGLDisplay param
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglGetFrameTimestampSupportedANDROID");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglGetFrameTimestampSupportedANDROID");
     if (it == functionMap.end()) {
@@ -2174,6 +2254,7 @@ const GLubyte* opengl_es_layer_glGetString(GLenum param0) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetString");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetString");
     if (it == functionMap.end()) {
@@ -2201,6 +2282,7 @@ const GLubyte* opengl_es_layer_glGetStringi(GLenum param0, GLuint param1) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetStringi");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetStringi");
     if (it == functionMap.end()) {
@@ -2228,6 +2310,7 @@ void opengl_es_layer_glGetBooleanv(GLenum param0, GLboolean* param1) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetBooleanv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetBooleanv");
     if (it == functionMap.end()) {
@@ -2255,6 +2338,7 @@ void opengl_es_layer_glGetFloatv(GLenum param0, GLfloat* param1) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetFloatv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetFloatv");
     if (it == functionMap.end()) {
@@ -2282,6 +2366,7 @@ void opengl_es_layer_glGetIntegerv(GLenum param0, GLint* param1) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetIntegerv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetIntegerv");
     if (it == functionMap.end()) {
@@ -2309,6 +2394,7 @@ void opengl_es_layer_glGetInteger64v(GLenum param0, GLint64* param1) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetInteger64v");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetInteger64v");
     if (it == functionMap.end()) {
@@ -2336,6 +2422,7 @@ EGLSurface opengl_es_layer_eglCreatePlatformWindowSurfaceEXT(EGLDisplay param0, 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglCreatePlatformWindowSurfaceEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglCreatePlatformWindowSurfaceEXT");
     if (it == functionMap.end()) {
@@ -2363,6 +2450,7 @@ EGLSurface opengl_es_layer_eglCreatePlatformPixmapSurfaceEXT(EGLDisplay param0, 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglCreatePlatformPixmapSurfaceEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglCreatePlatformPixmapSurfaceEXT");
     if (it == functionMap.end()) {
@@ -2390,6 +2478,7 @@ EGLBoolean opengl_es_layer_eglSetSwapRectangleANDROID(EGLDisplay param0, EGLSurf
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglSetSwapRectangleANDROID");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglSetSwapRectangleANDROID");
     if (it == functionMap.end()) {
@@ -2417,6 +2506,7 @@ EGLClientBuffer opengl_es_layer_eglGetRenderBufferANDROID(EGLDisplay param0, EGL
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglGetRenderBufferANDROID");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglGetRenderBufferANDROID");
     if (it == functionMap.end()) {
@@ -2444,6 +2534,7 @@ EGLClientBuffer opengl_es_layer_eglCreateNativeClientBufferANDROID(EGLint* param
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "eglCreateNativeClientBufferANDROID");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("eglCreateNativeClientBufferANDROID");
     if (it == functionMap.end()) {
@@ -2471,6 +2562,7 @@ void opengl_es_layer_glActiveShaderProgram(GLuint pipeline, GLuint program) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glActiveShaderProgram");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glActiveShaderProgram");
     if (it == functionMap.end()) {
@@ -2498,6 +2590,7 @@ void opengl_es_layer_glActiveShaderProgramEXT(GLuint pipeline, GLuint program) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glActiveShaderProgramEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glActiveShaderProgramEXT");
     if (it == functionMap.end()) {
@@ -2525,6 +2618,7 @@ void opengl_es_layer_glActiveTexture(GLenum texture) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glActiveTexture");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glActiveTexture");
     if (it == functionMap.end()) {
@@ -2552,6 +2646,7 @@ void opengl_es_layer_glAlphaFunc(GLenum func, GLfloat ref) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glAlphaFunc");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glAlphaFunc");
     if (it == functionMap.end()) {
@@ -2579,6 +2674,7 @@ void opengl_es_layer_glAlphaFuncQCOM(GLenum func, GLclampf ref) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glAlphaFuncQCOM");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glAlphaFuncQCOM");
     if (it == functionMap.end()) {
@@ -2606,6 +2702,7 @@ void opengl_es_layer_glAlphaFuncx(GLenum func, GLfixed ref) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glAlphaFuncx");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glAlphaFuncx");
     if (it == functionMap.end()) {
@@ -2633,6 +2730,7 @@ void opengl_es_layer_glAlphaFuncxOES(GLenum func, GLfixed ref) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glAlphaFuncxOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glAlphaFuncxOES");
     if (it == functionMap.end()) {
@@ -2660,6 +2758,7 @@ void opengl_es_layer_glApplyFramebufferAttachmentCMAAINTEL(void ) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glApplyFramebufferAttachmentCMAAINTEL");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glApplyFramebufferAttachmentCMAAINTEL");
     if (it == functionMap.end()) {
@@ -2687,6 +2786,7 @@ void opengl_es_layer_glAttachShader(GLuint program, GLuint shader) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glAttachShader");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glAttachShader");
     if (it == functionMap.end()) {
@@ -2714,6 +2814,7 @@ void opengl_es_layer_glBeginConditionalRenderNV(GLuint id, GLenum mode) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBeginConditionalRenderNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBeginConditionalRenderNV");
     if (it == functionMap.end()) {
@@ -2741,6 +2842,7 @@ void opengl_es_layer_glBeginPerfMonitorAMD(GLuint monitor) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBeginPerfMonitorAMD");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBeginPerfMonitorAMD");
     if (it == functionMap.end()) {
@@ -2768,6 +2870,7 @@ void opengl_es_layer_glBeginPerfQueryINTEL(GLuint queryHandle) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBeginPerfQueryINTEL");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBeginPerfQueryINTEL");
     if (it == functionMap.end()) {
@@ -2795,6 +2898,7 @@ void opengl_es_layer_glBeginQuery(GLenum target, GLuint id) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBeginQuery");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBeginQuery");
     if (it == functionMap.end()) {
@@ -2822,6 +2926,7 @@ void opengl_es_layer_glBeginQueryEXT(GLenum target, GLuint id) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBeginQueryEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBeginQueryEXT");
     if (it == functionMap.end()) {
@@ -2849,6 +2954,7 @@ void opengl_es_layer_glBeginTransformFeedback(GLenum primitiveMode) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBeginTransformFeedback");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBeginTransformFeedback");
     if (it == functionMap.end()) {
@@ -2876,6 +2982,7 @@ void opengl_es_layer_glBindAttribLocation(GLuint program, GLuint index, GLchar* 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBindAttribLocation");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBindAttribLocation");
     if (it == functionMap.end()) {
@@ -2903,6 +3010,7 @@ void opengl_es_layer_glBindBuffer(GLenum target, GLuint buffer) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBindBuffer");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBindBuffer");
     if (it == functionMap.end()) {
@@ -2930,6 +3038,7 @@ void opengl_es_layer_glBindBufferBase(GLenum target, GLuint index, GLuint buffer
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBindBufferBase");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBindBufferBase");
     if (it == functionMap.end()) {
@@ -2957,6 +3066,7 @@ void opengl_es_layer_glBindBufferRange(GLenum target, GLuint index, GLuint buffe
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBindBufferRange");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBindBufferRange");
     if (it == functionMap.end()) {
@@ -2984,6 +3094,7 @@ void opengl_es_layer_glBindFragDataLocationEXT(GLuint program, GLuint color, GLc
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBindFragDataLocationEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBindFragDataLocationEXT");
     if (it == functionMap.end()) {
@@ -3011,6 +3122,7 @@ void opengl_es_layer_glBindFragDataLocationIndexedEXT(GLuint program, GLuint col
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBindFragDataLocationIndexedEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBindFragDataLocationIndexedEXT");
     if (it == functionMap.end()) {
@@ -3038,6 +3150,7 @@ void opengl_es_layer_glBindFramebuffer(GLenum target, GLuint framebuffer) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBindFramebuffer");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBindFramebuffer");
     if (it == functionMap.end()) {
@@ -3065,6 +3178,7 @@ void opengl_es_layer_glBindFramebufferOES(GLenum target, GLuint framebuffer) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBindFramebufferOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBindFramebufferOES");
     if (it == functionMap.end()) {
@@ -3092,6 +3206,7 @@ void opengl_es_layer_glBindImageTexture(GLuint unit, GLuint texture, GLint level
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBindImageTexture");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBindImageTexture");
     if (it == functionMap.end()) {
@@ -3119,6 +3234,7 @@ void opengl_es_layer_glBindProgramPipeline(GLuint pipeline) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBindProgramPipeline");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBindProgramPipeline");
     if (it == functionMap.end()) {
@@ -3146,6 +3262,7 @@ void opengl_es_layer_glBindProgramPipelineEXT(GLuint pipeline) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBindProgramPipelineEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBindProgramPipelineEXT");
     if (it == functionMap.end()) {
@@ -3173,6 +3290,7 @@ void opengl_es_layer_glBindRenderbuffer(GLenum target, GLuint renderbuffer) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBindRenderbuffer");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBindRenderbuffer");
     if (it == functionMap.end()) {
@@ -3200,6 +3318,7 @@ void opengl_es_layer_glBindRenderbufferOES(GLenum target, GLuint renderbuffer) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBindRenderbufferOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBindRenderbufferOES");
     if (it == functionMap.end()) {
@@ -3227,6 +3346,7 @@ void opengl_es_layer_glBindSampler(GLuint unit, GLuint sampler) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBindSampler");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBindSampler");
     if (it == functionMap.end()) {
@@ -3254,6 +3374,7 @@ void opengl_es_layer_glBindTexture(GLenum target, GLuint texture) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBindTexture");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBindTexture");
     if (it == functionMap.end()) {
@@ -3281,6 +3402,7 @@ void opengl_es_layer_glBindTransformFeedback(GLenum target, GLuint id) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBindTransformFeedback");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBindTransformFeedback");
     if (it == functionMap.end()) {
@@ -3308,6 +3430,7 @@ void opengl_es_layer_glBindVertexArray(GLuint array) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBindVertexArray");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBindVertexArray");
     if (it == functionMap.end()) {
@@ -3335,6 +3458,7 @@ void opengl_es_layer_glBindVertexArrayOES(GLuint array) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBindVertexArrayOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBindVertexArrayOES");
     if (it == functionMap.end()) {
@@ -3362,6 +3486,7 @@ void opengl_es_layer_glBindVertexBuffer(GLuint bindingindex, GLuint buffer, GLin
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBindVertexBuffer");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBindVertexBuffer");
     if (it == functionMap.end()) {
@@ -3389,6 +3514,7 @@ void opengl_es_layer_glBlendBarrier(void ) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBlendBarrier");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBlendBarrier");
     if (it == functionMap.end()) {
@@ -3416,6 +3542,7 @@ void opengl_es_layer_glBlendBarrierKHR(void ) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBlendBarrierKHR");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBlendBarrierKHR");
     if (it == functionMap.end()) {
@@ -3443,6 +3570,7 @@ void opengl_es_layer_glBlendBarrierNV(void ) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBlendBarrierNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBlendBarrierNV");
     if (it == functionMap.end()) {
@@ -3470,6 +3598,7 @@ void opengl_es_layer_glBlendColor(GLfloat red, GLfloat green, GLfloat blue, GLfl
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBlendColor");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBlendColor");
     if (it == functionMap.end()) {
@@ -3497,6 +3626,7 @@ void opengl_es_layer_glBlendEquation(GLenum mode) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBlendEquation");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBlendEquation");
     if (it == functionMap.end()) {
@@ -3524,6 +3654,7 @@ void opengl_es_layer_glBlendEquationOES(GLenum mode) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBlendEquationOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBlendEquationOES");
     if (it == functionMap.end()) {
@@ -3551,6 +3682,7 @@ void opengl_es_layer_glBlendEquationSeparate(GLenum modeRGB, GLenum modeAlpha) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBlendEquationSeparate");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBlendEquationSeparate");
     if (it == functionMap.end()) {
@@ -3578,6 +3710,7 @@ void opengl_es_layer_glBlendEquationSeparateOES(GLenum modeRGB, GLenum modeAlpha
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBlendEquationSeparateOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBlendEquationSeparateOES");
     if (it == functionMap.end()) {
@@ -3605,6 +3738,7 @@ void opengl_es_layer_glBlendEquationSeparatei(GLuint buf, GLenum modeRGB, GLenum
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBlendEquationSeparatei");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBlendEquationSeparatei");
     if (it == functionMap.end()) {
@@ -3632,6 +3766,7 @@ void opengl_es_layer_glBlendEquationSeparateiEXT(GLuint buf, GLenum modeRGB, GLe
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBlendEquationSeparateiEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBlendEquationSeparateiEXT");
     if (it == functionMap.end()) {
@@ -3659,6 +3794,7 @@ void opengl_es_layer_glBlendEquationSeparateiOES(GLuint buf, GLenum modeRGB, GLe
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBlendEquationSeparateiOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBlendEquationSeparateiOES");
     if (it == functionMap.end()) {
@@ -3686,6 +3822,7 @@ void opengl_es_layer_glBlendEquationi(GLuint buf, GLenum mode) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBlendEquationi");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBlendEquationi");
     if (it == functionMap.end()) {
@@ -3713,6 +3850,7 @@ void opengl_es_layer_glBlendEquationiEXT(GLuint buf, GLenum mode) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBlendEquationiEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBlendEquationiEXT");
     if (it == functionMap.end()) {
@@ -3740,6 +3878,7 @@ void opengl_es_layer_glBlendEquationiOES(GLuint buf, GLenum mode) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBlendEquationiOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBlendEquationiOES");
     if (it == functionMap.end()) {
@@ -3767,6 +3906,7 @@ void opengl_es_layer_glBlendFunc(GLenum sfactor, GLenum dfactor) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBlendFunc");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBlendFunc");
     if (it == functionMap.end()) {
@@ -3794,6 +3934,7 @@ void opengl_es_layer_glBlendFuncSeparate(GLenum sfactorRGB, GLenum dfactorRGB, G
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBlendFuncSeparate");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBlendFuncSeparate");
     if (it == functionMap.end()) {
@@ -3821,6 +3962,7 @@ void opengl_es_layer_glBlendFuncSeparateOES(GLenum srcRGB, GLenum dstRGB, GLenum
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBlendFuncSeparateOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBlendFuncSeparateOES");
     if (it == functionMap.end()) {
@@ -3848,6 +3990,7 @@ void opengl_es_layer_glBlendFuncSeparatei(GLuint buf, GLenum srcRGB, GLenum dstR
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBlendFuncSeparatei");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBlendFuncSeparatei");
     if (it == functionMap.end()) {
@@ -3875,6 +4018,7 @@ void opengl_es_layer_glBlendFuncSeparateiEXT(GLuint buf, GLenum srcRGB, GLenum d
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBlendFuncSeparateiEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBlendFuncSeparateiEXT");
     if (it == functionMap.end()) {
@@ -3902,6 +4046,7 @@ void opengl_es_layer_glBlendFuncSeparateiOES(GLuint buf, GLenum srcRGB, GLenum d
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBlendFuncSeparateiOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBlendFuncSeparateiOES");
     if (it == functionMap.end()) {
@@ -3929,6 +4074,7 @@ void opengl_es_layer_glBlendFunci(GLuint buf, GLenum src, GLenum dst) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBlendFunci");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBlendFunci");
     if (it == functionMap.end()) {
@@ -3956,6 +4102,7 @@ void opengl_es_layer_glBlendFunciEXT(GLuint buf, GLenum src, GLenum dst) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBlendFunciEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBlendFunciEXT");
     if (it == functionMap.end()) {
@@ -3983,6 +4130,7 @@ void opengl_es_layer_glBlendFunciOES(GLuint buf, GLenum src, GLenum dst) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBlendFunciOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBlendFunciOES");
     if (it == functionMap.end()) {
@@ -4010,6 +4158,7 @@ void opengl_es_layer_glBlendParameteriNV(GLenum pname, GLint value) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBlendParameteriNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBlendParameteriNV");
     if (it == functionMap.end()) {
@@ -4037,6 +4186,7 @@ void opengl_es_layer_glBlitFramebuffer(GLint srcX0, GLint srcY0, GLint srcX1, GL
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBlitFramebuffer");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBlitFramebuffer");
     if (it == functionMap.end()) {
@@ -4064,6 +4214,7 @@ void opengl_es_layer_glBlitFramebufferANGLE(GLint srcX0, GLint srcY0, GLint srcX
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBlitFramebufferANGLE");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBlitFramebufferANGLE");
     if (it == functionMap.end()) {
@@ -4091,6 +4242,7 @@ void opengl_es_layer_glBlitFramebufferNV(GLint srcX0, GLint srcY0, GLint srcX1, 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBlitFramebufferNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBlitFramebufferNV");
     if (it == functionMap.end()) {
@@ -4118,6 +4270,7 @@ void opengl_es_layer_glBufferData(GLenum target, GLsizeiptr size, void* data, GL
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBufferData");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBufferData");
     if (it == functionMap.end()) {
@@ -4145,6 +4298,7 @@ void opengl_es_layer_glBufferStorageEXT(GLenum target, GLsizeiptr size, void* da
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBufferStorageEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBufferStorageEXT");
     if (it == functionMap.end()) {
@@ -4172,6 +4326,7 @@ void opengl_es_layer_glBufferStorageExternalEXT(GLenum target, GLintptr offset, 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBufferStorageExternalEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBufferStorageExternalEXT");
     if (it == functionMap.end()) {
@@ -4199,6 +4354,7 @@ void opengl_es_layer_glBufferStorageMemEXT(GLenum target, GLsizeiptr size, GLuin
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBufferStorageMemEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBufferStorageMemEXT");
     if (it == functionMap.end()) {
@@ -4226,6 +4382,7 @@ void opengl_es_layer_glBufferSubData(GLenum target, GLintptr offset, GLsizeiptr 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glBufferSubData");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glBufferSubData");
     if (it == functionMap.end()) {
@@ -4253,6 +4410,7 @@ GLenum opengl_es_layer_glCheckFramebufferStatus(GLenum target) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glCheckFramebufferStatus");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glCheckFramebufferStatus");
     if (it == functionMap.end()) {
@@ -4280,6 +4438,7 @@ GLenum opengl_es_layer_glCheckFramebufferStatusOES(GLenum target) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glCheckFramebufferStatusOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glCheckFramebufferStatusOES");
     if (it == functionMap.end()) {
@@ -4307,6 +4466,7 @@ void opengl_es_layer_glClear(GLbitfield mask) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glClear");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glClear");
     if (it == functionMap.end()) {
@@ -4334,6 +4494,7 @@ void opengl_es_layer_glClearBufferfi(GLenum buffer, GLint drawbuffer, GLfloat de
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glClearBufferfi");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glClearBufferfi");
     if (it == functionMap.end()) {
@@ -4361,6 +4522,7 @@ void opengl_es_layer_glClearBufferfv(GLenum buffer, GLint drawbuffer, GLfloat* v
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glClearBufferfv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glClearBufferfv");
     if (it == functionMap.end()) {
@@ -4388,6 +4550,7 @@ void opengl_es_layer_glClearBufferiv(GLenum buffer, GLint drawbuffer, GLint* val
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glClearBufferiv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glClearBufferiv");
     if (it == functionMap.end()) {
@@ -4415,6 +4578,7 @@ void opengl_es_layer_glClearBufferuiv(GLenum buffer, GLint drawbuffer, GLuint* v
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glClearBufferuiv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glClearBufferuiv");
     if (it == functionMap.end()) {
@@ -4442,6 +4606,7 @@ void opengl_es_layer_glClearColor(GLfloat red, GLfloat green, GLfloat blue, GLfl
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glClearColor");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glClearColor");
     if (it == functionMap.end()) {
@@ -4469,6 +4634,7 @@ void opengl_es_layer_glClearColorx(GLfixed red, GLfixed green, GLfixed blue, GLf
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glClearColorx");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glClearColorx");
     if (it == functionMap.end()) {
@@ -4496,6 +4662,7 @@ void opengl_es_layer_glClearColorxOES(GLfixed red, GLfixed green, GLfixed blue, 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glClearColorxOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glClearColorxOES");
     if (it == functionMap.end()) {
@@ -4523,6 +4690,7 @@ void opengl_es_layer_glClearDepthf(GLfloat d) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glClearDepthf");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glClearDepthf");
     if (it == functionMap.end()) {
@@ -4550,6 +4718,7 @@ void opengl_es_layer_glClearDepthfOES(GLclampf depth) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glClearDepthfOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glClearDepthfOES");
     if (it == functionMap.end()) {
@@ -4577,6 +4746,7 @@ void opengl_es_layer_glClearDepthx(GLfixed depth) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glClearDepthx");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glClearDepthx");
     if (it == functionMap.end()) {
@@ -4604,6 +4774,7 @@ void opengl_es_layer_glClearDepthxOES(GLfixed depth) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glClearDepthxOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glClearDepthxOES");
     if (it == functionMap.end()) {
@@ -4631,6 +4802,7 @@ void opengl_es_layer_glClearPixelLocalStorageuiEXT(GLsizei offset, GLsizei n, GL
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glClearPixelLocalStorageuiEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glClearPixelLocalStorageuiEXT");
     if (it == functionMap.end()) {
@@ -4658,6 +4830,7 @@ void opengl_es_layer_glClearStencil(GLint s) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glClearStencil");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glClearStencil");
     if (it == functionMap.end()) {
@@ -4685,6 +4858,7 @@ void opengl_es_layer_glClearTexImageEXT(GLuint texture, GLint level, GLenum form
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glClearTexImageEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glClearTexImageEXT");
     if (it == functionMap.end()) {
@@ -4712,6 +4886,7 @@ void opengl_es_layer_glClearTexSubImageEXT(GLuint texture, GLint level, GLint xo
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glClearTexSubImageEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glClearTexSubImageEXT");
     if (it == functionMap.end()) {
@@ -4739,6 +4914,7 @@ void opengl_es_layer_glClientActiveTexture(GLenum texture) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glClientActiveTexture");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glClientActiveTexture");
     if (it == functionMap.end()) {
@@ -4766,6 +4942,7 @@ GLenum opengl_es_layer_glClientWaitSync(GLsync sync, GLbitfield flags, GLuint64 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glClientWaitSync");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glClientWaitSync");
     if (it == functionMap.end()) {
@@ -4793,6 +4970,7 @@ GLenum opengl_es_layer_glClientWaitSyncAPPLE(GLsync sync, GLbitfield flags, GLui
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glClientWaitSyncAPPLE");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glClientWaitSyncAPPLE");
     if (it == functionMap.end()) {
@@ -4820,6 +4998,7 @@ void opengl_es_layer_glClipControlEXT(GLenum origin, GLenum depth) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glClipControlEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glClipControlEXT");
     if (it == functionMap.end()) {
@@ -4847,6 +5026,7 @@ void opengl_es_layer_glClipPlanef(GLenum p, GLfloat* eqn) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glClipPlanef");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glClipPlanef");
     if (it == functionMap.end()) {
@@ -4874,6 +5054,7 @@ void opengl_es_layer_glClipPlanefIMG(GLenum p, GLfloat* eqn) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glClipPlanefIMG");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glClipPlanefIMG");
     if (it == functionMap.end()) {
@@ -4901,6 +5082,7 @@ void opengl_es_layer_glClipPlanefOES(GLenum plane, GLfloat* equation) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glClipPlanefOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glClipPlanefOES");
     if (it == functionMap.end()) {
@@ -4928,6 +5110,7 @@ void opengl_es_layer_glClipPlanex(GLenum plane, GLfixed* equation) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glClipPlanex");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glClipPlanex");
     if (it == functionMap.end()) {
@@ -4955,6 +5138,7 @@ void opengl_es_layer_glClipPlanexIMG(GLenum p, GLfixed* eqn) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glClipPlanexIMG");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glClipPlanexIMG");
     if (it == functionMap.end()) {
@@ -4982,6 +5166,7 @@ void opengl_es_layer_glClipPlanexOES(GLenum plane, GLfixed* equation) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glClipPlanexOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glClipPlanexOES");
     if (it == functionMap.end()) {
@@ -5009,6 +5194,7 @@ void opengl_es_layer_glColor4f(GLfloat red, GLfloat green, GLfloat blue, GLfloat
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glColor4f");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glColor4f");
     if (it == functionMap.end()) {
@@ -5036,6 +5222,7 @@ void opengl_es_layer_glColor4ub(GLubyte red, GLubyte green, GLubyte blue, GLubyt
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glColor4ub");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glColor4ub");
     if (it == functionMap.end()) {
@@ -5063,6 +5250,7 @@ void opengl_es_layer_glColor4x(GLfixed red, GLfixed green, GLfixed blue, GLfixed
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glColor4x");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glColor4x");
     if (it == functionMap.end()) {
@@ -5090,6 +5278,7 @@ void opengl_es_layer_glColor4xOES(GLfixed red, GLfixed green, GLfixed blue, GLfi
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glColor4xOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glColor4xOES");
     if (it == functionMap.end()) {
@@ -5117,6 +5306,7 @@ void opengl_es_layer_glColorMask(GLboolean red, GLboolean green, GLboolean blue,
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glColorMask");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glColorMask");
     if (it == functionMap.end()) {
@@ -5144,6 +5334,7 @@ void opengl_es_layer_glColorMaski(GLuint index, GLboolean r, GLboolean g, GLbool
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glColorMaski");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glColorMaski");
     if (it == functionMap.end()) {
@@ -5171,6 +5362,7 @@ void opengl_es_layer_glColorMaskiEXT(GLuint index, GLboolean r, GLboolean g, GLb
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glColorMaskiEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glColorMaskiEXT");
     if (it == functionMap.end()) {
@@ -5198,6 +5390,7 @@ void opengl_es_layer_glColorMaskiOES(GLuint index, GLboolean r, GLboolean g, GLb
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glColorMaskiOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glColorMaskiOES");
     if (it == functionMap.end()) {
@@ -5225,6 +5418,7 @@ void opengl_es_layer_glColorPointer(GLint size, GLenum type, GLsizei stride, voi
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glColorPointer");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glColorPointer");
     if (it == functionMap.end()) {
@@ -5252,6 +5446,7 @@ void opengl_es_layer_glCompileShader(GLuint shader) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glCompileShader");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glCompileShader");
     if (it == functionMap.end()) {
@@ -5279,6 +5474,7 @@ void opengl_es_layer_glCompressedTexImage2D(GLenum target, GLint level, GLenum i
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glCompressedTexImage2D");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glCompressedTexImage2D");
     if (it == functionMap.end()) {
@@ -5306,6 +5502,7 @@ void opengl_es_layer_glCompressedTexImage3D(GLenum target, GLint level, GLenum i
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glCompressedTexImage3D");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glCompressedTexImage3D");
     if (it == functionMap.end()) {
@@ -5333,6 +5530,7 @@ void opengl_es_layer_glCompressedTexImage3DOES(GLenum target, GLint level, GLenu
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glCompressedTexImage3DOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glCompressedTexImage3DOES");
     if (it == functionMap.end()) {
@@ -5360,6 +5558,7 @@ void opengl_es_layer_glCompressedTexSubImage2D(GLenum target, GLint level, GLint
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glCompressedTexSubImage2D");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glCompressedTexSubImage2D");
     if (it == functionMap.end()) {
@@ -5387,6 +5586,7 @@ void opengl_es_layer_glCompressedTexSubImage3D(GLenum target, GLint level, GLint
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glCompressedTexSubImage3D");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glCompressedTexSubImage3D");
     if (it == functionMap.end()) {
@@ -5414,6 +5614,7 @@ void opengl_es_layer_glCompressedTexSubImage3DOES(GLenum target, GLint level, GL
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glCompressedTexSubImage3DOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glCompressedTexSubImage3DOES");
     if (it == functionMap.end()) {
@@ -5441,6 +5642,7 @@ void opengl_es_layer_glConservativeRasterParameteriNV(GLenum pname, GLint param)
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glConservativeRasterParameteriNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glConservativeRasterParameteriNV");
     if (it == functionMap.end()) {
@@ -5468,6 +5670,7 @@ void opengl_es_layer_glCopyBufferSubData(GLenum readTarget, GLenum writeTarget, 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glCopyBufferSubData");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glCopyBufferSubData");
     if (it == functionMap.end()) {
@@ -5495,6 +5698,7 @@ void opengl_es_layer_glCopyBufferSubDataNV(GLenum readTarget, GLenum writeTarget
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glCopyBufferSubDataNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glCopyBufferSubDataNV");
     if (it == functionMap.end()) {
@@ -5522,6 +5726,7 @@ void opengl_es_layer_glCopyImageSubData(GLuint srcName, GLenum srcTarget, GLint 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glCopyImageSubData");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glCopyImageSubData");
     if (it == functionMap.end()) {
@@ -5549,6 +5754,7 @@ void opengl_es_layer_glCopyImageSubDataEXT(GLuint srcName, GLenum srcTarget, GLi
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glCopyImageSubDataEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glCopyImageSubDataEXT");
     if (it == functionMap.end()) {
@@ -5576,6 +5782,7 @@ void opengl_es_layer_glCopyImageSubDataOES(GLuint srcName, GLenum srcTarget, GLi
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glCopyImageSubDataOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glCopyImageSubDataOES");
     if (it == functionMap.end()) {
@@ -5603,6 +5810,7 @@ void opengl_es_layer_glCopyPathNV(GLuint resultPath, GLuint srcPath) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glCopyPathNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glCopyPathNV");
     if (it == functionMap.end()) {
@@ -5630,6 +5838,7 @@ void opengl_es_layer_glCopyTexImage2D(GLenum target, GLint level, GLenum interna
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glCopyTexImage2D");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glCopyTexImage2D");
     if (it == functionMap.end()) {
@@ -5657,6 +5866,7 @@ void opengl_es_layer_glCopyTexSubImage2D(GLenum target, GLint level, GLint xoffs
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glCopyTexSubImage2D");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glCopyTexSubImage2D");
     if (it == functionMap.end()) {
@@ -5684,6 +5894,7 @@ void opengl_es_layer_glCopyTexSubImage3D(GLenum target, GLint level, GLint xoffs
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glCopyTexSubImage3D");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glCopyTexSubImage3D");
     if (it == functionMap.end()) {
@@ -5711,6 +5922,7 @@ void opengl_es_layer_glCopyTexSubImage3DOES(GLenum target, GLint level, GLint xo
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glCopyTexSubImage3DOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glCopyTexSubImage3DOES");
     if (it == functionMap.end()) {
@@ -5738,6 +5950,7 @@ void opengl_es_layer_glCopyTextureLevelsAPPLE(GLuint destinationTexture, GLuint 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glCopyTextureLevelsAPPLE");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glCopyTextureLevelsAPPLE");
     if (it == functionMap.end()) {
@@ -5765,6 +5978,7 @@ void opengl_es_layer_glCoverFillPathInstancedNV(GLsizei numPaths, GLenum pathNam
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glCoverFillPathInstancedNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glCoverFillPathInstancedNV");
     if (it == functionMap.end()) {
@@ -5792,6 +6006,7 @@ void opengl_es_layer_glCoverFillPathNV(GLuint path, GLenum coverMode) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glCoverFillPathNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glCoverFillPathNV");
     if (it == functionMap.end()) {
@@ -5819,6 +6034,7 @@ void opengl_es_layer_glCoverStrokePathInstancedNV(GLsizei numPaths, GLenum pathN
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glCoverStrokePathInstancedNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glCoverStrokePathInstancedNV");
     if (it == functionMap.end()) {
@@ -5846,6 +6062,7 @@ void opengl_es_layer_glCoverStrokePathNV(GLuint path, GLenum coverMode) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glCoverStrokePathNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glCoverStrokePathNV");
     if (it == functionMap.end()) {
@@ -5873,6 +6090,7 @@ void opengl_es_layer_glCoverageMaskNV(GLboolean mask) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glCoverageMaskNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glCoverageMaskNV");
     if (it == functionMap.end()) {
@@ -5900,6 +6118,7 @@ void opengl_es_layer_glCoverageModulationNV(GLenum components) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glCoverageModulationNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glCoverageModulationNV");
     if (it == functionMap.end()) {
@@ -5927,6 +6146,7 @@ void opengl_es_layer_glCoverageModulationTableNV(GLsizei n, GLfloat* v) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glCoverageModulationTableNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glCoverageModulationTableNV");
     if (it == functionMap.end()) {
@@ -5954,6 +6174,7 @@ void opengl_es_layer_glCoverageOperationNV(GLenum operation) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glCoverageOperationNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glCoverageOperationNV");
     if (it == functionMap.end()) {
@@ -5981,6 +6202,7 @@ void opengl_es_layer_glCreateMemoryObjectsEXT(GLsizei n, GLuint* memoryObjects) 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glCreateMemoryObjectsEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glCreateMemoryObjectsEXT");
     if (it == functionMap.end()) {
@@ -6008,6 +6230,7 @@ void opengl_es_layer_glCreatePerfQueryINTEL(GLuint queryId, GLuint* queryHandle)
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glCreatePerfQueryINTEL");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glCreatePerfQueryINTEL");
     if (it == functionMap.end()) {
@@ -6035,6 +6258,7 @@ GLuint opengl_es_layer_glCreateProgram(void ) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glCreateProgram");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glCreateProgram");
     if (it == functionMap.end()) {
@@ -6062,6 +6286,7 @@ GLuint opengl_es_layer_glCreateShader(GLenum type) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glCreateShader");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glCreateShader");
     if (it == functionMap.end()) {
@@ -6089,6 +6314,7 @@ GLuint opengl_es_layer_glCreateShaderProgramv(GLenum type, GLsizei count, GLchar
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glCreateShaderProgramv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glCreateShaderProgramv");
     if (it == functionMap.end()) {
@@ -6116,6 +6342,7 @@ GLuint opengl_es_layer_glCreateShaderProgramvEXT(GLenum type, GLsizei count, GLc
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glCreateShaderProgramvEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glCreateShaderProgramvEXT");
     if (it == functionMap.end()) {
@@ -6143,6 +6370,7 @@ void opengl_es_layer_glCullFace(GLenum mode) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glCullFace");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glCullFace");
     if (it == functionMap.end()) {
@@ -6170,6 +6398,7 @@ void opengl_es_layer_glCurrentPaletteMatrixOES(GLuint matrixpaletteindex) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glCurrentPaletteMatrixOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glCurrentPaletteMatrixOES");
     if (it == functionMap.end()) {
@@ -6197,6 +6426,7 @@ void opengl_es_layer_glDebugMessageCallback(GLDEBUGPROC callback, void* userPara
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDebugMessageCallback");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDebugMessageCallback");
     if (it == functionMap.end()) {
@@ -6224,6 +6454,7 @@ void opengl_es_layer_glDebugMessageCallbackKHR(GLDEBUGPROCKHR callback, void* us
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDebugMessageCallbackKHR");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDebugMessageCallbackKHR");
     if (it == functionMap.end()) {
@@ -6251,6 +6482,7 @@ void opengl_es_layer_glDebugMessageControl(GLenum source, GLenum type, GLenum se
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDebugMessageControl");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDebugMessageControl");
     if (it == functionMap.end()) {
@@ -6278,6 +6510,7 @@ void opengl_es_layer_glDebugMessageControlKHR(GLenum source, GLenum type, GLenum
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDebugMessageControlKHR");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDebugMessageControlKHR");
     if (it == functionMap.end()) {
@@ -6305,6 +6538,7 @@ void opengl_es_layer_glDebugMessageInsert(GLenum source, GLenum type, GLuint id,
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDebugMessageInsert");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDebugMessageInsert");
     if (it == functionMap.end()) {
@@ -6332,6 +6566,7 @@ void opengl_es_layer_glDebugMessageInsertKHR(GLenum source, GLenum type, GLuint 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDebugMessageInsertKHR");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDebugMessageInsertKHR");
     if (it == functionMap.end()) {
@@ -6359,6 +6594,7 @@ void opengl_es_layer_glDeleteBuffers(GLsizei n, GLuint* buffers) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDeleteBuffers");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDeleteBuffers");
     if (it == functionMap.end()) {
@@ -6386,6 +6622,7 @@ void opengl_es_layer_glDeleteFencesNV(GLsizei n, GLuint* fences) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDeleteFencesNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDeleteFencesNV");
     if (it == functionMap.end()) {
@@ -6413,6 +6650,7 @@ void opengl_es_layer_glDeleteFramebuffers(GLsizei n, GLuint* framebuffers) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDeleteFramebuffers");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDeleteFramebuffers");
     if (it == functionMap.end()) {
@@ -6440,6 +6678,7 @@ void opengl_es_layer_glDeleteFramebuffersOES(GLsizei n, GLuint* framebuffers) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDeleteFramebuffersOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDeleteFramebuffersOES");
     if (it == functionMap.end()) {
@@ -6467,6 +6706,7 @@ void opengl_es_layer_glDeleteMemoryObjectsEXT(GLsizei n, GLuint* memoryObjects) 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDeleteMemoryObjectsEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDeleteMemoryObjectsEXT");
     if (it == functionMap.end()) {
@@ -6494,6 +6734,7 @@ void opengl_es_layer_glDeletePathsNV(GLuint path, GLsizei range) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDeletePathsNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDeletePathsNV");
     if (it == functionMap.end()) {
@@ -6521,6 +6762,7 @@ void opengl_es_layer_glDeletePerfMonitorsAMD(GLsizei n, GLuint* monitors) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDeletePerfMonitorsAMD");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDeletePerfMonitorsAMD");
     if (it == functionMap.end()) {
@@ -6548,6 +6790,7 @@ void opengl_es_layer_glDeletePerfQueryINTEL(GLuint queryHandle) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDeletePerfQueryINTEL");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDeletePerfQueryINTEL");
     if (it == functionMap.end()) {
@@ -6575,6 +6818,7 @@ void opengl_es_layer_glDeleteProgram(GLuint program) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDeleteProgram");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDeleteProgram");
     if (it == functionMap.end()) {
@@ -6602,6 +6846,7 @@ void opengl_es_layer_glDeleteProgramPipelines(GLsizei n, GLuint* pipelines) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDeleteProgramPipelines");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDeleteProgramPipelines");
     if (it == functionMap.end()) {
@@ -6629,6 +6874,7 @@ void opengl_es_layer_glDeleteProgramPipelinesEXT(GLsizei n, GLuint* pipelines) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDeleteProgramPipelinesEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDeleteProgramPipelinesEXT");
     if (it == functionMap.end()) {
@@ -6656,6 +6902,7 @@ void opengl_es_layer_glDeleteQueries(GLsizei n, GLuint* ids) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDeleteQueries");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDeleteQueries");
     if (it == functionMap.end()) {
@@ -6683,6 +6930,7 @@ void opengl_es_layer_glDeleteQueriesEXT(GLsizei n, GLuint* ids) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDeleteQueriesEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDeleteQueriesEXT");
     if (it == functionMap.end()) {
@@ -6710,6 +6958,7 @@ void opengl_es_layer_glDeleteRenderbuffers(GLsizei n, GLuint* renderbuffers) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDeleteRenderbuffers");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDeleteRenderbuffers");
     if (it == functionMap.end()) {
@@ -6737,6 +6986,7 @@ void opengl_es_layer_glDeleteRenderbuffersOES(GLsizei n, GLuint* renderbuffers) 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDeleteRenderbuffersOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDeleteRenderbuffersOES");
     if (it == functionMap.end()) {
@@ -6764,6 +7014,7 @@ void opengl_es_layer_glDeleteSamplers(GLsizei count, GLuint* samplers) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDeleteSamplers");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDeleteSamplers");
     if (it == functionMap.end()) {
@@ -6791,6 +7042,7 @@ void opengl_es_layer_glDeleteSemaphoresEXT(GLsizei n, GLuint* semaphores) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDeleteSemaphoresEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDeleteSemaphoresEXT");
     if (it == functionMap.end()) {
@@ -6818,6 +7070,7 @@ void opengl_es_layer_glDeleteShader(GLuint shader) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDeleteShader");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDeleteShader");
     if (it == functionMap.end()) {
@@ -6845,6 +7098,7 @@ void opengl_es_layer_glDeleteSync(GLsync sync) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDeleteSync");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDeleteSync");
     if (it == functionMap.end()) {
@@ -6872,6 +7126,7 @@ void opengl_es_layer_glDeleteSyncAPPLE(GLsync sync) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDeleteSyncAPPLE");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDeleteSyncAPPLE");
     if (it == functionMap.end()) {
@@ -6899,6 +7154,7 @@ void opengl_es_layer_glDeleteTextures(GLsizei n, GLuint* textures) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDeleteTextures");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDeleteTextures");
     if (it == functionMap.end()) {
@@ -6926,6 +7182,7 @@ void opengl_es_layer_glDeleteTransformFeedbacks(GLsizei n, GLuint* ids) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDeleteTransformFeedbacks");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDeleteTransformFeedbacks");
     if (it == functionMap.end()) {
@@ -6953,6 +7210,7 @@ void opengl_es_layer_glDeleteVertexArrays(GLsizei n, GLuint* arrays) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDeleteVertexArrays");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDeleteVertexArrays");
     if (it == functionMap.end()) {
@@ -6980,6 +7238,7 @@ void opengl_es_layer_glDeleteVertexArraysOES(GLsizei n, GLuint* arrays) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDeleteVertexArraysOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDeleteVertexArraysOES");
     if (it == functionMap.end()) {
@@ -7007,6 +7266,7 @@ void opengl_es_layer_glDepthFunc(GLenum func) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDepthFunc");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDepthFunc");
     if (it == functionMap.end()) {
@@ -7034,6 +7294,7 @@ void opengl_es_layer_glDepthMask(GLboolean flag) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDepthMask");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDepthMask");
     if (it == functionMap.end()) {
@@ -7061,6 +7322,7 @@ void opengl_es_layer_glDepthRangeArrayfvNV(GLuint first, GLsizei count, GLfloat*
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDepthRangeArrayfvNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDepthRangeArrayfvNV");
     if (it == functionMap.end()) {
@@ -7088,6 +7350,7 @@ void opengl_es_layer_glDepthRangeArrayfvOES(GLuint first, GLsizei count, GLfloat
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDepthRangeArrayfvOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDepthRangeArrayfvOES");
     if (it == functionMap.end()) {
@@ -7115,6 +7378,7 @@ void opengl_es_layer_glDepthRangeIndexedfNV(GLuint index, GLfloat n, GLfloat f) 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDepthRangeIndexedfNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDepthRangeIndexedfNV");
     if (it == functionMap.end()) {
@@ -7142,6 +7406,7 @@ void opengl_es_layer_glDepthRangeIndexedfOES(GLuint index, GLfloat n, GLfloat f)
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDepthRangeIndexedfOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDepthRangeIndexedfOES");
     if (it == functionMap.end()) {
@@ -7169,6 +7434,7 @@ void opengl_es_layer_glDepthRangef(GLfloat n, GLfloat f) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDepthRangef");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDepthRangef");
     if (it == functionMap.end()) {
@@ -7196,6 +7462,7 @@ void opengl_es_layer_glDepthRangefOES(GLclampf n, GLclampf f) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDepthRangefOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDepthRangefOES");
     if (it == functionMap.end()) {
@@ -7223,6 +7490,7 @@ void opengl_es_layer_glDepthRangex(GLfixed n, GLfixed f) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDepthRangex");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDepthRangex");
     if (it == functionMap.end()) {
@@ -7250,6 +7518,7 @@ void opengl_es_layer_glDepthRangexOES(GLfixed n, GLfixed f) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDepthRangexOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDepthRangexOES");
     if (it == functionMap.end()) {
@@ -7277,6 +7546,7 @@ void opengl_es_layer_glDetachShader(GLuint program, GLuint shader) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDetachShader");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDetachShader");
     if (it == functionMap.end()) {
@@ -7304,6 +7574,7 @@ void opengl_es_layer_glDisable(GLenum cap) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDisable");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDisable");
     if (it == functionMap.end()) {
@@ -7331,6 +7602,7 @@ void opengl_es_layer_glDisableClientState(GLenum array) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDisableClientState");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDisableClientState");
     if (it == functionMap.end()) {
@@ -7358,6 +7630,7 @@ void opengl_es_layer_glDisableDriverControlQCOM(GLuint driverControl) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDisableDriverControlQCOM");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDisableDriverControlQCOM");
     if (it == functionMap.end()) {
@@ -7385,6 +7658,7 @@ void opengl_es_layer_glDisableVertexAttribArray(GLuint index) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDisableVertexAttribArray");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDisableVertexAttribArray");
     if (it == functionMap.end()) {
@@ -7412,6 +7686,7 @@ void opengl_es_layer_glDisablei(GLenum target, GLuint index) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDisablei");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDisablei");
     if (it == functionMap.end()) {
@@ -7439,6 +7714,7 @@ void opengl_es_layer_glDisableiEXT(GLenum target, GLuint index) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDisableiEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDisableiEXT");
     if (it == functionMap.end()) {
@@ -7466,6 +7742,7 @@ void opengl_es_layer_glDisableiNV(GLenum target, GLuint index) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDisableiNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDisableiNV");
     if (it == functionMap.end()) {
@@ -7493,6 +7770,7 @@ void opengl_es_layer_glDisableiOES(GLenum target, GLuint index) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDisableiOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDisableiOES");
     if (it == functionMap.end()) {
@@ -7520,6 +7798,7 @@ void opengl_es_layer_glDiscardFramebufferEXT(GLenum target, GLsizei numAttachmen
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDiscardFramebufferEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDiscardFramebufferEXT");
     if (it == functionMap.end()) {
@@ -7547,6 +7826,7 @@ void opengl_es_layer_glDispatchCompute(GLuint num_groups_x, GLuint num_groups_y,
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDispatchCompute");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDispatchCompute");
     if (it == functionMap.end()) {
@@ -7574,6 +7854,7 @@ void opengl_es_layer_glDispatchComputeIndirect(GLintptr indirect) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDispatchComputeIndirect");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDispatchComputeIndirect");
     if (it == functionMap.end()) {
@@ -7601,6 +7882,7 @@ void opengl_es_layer_glDrawArrays(GLenum mode, GLint first, GLsizei count) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDrawArrays");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDrawArrays");
     if (it == functionMap.end()) {
@@ -7628,6 +7910,7 @@ void opengl_es_layer_glDrawArraysIndirect(GLenum mode, void* indirect) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDrawArraysIndirect");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDrawArraysIndirect");
     if (it == functionMap.end()) {
@@ -7655,6 +7938,7 @@ void opengl_es_layer_glDrawArraysInstanced(GLenum mode, GLint first, GLsizei cou
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDrawArraysInstanced");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDrawArraysInstanced");
     if (it == functionMap.end()) {
@@ -7682,6 +7966,7 @@ void opengl_es_layer_glDrawArraysInstancedANGLE(GLenum mode, GLint first, GLsize
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDrawArraysInstancedANGLE");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDrawArraysInstancedANGLE");
     if (it == functionMap.end()) {
@@ -7709,6 +7994,7 @@ void opengl_es_layer_glDrawArraysInstancedBaseInstanceEXT(GLenum mode, GLint fir
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDrawArraysInstancedBaseInstanceEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDrawArraysInstancedBaseInstanceEXT");
     if (it == functionMap.end()) {
@@ -7736,6 +8022,7 @@ void opengl_es_layer_glDrawArraysInstancedEXT(GLenum mode, GLint start, GLsizei 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDrawArraysInstancedEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDrawArraysInstancedEXT");
     if (it == functionMap.end()) {
@@ -7763,6 +8050,7 @@ void opengl_es_layer_glDrawArraysInstancedNV(GLenum mode, GLint first, GLsizei c
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDrawArraysInstancedNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDrawArraysInstancedNV");
     if (it == functionMap.end()) {
@@ -7790,6 +8078,7 @@ void opengl_es_layer_glDrawBuffers(GLsizei n, GLenum* bufs) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDrawBuffers");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDrawBuffers");
     if (it == functionMap.end()) {
@@ -7817,6 +8106,7 @@ void opengl_es_layer_glDrawBuffersEXT(GLsizei n, GLenum* bufs) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDrawBuffersEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDrawBuffersEXT");
     if (it == functionMap.end()) {
@@ -7844,6 +8134,7 @@ void opengl_es_layer_glDrawBuffersIndexedEXT(GLint n, GLenum* location, GLint* i
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDrawBuffersIndexedEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDrawBuffersIndexedEXT");
     if (it == functionMap.end()) {
@@ -7871,6 +8162,7 @@ void opengl_es_layer_glDrawBuffersNV(GLsizei n, GLenum* bufs) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDrawBuffersNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDrawBuffersNV");
     if (it == functionMap.end()) {
@@ -7898,6 +8190,7 @@ void opengl_es_layer_glDrawElements(GLenum mode, GLsizei count, GLenum type, voi
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDrawElements");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDrawElements");
     if (it == functionMap.end()) {
@@ -7925,6 +8218,7 @@ void opengl_es_layer_glDrawElementsBaseVertex(GLenum mode, GLsizei count, GLenum
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDrawElementsBaseVertex");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDrawElementsBaseVertex");
     if (it == functionMap.end()) {
@@ -7952,6 +8246,7 @@ void opengl_es_layer_glDrawElementsBaseVertexEXT(GLenum mode, GLsizei count, GLe
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDrawElementsBaseVertexEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDrawElementsBaseVertexEXT");
     if (it == functionMap.end()) {
@@ -7979,6 +8274,7 @@ void opengl_es_layer_glDrawElementsBaseVertexOES(GLenum mode, GLsizei count, GLe
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDrawElementsBaseVertexOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDrawElementsBaseVertexOES");
     if (it == functionMap.end()) {
@@ -8006,6 +8302,7 @@ void opengl_es_layer_glDrawElementsIndirect(GLenum mode, GLenum type, void* indi
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDrawElementsIndirect");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDrawElementsIndirect");
     if (it == functionMap.end()) {
@@ -8033,6 +8330,7 @@ void opengl_es_layer_glDrawElementsInstanced(GLenum mode, GLsizei count, GLenum 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDrawElementsInstanced");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDrawElementsInstanced");
     if (it == functionMap.end()) {
@@ -8060,6 +8358,7 @@ void opengl_es_layer_glDrawElementsInstancedANGLE(GLenum mode, GLsizei count, GL
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDrawElementsInstancedANGLE");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDrawElementsInstancedANGLE");
     if (it == functionMap.end()) {
@@ -8087,6 +8386,7 @@ void opengl_es_layer_glDrawElementsInstancedBaseInstanceEXT(GLenum mode, GLsizei
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDrawElementsInstancedBaseInstanceEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDrawElementsInstancedBaseInstanceEXT");
     if (it == functionMap.end()) {
@@ -8114,6 +8414,7 @@ void opengl_es_layer_glDrawElementsInstancedBaseVertex(GLenum mode, GLsizei coun
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDrawElementsInstancedBaseVertex");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDrawElementsInstancedBaseVertex");
     if (it == functionMap.end()) {
@@ -8141,6 +8442,7 @@ void opengl_es_layer_glDrawElementsInstancedBaseVertexBaseInstanceEXT(GLenum mod
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDrawElementsInstancedBaseVertexBaseInstanceEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDrawElementsInstancedBaseVertexBaseInstanceEXT");
     if (it == functionMap.end()) {
@@ -8168,6 +8470,7 @@ void opengl_es_layer_glDrawElementsInstancedBaseVertexEXT(GLenum mode, GLsizei c
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDrawElementsInstancedBaseVertexEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDrawElementsInstancedBaseVertexEXT");
     if (it == functionMap.end()) {
@@ -8195,6 +8498,7 @@ void opengl_es_layer_glDrawElementsInstancedBaseVertexOES(GLenum mode, GLsizei c
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDrawElementsInstancedBaseVertexOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDrawElementsInstancedBaseVertexOES");
     if (it == functionMap.end()) {
@@ -8222,6 +8526,7 @@ void opengl_es_layer_glDrawElementsInstancedEXT(GLenum mode, GLsizei count, GLen
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDrawElementsInstancedEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDrawElementsInstancedEXT");
     if (it == functionMap.end()) {
@@ -8249,6 +8554,7 @@ void opengl_es_layer_glDrawElementsInstancedNV(GLenum mode, GLsizei count, GLenu
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDrawElementsInstancedNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDrawElementsInstancedNV");
     if (it == functionMap.end()) {
@@ -8276,6 +8582,7 @@ void opengl_es_layer_glDrawRangeElements(GLenum mode, GLuint start, GLuint end, 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDrawRangeElements");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDrawRangeElements");
     if (it == functionMap.end()) {
@@ -8303,6 +8610,7 @@ void opengl_es_layer_glDrawRangeElementsBaseVertex(GLenum mode, GLuint start, GL
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDrawRangeElementsBaseVertex");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDrawRangeElementsBaseVertex");
     if (it == functionMap.end()) {
@@ -8330,6 +8638,7 @@ void opengl_es_layer_glDrawRangeElementsBaseVertexEXT(GLenum mode, GLuint start,
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDrawRangeElementsBaseVertexEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDrawRangeElementsBaseVertexEXT");
     if (it == functionMap.end()) {
@@ -8357,6 +8666,7 @@ void opengl_es_layer_glDrawRangeElementsBaseVertexOES(GLenum mode, GLuint start,
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDrawRangeElementsBaseVertexOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDrawRangeElementsBaseVertexOES");
     if (it == functionMap.end()) {
@@ -8384,6 +8694,7 @@ void opengl_es_layer_glDrawTexfOES(GLfloat x, GLfloat y, GLfloat z, GLfloat widt
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDrawTexfOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDrawTexfOES");
     if (it == functionMap.end()) {
@@ -8411,6 +8722,7 @@ void opengl_es_layer_glDrawTexfvOES(GLfloat* coords) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDrawTexfvOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDrawTexfvOES");
     if (it == functionMap.end()) {
@@ -8438,6 +8750,7 @@ void opengl_es_layer_glDrawTexiOES(GLint x, GLint y, GLint z, GLint width, GLint
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDrawTexiOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDrawTexiOES");
     if (it == functionMap.end()) {
@@ -8465,6 +8778,7 @@ void opengl_es_layer_glDrawTexivOES(GLint* coords) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDrawTexivOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDrawTexivOES");
     if (it == functionMap.end()) {
@@ -8492,6 +8806,7 @@ void opengl_es_layer_glDrawTexsOES(GLshort x, GLshort y, GLshort z, GLshort widt
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDrawTexsOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDrawTexsOES");
     if (it == functionMap.end()) {
@@ -8519,6 +8834,7 @@ void opengl_es_layer_glDrawTexsvOES(GLshort* coords) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDrawTexsvOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDrawTexsvOES");
     if (it == functionMap.end()) {
@@ -8546,6 +8862,7 @@ void opengl_es_layer_glDrawTexxOES(GLfixed x, GLfixed y, GLfixed z, GLfixed widt
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDrawTexxOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDrawTexxOES");
     if (it == functionMap.end()) {
@@ -8573,6 +8890,7 @@ void opengl_es_layer_glDrawTexxvOES(GLfixed* coords) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDrawTexxvOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDrawTexxvOES");
     if (it == functionMap.end()) {
@@ -8600,6 +8918,7 @@ void opengl_es_layer_glDrawTransformFeedbackEXT(GLenum mode, GLuint id) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDrawTransformFeedbackEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDrawTransformFeedbackEXT");
     if (it == functionMap.end()) {
@@ -8627,6 +8946,7 @@ void opengl_es_layer_glDrawTransformFeedbackInstancedEXT(GLenum mode, GLuint id,
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDrawTransformFeedbackInstancedEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDrawTransformFeedbackInstancedEXT");
     if (it == functionMap.end()) {
@@ -8654,6 +8974,7 @@ void opengl_es_layer_glDrawVkImageNV(GLuint64 vkImage, GLuint sampler, GLfloat x
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glDrawVkImageNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glDrawVkImageNV");
     if (it == functionMap.end()) {
@@ -8681,6 +9002,7 @@ void opengl_es_layer_glEGLImageTargetRenderbufferStorageOES(GLenum target, GLegl
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glEGLImageTargetRenderbufferStorageOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glEGLImageTargetRenderbufferStorageOES");
     if (it == functionMap.end()) {
@@ -8708,6 +9030,7 @@ void opengl_es_layer_glEGLImageTargetTexStorageEXT(GLenum target, GLeglImageOES 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glEGLImageTargetTexStorageEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glEGLImageTargetTexStorageEXT");
     if (it == functionMap.end()) {
@@ -8735,6 +9058,7 @@ void opengl_es_layer_glEGLImageTargetTexture2DOES(GLenum target, GLeglImageOES i
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glEGLImageTargetTexture2DOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glEGLImageTargetTexture2DOES");
     if (it == functionMap.end()) {
@@ -8762,6 +9086,7 @@ void opengl_es_layer_glEGLImageTargetTextureStorageEXT(GLuint texture, GLeglImag
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glEGLImageTargetTextureStorageEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glEGLImageTargetTextureStorageEXT");
     if (it == functionMap.end()) {
@@ -8789,6 +9114,7 @@ void opengl_es_layer_glEnable(GLenum cap) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glEnable");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glEnable");
     if (it == functionMap.end()) {
@@ -8816,6 +9142,7 @@ void opengl_es_layer_glEnableClientState(GLenum array) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glEnableClientState");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glEnableClientState");
     if (it == functionMap.end()) {
@@ -8843,6 +9170,7 @@ void opengl_es_layer_glEnableDriverControlQCOM(GLuint driverControl) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glEnableDriverControlQCOM");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glEnableDriverControlQCOM");
     if (it == functionMap.end()) {
@@ -8870,6 +9198,7 @@ void opengl_es_layer_glEnableVertexAttribArray(GLuint index) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glEnableVertexAttribArray");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glEnableVertexAttribArray");
     if (it == functionMap.end()) {
@@ -8897,6 +9226,7 @@ void opengl_es_layer_glEnablei(GLenum target, GLuint index) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glEnablei");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glEnablei");
     if (it == functionMap.end()) {
@@ -8924,6 +9254,7 @@ void opengl_es_layer_glEnableiEXT(GLenum target, GLuint index) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glEnableiEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glEnableiEXT");
     if (it == functionMap.end()) {
@@ -8951,6 +9282,7 @@ void opengl_es_layer_glEnableiNV(GLenum target, GLuint index) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glEnableiNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glEnableiNV");
     if (it == functionMap.end()) {
@@ -8978,6 +9310,7 @@ void opengl_es_layer_glEnableiOES(GLenum target, GLuint index) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glEnableiOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glEnableiOES");
     if (it == functionMap.end()) {
@@ -9005,6 +9338,7 @@ void opengl_es_layer_glEndConditionalRenderNV(void ) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glEndConditionalRenderNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glEndConditionalRenderNV");
     if (it == functionMap.end()) {
@@ -9032,6 +9366,7 @@ void opengl_es_layer_glEndPerfMonitorAMD(GLuint monitor) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glEndPerfMonitorAMD");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glEndPerfMonitorAMD");
     if (it == functionMap.end()) {
@@ -9059,6 +9394,7 @@ void opengl_es_layer_glEndPerfQueryINTEL(GLuint queryHandle) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glEndPerfQueryINTEL");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glEndPerfQueryINTEL");
     if (it == functionMap.end()) {
@@ -9086,6 +9422,7 @@ void opengl_es_layer_glEndQuery(GLenum target) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glEndQuery");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glEndQuery");
     if (it == functionMap.end()) {
@@ -9113,6 +9450,7 @@ void opengl_es_layer_glEndQueryEXT(GLenum target) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glEndQueryEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glEndQueryEXT");
     if (it == functionMap.end()) {
@@ -9140,6 +9478,7 @@ void opengl_es_layer_glEndTilingQCOM(GLbitfield preserveMask) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glEndTilingQCOM");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glEndTilingQCOM");
     if (it == functionMap.end()) {
@@ -9167,6 +9506,7 @@ void opengl_es_layer_glEndTransformFeedback(void ) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glEndTransformFeedback");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glEndTransformFeedback");
     if (it == functionMap.end()) {
@@ -9194,6 +9534,7 @@ void opengl_es_layer_glExtGetBufferPointervQCOM(GLenum target, void** params) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glExtGetBufferPointervQCOM");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glExtGetBufferPointervQCOM");
     if (it == functionMap.end()) {
@@ -9221,6 +9562,7 @@ void opengl_es_layer_glExtGetBuffersQCOM(GLuint* buffers, GLint maxBuffers, GLin
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glExtGetBuffersQCOM");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glExtGetBuffersQCOM");
     if (it == functionMap.end()) {
@@ -9248,6 +9590,7 @@ void opengl_es_layer_glExtGetFramebuffersQCOM(GLuint* framebuffers, GLint maxFra
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glExtGetFramebuffersQCOM");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glExtGetFramebuffersQCOM");
     if (it == functionMap.end()) {
@@ -9275,6 +9618,7 @@ void opengl_es_layer_glExtGetProgramBinarySourceQCOM(GLuint program, GLenum shad
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glExtGetProgramBinarySourceQCOM");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glExtGetProgramBinarySourceQCOM");
     if (it == functionMap.end()) {
@@ -9302,6 +9646,7 @@ void opengl_es_layer_glExtGetProgramsQCOM(GLuint* programs, GLint maxPrograms, G
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glExtGetProgramsQCOM");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glExtGetProgramsQCOM");
     if (it == functionMap.end()) {
@@ -9329,6 +9674,7 @@ void opengl_es_layer_glExtGetRenderbuffersQCOM(GLuint* renderbuffers, GLint maxR
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glExtGetRenderbuffersQCOM");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glExtGetRenderbuffersQCOM");
     if (it == functionMap.end()) {
@@ -9356,6 +9702,7 @@ void opengl_es_layer_glExtGetShadersQCOM(GLuint* shaders, GLint maxShaders, GLin
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glExtGetShadersQCOM");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glExtGetShadersQCOM");
     if (it == functionMap.end()) {
@@ -9383,6 +9730,7 @@ void opengl_es_layer_glExtGetTexLevelParameterivQCOM(GLuint texture, GLenum face
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glExtGetTexLevelParameterivQCOM");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glExtGetTexLevelParameterivQCOM");
     if (it == functionMap.end()) {
@@ -9410,6 +9758,7 @@ void opengl_es_layer_glExtGetTexSubImageQCOM(GLenum target, GLint level, GLint x
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glExtGetTexSubImageQCOM");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glExtGetTexSubImageQCOM");
     if (it == functionMap.end()) {
@@ -9437,6 +9786,7 @@ void opengl_es_layer_glExtGetTexturesQCOM(GLuint* textures, GLint maxTextures, G
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glExtGetTexturesQCOM");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glExtGetTexturesQCOM");
     if (it == functionMap.end()) {
@@ -9464,6 +9814,7 @@ GLboolean opengl_es_layer_glExtIsProgramBinaryQCOM(GLuint program) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glExtIsProgramBinaryQCOM");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glExtIsProgramBinaryQCOM");
     if (it == functionMap.end()) {
@@ -9491,6 +9842,7 @@ void opengl_es_layer_glExtTexObjectStateOverrideiQCOM(GLenum target, GLenum pnam
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glExtTexObjectStateOverrideiQCOM");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glExtTexObjectStateOverrideiQCOM");
     if (it == functionMap.end()) {
@@ -9518,6 +9870,7 @@ GLsync opengl_es_layer_glFenceSync(GLenum condition, GLbitfield flags) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glFenceSync");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glFenceSync");
     if (it == functionMap.end()) {
@@ -9545,6 +9898,7 @@ GLsync opengl_es_layer_glFenceSyncAPPLE(GLenum condition, GLbitfield flags) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glFenceSyncAPPLE");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glFenceSyncAPPLE");
     if (it == functionMap.end()) {
@@ -9572,6 +9926,7 @@ void opengl_es_layer_glFinish(void ) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glFinish");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glFinish");
     if (it == functionMap.end()) {
@@ -9599,6 +9954,7 @@ void opengl_es_layer_glFinishFenceNV(GLuint fence) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glFinishFenceNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glFinishFenceNV");
     if (it == functionMap.end()) {
@@ -9626,6 +9982,7 @@ void opengl_es_layer_glFlush(void ) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glFlush");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glFlush");
     if (it == functionMap.end()) {
@@ -9653,6 +10010,7 @@ void opengl_es_layer_glFlushMappedBufferRange(GLenum target, GLintptr offset, GL
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glFlushMappedBufferRange");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glFlushMappedBufferRange");
     if (it == functionMap.end()) {
@@ -9680,6 +10038,7 @@ void opengl_es_layer_glFlushMappedBufferRangeEXT(GLenum target, GLintptr offset,
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glFlushMappedBufferRangeEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glFlushMappedBufferRangeEXT");
     if (it == functionMap.end()) {
@@ -9707,6 +10066,7 @@ void opengl_es_layer_glFogf(GLenum pname, GLfloat param) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glFogf");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glFogf");
     if (it == functionMap.end()) {
@@ -9734,6 +10094,7 @@ void opengl_es_layer_glFogfv(GLenum pname, GLfloat* params) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glFogfv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glFogfv");
     if (it == functionMap.end()) {
@@ -9761,6 +10122,7 @@ void opengl_es_layer_glFogx(GLenum pname, GLfixed param) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glFogx");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glFogx");
     if (it == functionMap.end()) {
@@ -9788,6 +10150,7 @@ void opengl_es_layer_glFogxOES(GLenum pname, GLfixed param) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glFogxOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glFogxOES");
     if (it == functionMap.end()) {
@@ -9815,6 +10178,7 @@ void opengl_es_layer_glFogxv(GLenum pname, GLfixed* param) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glFogxv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glFogxv");
     if (it == functionMap.end()) {
@@ -9842,6 +10206,7 @@ void opengl_es_layer_glFogxvOES(GLenum pname, GLfixed* param) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glFogxvOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glFogxvOES");
     if (it == functionMap.end()) {
@@ -9869,6 +10234,7 @@ void opengl_es_layer_glFragmentCoverageColorNV(GLuint color) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glFragmentCoverageColorNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glFragmentCoverageColorNV");
     if (it == functionMap.end()) {
@@ -9896,6 +10262,7 @@ void opengl_es_layer_glFramebufferFetchBarrierEXT(void ) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glFramebufferFetchBarrierEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glFramebufferFetchBarrierEXT");
     if (it == functionMap.end()) {
@@ -9923,6 +10290,7 @@ void opengl_es_layer_glFramebufferFetchBarrierQCOM(void ) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glFramebufferFetchBarrierQCOM");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glFramebufferFetchBarrierQCOM");
     if (it == functionMap.end()) {
@@ -9950,6 +10318,7 @@ void opengl_es_layer_glFramebufferFoveationConfigQCOM(GLuint framebuffer, GLuint
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glFramebufferFoveationConfigQCOM");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glFramebufferFoveationConfigQCOM");
     if (it == functionMap.end()) {
@@ -9977,6 +10346,7 @@ void opengl_es_layer_glFramebufferFoveationParametersQCOM(GLuint framebuffer, GL
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glFramebufferFoveationParametersQCOM");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glFramebufferFoveationParametersQCOM");
     if (it == functionMap.end()) {
@@ -10004,6 +10374,7 @@ void opengl_es_layer_glFramebufferParameteri(GLenum target, GLenum pname, GLint 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glFramebufferParameteri");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glFramebufferParameteri");
     if (it == functionMap.end()) {
@@ -10031,6 +10402,7 @@ void opengl_es_layer_glFramebufferPixelLocalStorageSizeEXT(GLuint target, GLsize
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glFramebufferPixelLocalStorageSizeEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glFramebufferPixelLocalStorageSizeEXT");
     if (it == functionMap.end()) {
@@ -10058,6 +10430,7 @@ void opengl_es_layer_glFramebufferRenderbuffer(GLenum target, GLenum attachment,
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glFramebufferRenderbuffer");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glFramebufferRenderbuffer");
     if (it == functionMap.end()) {
@@ -10085,6 +10458,7 @@ void opengl_es_layer_glFramebufferRenderbufferOES(GLenum target, GLenum attachme
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glFramebufferRenderbufferOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glFramebufferRenderbufferOES");
     if (it == functionMap.end()) {
@@ -10112,6 +10486,7 @@ void opengl_es_layer_glFramebufferSampleLocationsfvNV(GLenum target, GLuint star
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glFramebufferSampleLocationsfvNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glFramebufferSampleLocationsfvNV");
     if (it == functionMap.end()) {
@@ -10139,6 +10514,7 @@ void opengl_es_layer_glFramebufferTexture(GLenum target, GLenum attachment, GLui
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glFramebufferTexture");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glFramebufferTexture");
     if (it == functionMap.end()) {
@@ -10166,6 +10542,7 @@ void opengl_es_layer_glFramebufferTexture2D(GLenum target, GLenum attachment, GL
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glFramebufferTexture2D");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glFramebufferTexture2D");
     if (it == functionMap.end()) {
@@ -10193,6 +10570,7 @@ void opengl_es_layer_glFramebufferTexture2DDownsampleIMG(GLenum target, GLenum a
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glFramebufferTexture2DDownsampleIMG");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glFramebufferTexture2DDownsampleIMG");
     if (it == functionMap.end()) {
@@ -10220,6 +10598,7 @@ void opengl_es_layer_glFramebufferTexture2DMultisampleEXT(GLenum target, GLenum 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glFramebufferTexture2DMultisampleEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glFramebufferTexture2DMultisampleEXT");
     if (it == functionMap.end()) {
@@ -10247,6 +10626,7 @@ void opengl_es_layer_glFramebufferTexture2DMultisampleIMG(GLenum target, GLenum 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glFramebufferTexture2DMultisampleIMG");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glFramebufferTexture2DMultisampleIMG");
     if (it == functionMap.end()) {
@@ -10274,6 +10654,7 @@ void opengl_es_layer_glFramebufferTexture2DOES(GLenum target, GLenum attachment,
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glFramebufferTexture2DOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glFramebufferTexture2DOES");
     if (it == functionMap.end()) {
@@ -10301,6 +10682,7 @@ void opengl_es_layer_glFramebufferTexture3DOES(GLenum target, GLenum attachment,
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glFramebufferTexture3DOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glFramebufferTexture3DOES");
     if (it == functionMap.end()) {
@@ -10328,6 +10710,7 @@ void opengl_es_layer_glFramebufferTextureEXT(GLenum target, GLenum attachment, G
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glFramebufferTextureEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glFramebufferTextureEXT");
     if (it == functionMap.end()) {
@@ -10355,6 +10738,7 @@ void opengl_es_layer_glFramebufferTextureLayer(GLenum target, GLenum attachment,
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glFramebufferTextureLayer");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glFramebufferTextureLayer");
     if (it == functionMap.end()) {
@@ -10382,6 +10766,7 @@ void opengl_es_layer_glFramebufferTextureLayerDownsampleIMG(GLenum target, GLenu
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glFramebufferTextureLayerDownsampleIMG");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glFramebufferTextureLayerDownsampleIMG");
     if (it == functionMap.end()) {
@@ -10409,6 +10794,7 @@ void opengl_es_layer_glFramebufferTextureMultisampleMultiviewOVR(GLenum target, 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glFramebufferTextureMultisampleMultiviewOVR");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glFramebufferTextureMultisampleMultiviewOVR");
     if (it == functionMap.end()) {
@@ -10436,6 +10822,7 @@ void opengl_es_layer_glFramebufferTextureMultiviewOVR(GLenum target, GLenum atta
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glFramebufferTextureMultiviewOVR");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glFramebufferTextureMultiviewOVR");
     if (it == functionMap.end()) {
@@ -10463,6 +10850,7 @@ void opengl_es_layer_glFramebufferTextureOES(GLenum target, GLenum attachment, G
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glFramebufferTextureOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glFramebufferTextureOES");
     if (it == functionMap.end()) {
@@ -10490,6 +10878,7 @@ void opengl_es_layer_glFrontFace(GLenum mode) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glFrontFace");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glFrontFace");
     if (it == functionMap.end()) {
@@ -10517,6 +10906,7 @@ void opengl_es_layer_glFrustumf(GLfloat l, GLfloat r, GLfloat b, GLfloat t, GLfl
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glFrustumf");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glFrustumf");
     if (it == functionMap.end()) {
@@ -10544,6 +10934,7 @@ void opengl_es_layer_glFrustumfOES(GLfloat l, GLfloat r, GLfloat b, GLfloat t, G
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glFrustumfOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glFrustumfOES");
     if (it == functionMap.end()) {
@@ -10571,6 +10962,7 @@ void opengl_es_layer_glFrustumx(GLfixed l, GLfixed r, GLfixed b, GLfixed t, GLfi
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glFrustumx");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glFrustumx");
     if (it == functionMap.end()) {
@@ -10598,6 +10990,7 @@ void opengl_es_layer_glFrustumxOES(GLfixed l, GLfixed r, GLfixed b, GLfixed t, G
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glFrustumxOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glFrustumxOES");
     if (it == functionMap.end()) {
@@ -10625,6 +11018,7 @@ void opengl_es_layer_glGenBuffers(GLsizei n, GLuint* buffers) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGenBuffers");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGenBuffers");
     if (it == functionMap.end()) {
@@ -10652,6 +11046,7 @@ void opengl_es_layer_glGenFencesNV(GLsizei n, GLuint* fences) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGenFencesNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGenFencesNV");
     if (it == functionMap.end()) {
@@ -10679,6 +11074,7 @@ void opengl_es_layer_glGenFramebuffers(GLsizei n, GLuint* framebuffers) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGenFramebuffers");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGenFramebuffers");
     if (it == functionMap.end()) {
@@ -10706,6 +11102,7 @@ void opengl_es_layer_glGenFramebuffersOES(GLsizei n, GLuint* framebuffers) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGenFramebuffersOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGenFramebuffersOES");
     if (it == functionMap.end()) {
@@ -10733,6 +11130,7 @@ GLuint opengl_es_layer_glGenPathsNV(GLsizei range) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGenPathsNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGenPathsNV");
     if (it == functionMap.end()) {
@@ -10760,6 +11158,7 @@ void opengl_es_layer_glGenPerfMonitorsAMD(GLsizei n, GLuint* monitors) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGenPerfMonitorsAMD");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGenPerfMonitorsAMD");
     if (it == functionMap.end()) {
@@ -10787,6 +11186,7 @@ void opengl_es_layer_glGenProgramPipelines(GLsizei n, GLuint* pipelines) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGenProgramPipelines");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGenProgramPipelines");
     if (it == functionMap.end()) {
@@ -10814,6 +11214,7 @@ void opengl_es_layer_glGenProgramPipelinesEXT(GLsizei n, GLuint* pipelines) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGenProgramPipelinesEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGenProgramPipelinesEXT");
     if (it == functionMap.end()) {
@@ -10841,6 +11242,7 @@ void opengl_es_layer_glGenQueries(GLsizei n, GLuint* ids) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGenQueries");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGenQueries");
     if (it == functionMap.end()) {
@@ -10868,6 +11270,7 @@ void opengl_es_layer_glGenQueriesEXT(GLsizei n, GLuint* ids) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGenQueriesEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGenQueriesEXT");
     if (it == functionMap.end()) {
@@ -10895,6 +11298,7 @@ void opengl_es_layer_glGenRenderbuffers(GLsizei n, GLuint* renderbuffers) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGenRenderbuffers");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGenRenderbuffers");
     if (it == functionMap.end()) {
@@ -10922,6 +11326,7 @@ void opengl_es_layer_glGenRenderbuffersOES(GLsizei n, GLuint* renderbuffers) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGenRenderbuffersOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGenRenderbuffersOES");
     if (it == functionMap.end()) {
@@ -10949,6 +11354,7 @@ void opengl_es_layer_glGenSamplers(GLsizei count, GLuint* samplers) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGenSamplers");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGenSamplers");
     if (it == functionMap.end()) {
@@ -10976,6 +11382,7 @@ void opengl_es_layer_glGenSemaphoresEXT(GLsizei n, GLuint* semaphores) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGenSemaphoresEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGenSemaphoresEXT");
     if (it == functionMap.end()) {
@@ -11003,6 +11410,7 @@ void opengl_es_layer_glGenTextures(GLsizei n, GLuint* textures) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGenTextures");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGenTextures");
     if (it == functionMap.end()) {
@@ -11030,6 +11438,7 @@ void opengl_es_layer_glGenTransformFeedbacks(GLsizei n, GLuint* ids) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGenTransformFeedbacks");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGenTransformFeedbacks");
     if (it == functionMap.end()) {
@@ -11057,6 +11466,7 @@ void opengl_es_layer_glGenVertexArrays(GLsizei n, GLuint* arrays) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGenVertexArrays");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGenVertexArrays");
     if (it == functionMap.end()) {
@@ -11084,6 +11494,7 @@ void opengl_es_layer_glGenVertexArraysOES(GLsizei n, GLuint* arrays) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGenVertexArraysOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGenVertexArraysOES");
     if (it == functionMap.end()) {
@@ -11111,6 +11522,7 @@ void opengl_es_layer_glGenerateMipmap(GLenum target) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGenerateMipmap");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGenerateMipmap");
     if (it == functionMap.end()) {
@@ -11138,6 +11550,7 @@ void opengl_es_layer_glGenerateMipmapOES(GLenum target) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGenerateMipmapOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGenerateMipmapOES");
     if (it == functionMap.end()) {
@@ -11165,6 +11578,7 @@ void opengl_es_layer_glGetActiveAttrib(GLuint program, GLuint index, GLsizei buf
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetActiveAttrib");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetActiveAttrib");
     if (it == functionMap.end()) {
@@ -11192,6 +11606,7 @@ void opengl_es_layer_glGetActiveUniform(GLuint program, GLuint index, GLsizei bu
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetActiveUniform");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetActiveUniform");
     if (it == functionMap.end()) {
@@ -11219,6 +11634,7 @@ void opengl_es_layer_glGetActiveUniformBlockName(GLuint program, GLuint uniformB
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetActiveUniformBlockName");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetActiveUniformBlockName");
     if (it == functionMap.end()) {
@@ -11246,6 +11662,7 @@ void opengl_es_layer_glGetActiveUniformBlockiv(GLuint program, GLuint uniformBlo
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetActiveUniformBlockiv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetActiveUniformBlockiv");
     if (it == functionMap.end()) {
@@ -11273,6 +11690,7 @@ void opengl_es_layer_glGetActiveUniformsiv(GLuint program, GLsizei uniformCount,
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetActiveUniformsiv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetActiveUniformsiv");
     if (it == functionMap.end()) {
@@ -11300,6 +11718,7 @@ void opengl_es_layer_glGetAttachedShaders(GLuint program, GLsizei maxCount, GLsi
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetAttachedShaders");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetAttachedShaders");
     if (it == functionMap.end()) {
@@ -11327,6 +11746,7 @@ GLint opengl_es_layer_glGetAttribLocation(GLuint program, GLchar* name) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetAttribLocation");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetAttribLocation");
     if (it == functionMap.end()) {
@@ -11354,6 +11774,7 @@ void opengl_es_layer_glGetBooleani_v(GLenum target, GLuint index, GLboolean* dat
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetBooleani_v");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetBooleani_v");
     if (it == functionMap.end()) {
@@ -11381,6 +11802,7 @@ void opengl_es_layer_glGetBufferParameteri64v(GLenum target, GLenum pname, GLint
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetBufferParameteri64v");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetBufferParameteri64v");
     if (it == functionMap.end()) {
@@ -11408,6 +11830,7 @@ void opengl_es_layer_glGetBufferParameteriv(GLenum target, GLenum pname, GLint* 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetBufferParameteriv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetBufferParameteriv");
     if (it == functionMap.end()) {
@@ -11435,6 +11858,7 @@ void opengl_es_layer_glGetBufferPointerv(GLenum target, GLenum pname, void** par
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetBufferPointerv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetBufferPointerv");
     if (it == functionMap.end()) {
@@ -11462,6 +11886,7 @@ void opengl_es_layer_glGetBufferPointervOES(GLenum target, GLenum pname, void** 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetBufferPointervOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetBufferPointervOES");
     if (it == functionMap.end()) {
@@ -11489,6 +11914,7 @@ void opengl_es_layer_glGetClipPlanef(GLenum plane, GLfloat* equation) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetClipPlanef");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetClipPlanef");
     if (it == functionMap.end()) {
@@ -11516,6 +11942,7 @@ void opengl_es_layer_glGetClipPlanefOES(GLenum plane, GLfloat* equation) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetClipPlanefOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetClipPlanefOES");
     if (it == functionMap.end()) {
@@ -11543,6 +11970,7 @@ void opengl_es_layer_glGetClipPlanex(GLenum plane, GLfixed* equation) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetClipPlanex");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetClipPlanex");
     if (it == functionMap.end()) {
@@ -11570,6 +11998,7 @@ void opengl_es_layer_glGetClipPlanexOES(GLenum plane, GLfixed* equation) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetClipPlanexOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetClipPlanexOES");
     if (it == functionMap.end()) {
@@ -11597,6 +12026,7 @@ void opengl_es_layer_glGetCoverageModulationTableNV(GLsizei bufsize, GLfloat* v)
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetCoverageModulationTableNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetCoverageModulationTableNV");
     if (it == functionMap.end()) {
@@ -11624,6 +12054,7 @@ GLuint opengl_es_layer_glGetDebugMessageLog(GLuint count, GLsizei bufSize, GLenu
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetDebugMessageLog");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetDebugMessageLog");
     if (it == functionMap.end()) {
@@ -11651,6 +12082,7 @@ GLuint opengl_es_layer_glGetDebugMessageLogKHR(GLuint count, GLsizei bufSize, GL
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetDebugMessageLogKHR");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetDebugMessageLogKHR");
     if (it == functionMap.end()) {
@@ -11678,6 +12110,7 @@ void opengl_es_layer_glGetDriverControlStringQCOM(GLuint driverControl, GLsizei 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetDriverControlStringQCOM");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetDriverControlStringQCOM");
     if (it == functionMap.end()) {
@@ -11705,6 +12138,7 @@ void opengl_es_layer_glGetDriverControlsQCOM(GLint* num, GLsizei size, GLuint* d
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetDriverControlsQCOM");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetDriverControlsQCOM");
     if (it == functionMap.end()) {
@@ -11732,6 +12166,7 @@ GLenum opengl_es_layer_glGetError(void ) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetError");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetError");
     if (it == functionMap.end()) {
@@ -11759,6 +12194,7 @@ void opengl_es_layer_glGetFenceivNV(GLuint fence, GLenum pname, GLint* params) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetFenceivNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetFenceivNV");
     if (it == functionMap.end()) {
@@ -11786,6 +12222,7 @@ void opengl_es_layer_glGetFirstPerfQueryIdINTEL(GLuint* queryId) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetFirstPerfQueryIdINTEL");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetFirstPerfQueryIdINTEL");
     if (it == functionMap.end()) {
@@ -11813,6 +12250,7 @@ void opengl_es_layer_glGetFixedv(GLenum pname, GLfixed* params) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetFixedv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetFixedv");
     if (it == functionMap.end()) {
@@ -11840,6 +12278,7 @@ void opengl_es_layer_glGetFixedvOES(GLenum pname, GLfixed* params) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetFixedvOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetFixedvOES");
     if (it == functionMap.end()) {
@@ -11867,6 +12306,7 @@ void opengl_es_layer_glGetFloati_vNV(GLenum target, GLuint index, GLfloat* data)
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetFloati_vNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetFloati_vNV");
     if (it == functionMap.end()) {
@@ -11894,6 +12334,7 @@ void opengl_es_layer_glGetFloati_vOES(GLenum target, GLuint index, GLfloat* data
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetFloati_vOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetFloati_vOES");
     if (it == functionMap.end()) {
@@ -11921,6 +12362,7 @@ GLint opengl_es_layer_glGetFragDataIndexEXT(GLuint program, GLchar* name) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetFragDataIndexEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetFragDataIndexEXT");
     if (it == functionMap.end()) {
@@ -11948,6 +12390,7 @@ GLint opengl_es_layer_glGetFragDataLocation(GLuint program, GLchar* name) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetFragDataLocation");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetFragDataLocation");
     if (it == functionMap.end()) {
@@ -11975,6 +12418,7 @@ void opengl_es_layer_glGetFramebufferAttachmentParameteriv(GLenum target, GLenum
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetFramebufferAttachmentParameteriv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetFramebufferAttachmentParameteriv");
     if (it == functionMap.end()) {
@@ -12002,6 +12446,7 @@ void opengl_es_layer_glGetFramebufferAttachmentParameterivOES(GLenum target, GLe
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetFramebufferAttachmentParameterivOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetFramebufferAttachmentParameterivOES");
     if (it == functionMap.end()) {
@@ -12029,6 +12474,7 @@ void opengl_es_layer_glGetFramebufferParameteriv(GLenum target, GLenum pname, GL
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetFramebufferParameteriv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetFramebufferParameteriv");
     if (it == functionMap.end()) {
@@ -12056,6 +12502,7 @@ GLsizei opengl_es_layer_glGetFramebufferPixelLocalStorageSizeEXT(GLuint target) 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetFramebufferPixelLocalStorageSizeEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetFramebufferPixelLocalStorageSizeEXT");
     if (it == functionMap.end()) {
@@ -12083,6 +12530,7 @@ GLenum opengl_es_layer_glGetGraphicsResetStatus(void ) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetGraphicsResetStatus");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetGraphicsResetStatus");
     if (it == functionMap.end()) {
@@ -12110,6 +12558,7 @@ GLenum opengl_es_layer_glGetGraphicsResetStatusEXT(void ) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetGraphicsResetStatusEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetGraphicsResetStatusEXT");
     if (it == functionMap.end()) {
@@ -12137,6 +12586,7 @@ GLenum opengl_es_layer_glGetGraphicsResetStatusKHR(void ) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetGraphicsResetStatusKHR");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetGraphicsResetStatusKHR");
     if (it == functionMap.end()) {
@@ -12164,6 +12614,7 @@ GLuint64 opengl_es_layer_glGetImageHandleNV(GLuint texture, GLint level, GLboole
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetImageHandleNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetImageHandleNV");
     if (it == functionMap.end()) {
@@ -12191,6 +12642,7 @@ void opengl_es_layer_glGetInteger64i_v(GLenum target, GLuint index, GLint64* dat
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetInteger64i_v");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetInteger64i_v");
     if (it == functionMap.end()) {
@@ -12218,6 +12670,7 @@ void opengl_es_layer_glGetInteger64vAPPLE(GLenum pname, GLint64* params) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetInteger64vAPPLE");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetInteger64vAPPLE");
     if (it == functionMap.end()) {
@@ -12245,6 +12698,7 @@ void opengl_es_layer_glGetIntegeri_v(GLenum target, GLuint index, GLint* data) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetIntegeri_v");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetIntegeri_v");
     if (it == functionMap.end()) {
@@ -12272,6 +12726,7 @@ void opengl_es_layer_glGetIntegeri_vEXT(GLenum target, GLuint index, GLint* data
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetIntegeri_vEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetIntegeri_vEXT");
     if (it == functionMap.end()) {
@@ -12299,6 +12754,7 @@ void opengl_es_layer_glGetInternalformatSampleivNV(GLenum target, GLenum interna
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetInternalformatSampleivNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetInternalformatSampleivNV");
     if (it == functionMap.end()) {
@@ -12326,6 +12782,7 @@ void opengl_es_layer_glGetInternalformativ(GLenum target, GLenum internalformat,
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetInternalformativ");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetInternalformativ");
     if (it == functionMap.end()) {
@@ -12353,6 +12810,7 @@ void opengl_es_layer_glGetLightfv(GLenum light, GLenum pname, GLfloat* params) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetLightfv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetLightfv");
     if (it == functionMap.end()) {
@@ -12380,6 +12838,7 @@ void opengl_es_layer_glGetLightxv(GLenum light, GLenum pname, GLfixed* params) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetLightxv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetLightxv");
     if (it == functionMap.end()) {
@@ -12407,6 +12866,7 @@ void opengl_es_layer_glGetLightxvOES(GLenum light, GLenum pname, GLfixed* params
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetLightxvOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetLightxvOES");
     if (it == functionMap.end()) {
@@ -12434,6 +12894,7 @@ void opengl_es_layer_glGetMaterialfv(GLenum face, GLenum pname, GLfloat* params)
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetMaterialfv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetMaterialfv");
     if (it == functionMap.end()) {
@@ -12461,6 +12922,7 @@ void opengl_es_layer_glGetMaterialxv(GLenum face, GLenum pname, GLfixed* params)
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetMaterialxv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetMaterialxv");
     if (it == functionMap.end()) {
@@ -12488,6 +12950,7 @@ void opengl_es_layer_glGetMaterialxvOES(GLenum face, GLenum pname, GLfixed* para
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetMaterialxvOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetMaterialxvOES");
     if (it == functionMap.end()) {
@@ -12515,6 +12978,7 @@ void opengl_es_layer_glGetMemoryObjectParameterivEXT(GLuint memoryObject, GLenum
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetMemoryObjectParameterivEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetMemoryObjectParameterivEXT");
     if (it == functionMap.end()) {
@@ -12542,6 +13006,7 @@ void opengl_es_layer_glGetMultisamplefv(GLenum pname, GLuint index, GLfloat* val
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetMultisamplefv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetMultisamplefv");
     if (it == functionMap.end()) {
@@ -12569,6 +13034,7 @@ void opengl_es_layer_glGetNextPerfQueryIdINTEL(GLuint queryId, GLuint* nextQuery
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetNextPerfQueryIdINTEL");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetNextPerfQueryIdINTEL");
     if (it == functionMap.end()) {
@@ -12596,6 +13062,7 @@ void opengl_es_layer_glGetObjectLabel(GLenum identifier, GLuint name, GLsizei bu
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetObjectLabel");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetObjectLabel");
     if (it == functionMap.end()) {
@@ -12623,6 +13090,7 @@ void opengl_es_layer_glGetObjectLabelEXT(GLenum type, GLuint object, GLsizei buf
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetObjectLabelEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetObjectLabelEXT");
     if (it == functionMap.end()) {
@@ -12650,6 +13118,7 @@ void opengl_es_layer_glGetObjectLabelKHR(GLenum identifier, GLuint name, GLsizei
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetObjectLabelKHR");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetObjectLabelKHR");
     if (it == functionMap.end()) {
@@ -12677,6 +13146,7 @@ void opengl_es_layer_glGetObjectPtrLabel(void* ptr, GLsizei bufSize, GLsizei* le
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetObjectPtrLabel");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetObjectPtrLabel");
     if (it == functionMap.end()) {
@@ -12704,6 +13174,7 @@ void opengl_es_layer_glGetObjectPtrLabelKHR(void* ptr, GLsizei bufSize, GLsizei*
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetObjectPtrLabelKHR");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetObjectPtrLabelKHR");
     if (it == functionMap.end()) {
@@ -12731,6 +13202,7 @@ void opengl_es_layer_glGetPathCommandsNV(GLuint path, GLubyte* commands) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetPathCommandsNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetPathCommandsNV");
     if (it == functionMap.end()) {
@@ -12758,6 +13230,7 @@ void opengl_es_layer_glGetPathCoordsNV(GLuint path, GLfloat* coords) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetPathCoordsNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetPathCoordsNV");
     if (it == functionMap.end()) {
@@ -12785,6 +13258,7 @@ void opengl_es_layer_glGetPathDashArrayNV(GLuint path, GLfloat* dashArray) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetPathDashArrayNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetPathDashArrayNV");
     if (it == functionMap.end()) {
@@ -12812,6 +13286,7 @@ GLfloat opengl_es_layer_glGetPathLengthNV(GLuint path, GLsizei startSegment, GLs
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetPathLengthNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetPathLengthNV");
     if (it == functionMap.end()) {
@@ -12839,6 +13314,7 @@ void opengl_es_layer_glGetPathMetricRangeNV(GLbitfield metricQueryMask, GLuint f
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetPathMetricRangeNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetPathMetricRangeNV");
     if (it == functionMap.end()) {
@@ -12866,6 +13342,7 @@ void opengl_es_layer_glGetPathMetricsNV(GLbitfield metricQueryMask, GLsizei numP
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetPathMetricsNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetPathMetricsNV");
     if (it == functionMap.end()) {
@@ -12893,6 +13370,7 @@ void opengl_es_layer_glGetPathParameterfvNV(GLuint path, GLenum pname, GLfloat* 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetPathParameterfvNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetPathParameterfvNV");
     if (it == functionMap.end()) {
@@ -12920,6 +13398,7 @@ void opengl_es_layer_glGetPathParameterivNV(GLuint path, GLenum pname, GLint* va
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetPathParameterivNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetPathParameterivNV");
     if (it == functionMap.end()) {
@@ -12947,6 +13426,7 @@ void opengl_es_layer_glGetPathSpacingNV(GLenum pathListMode, GLsizei numPaths, G
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetPathSpacingNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetPathSpacingNV");
     if (it == functionMap.end()) {
@@ -12974,6 +13454,7 @@ void opengl_es_layer_glGetPerfCounterInfoINTEL(GLuint queryId, GLuint counterId,
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetPerfCounterInfoINTEL");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetPerfCounterInfoINTEL");
     if (it == functionMap.end()) {
@@ -13001,6 +13482,7 @@ void opengl_es_layer_glGetPerfMonitorCounterDataAMD(GLuint monitor, GLenum pname
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetPerfMonitorCounterDataAMD");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetPerfMonitorCounterDataAMD");
     if (it == functionMap.end()) {
@@ -13028,6 +13510,7 @@ void opengl_es_layer_glGetPerfMonitorCounterInfoAMD(GLuint group, GLuint counter
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetPerfMonitorCounterInfoAMD");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetPerfMonitorCounterInfoAMD");
     if (it == functionMap.end()) {
@@ -13055,6 +13538,7 @@ void opengl_es_layer_glGetPerfMonitorCounterStringAMD(GLuint group, GLuint count
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetPerfMonitorCounterStringAMD");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetPerfMonitorCounterStringAMD");
     if (it == functionMap.end()) {
@@ -13082,6 +13566,7 @@ void opengl_es_layer_glGetPerfMonitorCountersAMD(GLuint group, GLint* numCounter
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetPerfMonitorCountersAMD");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetPerfMonitorCountersAMD");
     if (it == functionMap.end()) {
@@ -13109,6 +13594,7 @@ void opengl_es_layer_glGetPerfMonitorGroupStringAMD(GLuint group, GLsizei bufSiz
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetPerfMonitorGroupStringAMD");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetPerfMonitorGroupStringAMD");
     if (it == functionMap.end()) {
@@ -13136,6 +13622,7 @@ void opengl_es_layer_glGetPerfMonitorGroupsAMD(GLint* numGroups, GLsizei groupsS
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetPerfMonitorGroupsAMD");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetPerfMonitorGroupsAMD");
     if (it == functionMap.end()) {
@@ -13163,6 +13650,7 @@ void opengl_es_layer_glGetPerfQueryDataINTEL(GLuint queryHandle, GLuint flags, G
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetPerfQueryDataINTEL");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetPerfQueryDataINTEL");
     if (it == functionMap.end()) {
@@ -13190,6 +13678,7 @@ void opengl_es_layer_glGetPerfQueryIdByNameINTEL(GLchar* queryName, GLuint* quer
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetPerfQueryIdByNameINTEL");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetPerfQueryIdByNameINTEL");
     if (it == functionMap.end()) {
@@ -13217,6 +13706,7 @@ void opengl_es_layer_glGetPerfQueryInfoINTEL(GLuint queryId, GLuint queryNameLen
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetPerfQueryInfoINTEL");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetPerfQueryInfoINTEL");
     if (it == functionMap.end()) {
@@ -13244,6 +13734,7 @@ void opengl_es_layer_glGetPointerv(GLenum pname, void** params) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetPointerv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetPointerv");
     if (it == functionMap.end()) {
@@ -13271,6 +13762,7 @@ void opengl_es_layer_glGetPointervKHR(GLenum pname, void** params) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetPointervKHR");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetPointervKHR");
     if (it == functionMap.end()) {
@@ -13298,6 +13790,7 @@ void opengl_es_layer_glGetProgramBinary(GLuint program, GLsizei bufSize, GLsizei
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetProgramBinary");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetProgramBinary");
     if (it == functionMap.end()) {
@@ -13325,6 +13818,7 @@ void opengl_es_layer_glGetProgramBinaryOES(GLuint program, GLsizei bufSize, GLsi
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetProgramBinaryOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetProgramBinaryOES");
     if (it == functionMap.end()) {
@@ -13352,6 +13846,7 @@ void opengl_es_layer_glGetProgramInfoLog(GLuint program, GLsizei bufSize, GLsize
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetProgramInfoLog");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetProgramInfoLog");
     if (it == functionMap.end()) {
@@ -13379,6 +13874,7 @@ void opengl_es_layer_glGetProgramInterfaceiv(GLuint program, GLenum programInter
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetProgramInterfaceiv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetProgramInterfaceiv");
     if (it == functionMap.end()) {
@@ -13406,6 +13902,7 @@ void opengl_es_layer_glGetProgramPipelineInfoLog(GLuint pipeline, GLsizei bufSiz
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetProgramPipelineInfoLog");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetProgramPipelineInfoLog");
     if (it == functionMap.end()) {
@@ -13433,6 +13930,7 @@ void opengl_es_layer_glGetProgramPipelineInfoLogEXT(GLuint pipeline, GLsizei buf
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetProgramPipelineInfoLogEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetProgramPipelineInfoLogEXT");
     if (it == functionMap.end()) {
@@ -13460,6 +13958,7 @@ void opengl_es_layer_glGetProgramPipelineiv(GLuint pipeline, GLenum pname, GLint
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetProgramPipelineiv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetProgramPipelineiv");
     if (it == functionMap.end()) {
@@ -13487,6 +13986,7 @@ void opengl_es_layer_glGetProgramPipelineivEXT(GLuint pipeline, GLenum pname, GL
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetProgramPipelineivEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetProgramPipelineivEXT");
     if (it == functionMap.end()) {
@@ -13514,6 +14014,7 @@ GLuint opengl_es_layer_glGetProgramResourceIndex(GLuint program, GLenum programI
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetProgramResourceIndex");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetProgramResourceIndex");
     if (it == functionMap.end()) {
@@ -13541,6 +14042,7 @@ GLint opengl_es_layer_glGetProgramResourceLocation(GLuint program, GLenum progra
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetProgramResourceLocation");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetProgramResourceLocation");
     if (it == functionMap.end()) {
@@ -13568,6 +14070,7 @@ GLint opengl_es_layer_glGetProgramResourceLocationIndexEXT(GLuint program, GLenu
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetProgramResourceLocationIndexEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetProgramResourceLocationIndexEXT");
     if (it == functionMap.end()) {
@@ -13595,6 +14098,7 @@ void opengl_es_layer_glGetProgramResourceName(GLuint program, GLenum programInte
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetProgramResourceName");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetProgramResourceName");
     if (it == functionMap.end()) {
@@ -13622,6 +14126,7 @@ void opengl_es_layer_glGetProgramResourcefvNV(GLuint program, GLenum programInte
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetProgramResourcefvNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetProgramResourcefvNV");
     if (it == functionMap.end()) {
@@ -13649,6 +14154,7 @@ void opengl_es_layer_glGetProgramResourceiv(GLuint program, GLenum programInterf
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetProgramResourceiv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetProgramResourceiv");
     if (it == functionMap.end()) {
@@ -13676,6 +14182,7 @@ void opengl_es_layer_glGetProgramiv(GLuint program, GLenum pname, GLint* params)
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetProgramiv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetProgramiv");
     if (it == functionMap.end()) {
@@ -13703,6 +14210,7 @@ void opengl_es_layer_glGetQueryObjecti64vEXT(GLuint id, GLenum pname, GLint64* p
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetQueryObjecti64vEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetQueryObjecti64vEXT");
     if (it == functionMap.end()) {
@@ -13730,6 +14238,7 @@ void opengl_es_layer_glGetQueryObjectivEXT(GLuint id, GLenum pname, GLint* param
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetQueryObjectivEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetQueryObjectivEXT");
     if (it == functionMap.end()) {
@@ -13757,6 +14266,7 @@ void opengl_es_layer_glGetQueryObjectui64vEXT(GLuint id, GLenum pname, GLuint64*
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetQueryObjectui64vEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetQueryObjectui64vEXT");
     if (it == functionMap.end()) {
@@ -13784,6 +14294,7 @@ void opengl_es_layer_glGetQueryObjectuiv(GLuint id, GLenum pname, GLuint* params
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetQueryObjectuiv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetQueryObjectuiv");
     if (it == functionMap.end()) {
@@ -13811,6 +14322,7 @@ void opengl_es_layer_glGetQueryObjectuivEXT(GLuint id, GLenum pname, GLuint* par
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetQueryObjectuivEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetQueryObjectuivEXT");
     if (it == functionMap.end()) {
@@ -13838,6 +14350,7 @@ void opengl_es_layer_glGetQueryiv(GLenum target, GLenum pname, GLint* params) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetQueryiv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetQueryiv");
     if (it == functionMap.end()) {
@@ -13865,6 +14378,7 @@ void opengl_es_layer_glGetQueryivEXT(GLenum target, GLenum pname, GLint* params)
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetQueryivEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetQueryivEXT");
     if (it == functionMap.end()) {
@@ -13892,6 +14406,7 @@ void opengl_es_layer_glGetRenderbufferParameteriv(GLenum target, GLenum pname, G
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetRenderbufferParameteriv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetRenderbufferParameteriv");
     if (it == functionMap.end()) {
@@ -13919,6 +14434,7 @@ void opengl_es_layer_glGetRenderbufferParameterivOES(GLenum target, GLenum pname
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetRenderbufferParameterivOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetRenderbufferParameterivOES");
     if (it == functionMap.end()) {
@@ -13946,6 +14462,7 @@ void opengl_es_layer_glGetSamplerParameterIiv(GLuint sampler, GLenum pname, GLin
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetSamplerParameterIiv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetSamplerParameterIiv");
     if (it == functionMap.end()) {
@@ -13973,6 +14490,7 @@ void opengl_es_layer_glGetSamplerParameterIivEXT(GLuint sampler, GLenum pname, G
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetSamplerParameterIivEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetSamplerParameterIivEXT");
     if (it == functionMap.end()) {
@@ -14000,6 +14518,7 @@ void opengl_es_layer_glGetSamplerParameterIivOES(GLuint sampler, GLenum pname, G
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetSamplerParameterIivOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetSamplerParameterIivOES");
     if (it == functionMap.end()) {
@@ -14027,6 +14546,7 @@ void opengl_es_layer_glGetSamplerParameterIuiv(GLuint sampler, GLenum pname, GLu
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetSamplerParameterIuiv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetSamplerParameterIuiv");
     if (it == functionMap.end()) {
@@ -14054,6 +14574,7 @@ void opengl_es_layer_glGetSamplerParameterIuivEXT(GLuint sampler, GLenum pname, 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetSamplerParameterIuivEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetSamplerParameterIuivEXT");
     if (it == functionMap.end()) {
@@ -14081,6 +14602,7 @@ void opengl_es_layer_glGetSamplerParameterIuivOES(GLuint sampler, GLenum pname, 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetSamplerParameterIuivOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetSamplerParameterIuivOES");
     if (it == functionMap.end()) {
@@ -14108,6 +14630,7 @@ void opengl_es_layer_glGetSamplerParameterfv(GLuint sampler, GLenum pname, GLflo
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetSamplerParameterfv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetSamplerParameterfv");
     if (it == functionMap.end()) {
@@ -14135,6 +14658,7 @@ void opengl_es_layer_glGetSamplerParameteriv(GLuint sampler, GLenum pname, GLint
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetSamplerParameteriv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetSamplerParameteriv");
     if (it == functionMap.end()) {
@@ -14162,6 +14686,7 @@ void opengl_es_layer_glGetSemaphoreParameterui64vEXT(GLuint semaphore, GLenum pn
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetSemaphoreParameterui64vEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetSemaphoreParameterui64vEXT");
     if (it == functionMap.end()) {
@@ -14189,6 +14714,7 @@ void opengl_es_layer_glGetShaderInfoLog(GLuint shader, GLsizei bufSize, GLsizei*
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetShaderInfoLog");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetShaderInfoLog");
     if (it == functionMap.end()) {
@@ -14216,6 +14742,7 @@ void opengl_es_layer_glGetShaderPrecisionFormat(GLenum shadertype, GLenum precis
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetShaderPrecisionFormat");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetShaderPrecisionFormat");
     if (it == functionMap.end()) {
@@ -14243,6 +14770,7 @@ void opengl_es_layer_glGetShaderSource(GLuint shader, GLsizei bufSize, GLsizei* 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetShaderSource");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetShaderSource");
     if (it == functionMap.end()) {
@@ -14270,6 +14798,7 @@ void opengl_es_layer_glGetShaderiv(GLuint shader, GLenum pname, GLint* params) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetShaderiv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetShaderiv");
     if (it == functionMap.end()) {
@@ -14297,6 +14826,7 @@ void opengl_es_layer_glGetSynciv(GLsync sync, GLenum pname, GLsizei bufSize, GLs
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetSynciv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetSynciv");
     if (it == functionMap.end()) {
@@ -14324,6 +14854,7 @@ void opengl_es_layer_glGetSyncivAPPLE(GLsync sync, GLenum pname, GLsizei bufSize
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetSyncivAPPLE");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetSyncivAPPLE");
     if (it == functionMap.end()) {
@@ -14351,6 +14882,7 @@ void opengl_es_layer_glGetTexEnvfv(GLenum target, GLenum pname, GLfloat* params)
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetTexEnvfv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetTexEnvfv");
     if (it == functionMap.end()) {
@@ -14378,6 +14910,7 @@ void opengl_es_layer_glGetTexEnviv(GLenum target, GLenum pname, GLint* params) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetTexEnviv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetTexEnviv");
     if (it == functionMap.end()) {
@@ -14405,6 +14938,7 @@ void opengl_es_layer_glGetTexEnvxv(GLenum target, GLenum pname, GLfixed* params)
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetTexEnvxv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetTexEnvxv");
     if (it == functionMap.end()) {
@@ -14432,6 +14966,7 @@ void opengl_es_layer_glGetTexEnvxvOES(GLenum target, GLenum pname, GLfixed* para
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetTexEnvxvOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetTexEnvxvOES");
     if (it == functionMap.end()) {
@@ -14459,6 +14994,7 @@ void opengl_es_layer_glGetTexGenfvOES(GLenum coord, GLenum pname, GLfloat* param
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetTexGenfvOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetTexGenfvOES");
     if (it == functionMap.end()) {
@@ -14486,6 +15022,7 @@ void opengl_es_layer_glGetTexGenivOES(GLenum coord, GLenum pname, GLint* params)
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetTexGenivOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetTexGenivOES");
     if (it == functionMap.end()) {
@@ -14513,6 +15050,7 @@ void opengl_es_layer_glGetTexGenxvOES(GLenum coord, GLenum pname, GLfixed* param
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetTexGenxvOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetTexGenxvOES");
     if (it == functionMap.end()) {
@@ -14540,6 +15078,7 @@ void opengl_es_layer_glGetTexLevelParameterfv(GLenum target, GLint level, GLenum
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetTexLevelParameterfv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetTexLevelParameterfv");
     if (it == functionMap.end()) {
@@ -14567,6 +15106,7 @@ void opengl_es_layer_glGetTexLevelParameteriv(GLenum target, GLint level, GLenum
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetTexLevelParameteriv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetTexLevelParameteriv");
     if (it == functionMap.end()) {
@@ -14594,6 +15134,7 @@ void opengl_es_layer_glGetTexParameterIiv(GLenum target, GLenum pname, GLint* pa
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetTexParameterIiv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetTexParameterIiv");
     if (it == functionMap.end()) {
@@ -14621,6 +15162,7 @@ void opengl_es_layer_glGetTexParameterIivEXT(GLenum target, GLenum pname, GLint*
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetTexParameterIivEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetTexParameterIivEXT");
     if (it == functionMap.end()) {
@@ -14648,6 +15190,7 @@ void opengl_es_layer_glGetTexParameterIivOES(GLenum target, GLenum pname, GLint*
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetTexParameterIivOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetTexParameterIivOES");
     if (it == functionMap.end()) {
@@ -14675,6 +15218,7 @@ void opengl_es_layer_glGetTexParameterIuiv(GLenum target, GLenum pname, GLuint* 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetTexParameterIuiv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetTexParameterIuiv");
     if (it == functionMap.end()) {
@@ -14702,6 +15246,7 @@ void opengl_es_layer_glGetTexParameterIuivEXT(GLenum target, GLenum pname, GLuin
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetTexParameterIuivEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetTexParameterIuivEXT");
     if (it == functionMap.end()) {
@@ -14729,6 +15274,7 @@ void opengl_es_layer_glGetTexParameterIuivOES(GLenum target, GLenum pname, GLuin
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetTexParameterIuivOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetTexParameterIuivOES");
     if (it == functionMap.end()) {
@@ -14756,6 +15302,7 @@ void opengl_es_layer_glGetTexParameterfv(GLenum target, GLenum pname, GLfloat* p
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetTexParameterfv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetTexParameterfv");
     if (it == functionMap.end()) {
@@ -14783,6 +15330,7 @@ void opengl_es_layer_glGetTexParameteriv(GLenum target, GLenum pname, GLint* par
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetTexParameteriv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetTexParameteriv");
     if (it == functionMap.end()) {
@@ -14810,6 +15358,7 @@ void opengl_es_layer_glGetTexParameterxv(GLenum target, GLenum pname, GLfixed* p
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetTexParameterxv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetTexParameterxv");
     if (it == functionMap.end()) {
@@ -14837,6 +15386,7 @@ void opengl_es_layer_glGetTexParameterxvOES(GLenum target, GLenum pname, GLfixed
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetTexParameterxvOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetTexParameterxvOES");
     if (it == functionMap.end()) {
@@ -14864,6 +15414,7 @@ GLuint64 opengl_es_layer_glGetTextureHandleIMG(GLuint texture) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetTextureHandleIMG");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetTextureHandleIMG");
     if (it == functionMap.end()) {
@@ -14891,6 +15442,7 @@ GLuint64 opengl_es_layer_glGetTextureHandleNV(GLuint texture) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetTextureHandleNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetTextureHandleNV");
     if (it == functionMap.end()) {
@@ -14918,6 +15470,7 @@ GLuint64 opengl_es_layer_glGetTextureSamplerHandleIMG(GLuint texture, GLuint sam
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetTextureSamplerHandleIMG");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetTextureSamplerHandleIMG");
     if (it == functionMap.end()) {
@@ -14945,6 +15498,7 @@ GLuint64 opengl_es_layer_glGetTextureSamplerHandleNV(GLuint texture, GLuint samp
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetTextureSamplerHandleNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetTextureSamplerHandleNV");
     if (it == functionMap.end()) {
@@ -14972,6 +15526,7 @@ void opengl_es_layer_glGetTransformFeedbackVarying(GLuint program, GLuint index,
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetTransformFeedbackVarying");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetTransformFeedbackVarying");
     if (it == functionMap.end()) {
@@ -14999,6 +15554,7 @@ void opengl_es_layer_glGetTranslatedShaderSourceANGLE(GLuint shader, GLsizei buf
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetTranslatedShaderSourceANGLE");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetTranslatedShaderSourceANGLE");
     if (it == functionMap.end()) {
@@ -15026,6 +15582,7 @@ GLuint opengl_es_layer_glGetUniformBlockIndex(GLuint program, GLchar* uniformBlo
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetUniformBlockIndex");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetUniformBlockIndex");
     if (it == functionMap.end()) {
@@ -15053,6 +15610,7 @@ void opengl_es_layer_glGetUniformIndices(GLuint program, GLsizei uniformCount, G
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetUniformIndices");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetUniformIndices");
     if (it == functionMap.end()) {
@@ -15080,6 +15638,7 @@ GLint opengl_es_layer_glGetUniformLocation(GLuint program, GLchar* name) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetUniformLocation");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetUniformLocation");
     if (it == functionMap.end()) {
@@ -15107,6 +15666,7 @@ void opengl_es_layer_glGetUniformfv(GLuint program, GLint location, GLfloat* par
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetUniformfv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetUniformfv");
     if (it == functionMap.end()) {
@@ -15134,6 +15694,7 @@ void opengl_es_layer_glGetUniformi64vNV(GLuint program, GLint location, GLint64E
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetUniformi64vNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetUniformi64vNV");
     if (it == functionMap.end()) {
@@ -15161,6 +15722,7 @@ void opengl_es_layer_glGetUniformiv(GLuint program, GLint location, GLint* param
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetUniformiv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetUniformiv");
     if (it == functionMap.end()) {
@@ -15188,6 +15750,7 @@ void opengl_es_layer_glGetUniformuiv(GLuint program, GLint location, GLuint* par
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetUniformuiv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetUniformuiv");
     if (it == functionMap.end()) {
@@ -15215,6 +15778,7 @@ void opengl_es_layer_glGetUnsignedBytei_vEXT(GLenum target, GLuint index, GLubyt
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetUnsignedBytei_vEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetUnsignedBytei_vEXT");
     if (it == functionMap.end()) {
@@ -15242,6 +15806,7 @@ void opengl_es_layer_glGetUnsignedBytevEXT(GLenum pname, GLubyte* data) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetUnsignedBytevEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetUnsignedBytevEXT");
     if (it == functionMap.end()) {
@@ -15269,6 +15834,7 @@ void opengl_es_layer_glGetVertexAttribIiv(GLuint index, GLenum pname, GLint* par
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetVertexAttribIiv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetVertexAttribIiv");
     if (it == functionMap.end()) {
@@ -15296,6 +15862,7 @@ void opengl_es_layer_glGetVertexAttribIuiv(GLuint index, GLenum pname, GLuint* p
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetVertexAttribIuiv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetVertexAttribIuiv");
     if (it == functionMap.end()) {
@@ -15323,6 +15890,7 @@ void opengl_es_layer_glGetVertexAttribPointerv(GLuint index, GLenum pname, void*
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetVertexAttribPointerv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetVertexAttribPointerv");
     if (it == functionMap.end()) {
@@ -15350,6 +15918,7 @@ void opengl_es_layer_glGetVertexAttribfv(GLuint index, GLenum pname, GLfloat* pa
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetVertexAttribfv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetVertexAttribfv");
     if (it == functionMap.end()) {
@@ -15377,6 +15946,7 @@ void opengl_es_layer_glGetVertexAttribiv(GLuint index, GLenum pname, GLint* para
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetVertexAttribiv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetVertexAttribiv");
     if (it == functionMap.end()) {
@@ -15404,6 +15974,7 @@ GLVULKANPROCNV opengl_es_layer_glGetVkProcAddrNV(GLchar* name) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetVkProcAddrNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetVkProcAddrNV");
     if (it == functionMap.end()) {
@@ -15431,6 +16002,7 @@ void opengl_es_layer_glGetnUniformfv(GLuint program, GLint location, GLsizei buf
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetnUniformfv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetnUniformfv");
     if (it == functionMap.end()) {
@@ -15458,6 +16030,7 @@ void opengl_es_layer_glGetnUniformfvEXT(GLuint program, GLint location, GLsizei 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetnUniformfvEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetnUniformfvEXT");
     if (it == functionMap.end()) {
@@ -15485,6 +16058,7 @@ void opengl_es_layer_glGetnUniformfvKHR(GLuint program, GLint location, GLsizei 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetnUniformfvKHR");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetnUniformfvKHR");
     if (it == functionMap.end()) {
@@ -15512,6 +16086,7 @@ void opengl_es_layer_glGetnUniformiv(GLuint program, GLint location, GLsizei buf
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetnUniformiv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetnUniformiv");
     if (it == functionMap.end()) {
@@ -15539,6 +16114,7 @@ void opengl_es_layer_glGetnUniformivEXT(GLuint program, GLint location, GLsizei 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetnUniformivEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetnUniformivEXT");
     if (it == functionMap.end()) {
@@ -15566,6 +16142,7 @@ void opengl_es_layer_glGetnUniformivKHR(GLuint program, GLint location, GLsizei 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetnUniformivKHR");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetnUniformivKHR");
     if (it == functionMap.end()) {
@@ -15593,6 +16170,7 @@ void opengl_es_layer_glGetnUniformuiv(GLuint program, GLint location, GLsizei bu
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetnUniformuiv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetnUniformuiv");
     if (it == functionMap.end()) {
@@ -15620,6 +16198,7 @@ void opengl_es_layer_glGetnUniformuivKHR(GLuint program, GLint location, GLsizei
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glGetnUniformuivKHR");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glGetnUniformuivKHR");
     if (it == functionMap.end()) {
@@ -15647,6 +16226,7 @@ void opengl_es_layer_glHint(GLenum target, GLenum mode) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glHint");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glHint");
     if (it == functionMap.end()) {
@@ -15674,6 +16254,7 @@ void opengl_es_layer_glImportMemoryFdEXT(GLuint memory, GLuint64 size, GLenum ha
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glImportMemoryFdEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glImportMemoryFdEXT");
     if (it == functionMap.end()) {
@@ -15701,6 +16282,7 @@ void opengl_es_layer_glImportSemaphoreFdEXT(GLuint semaphore, GLenum handleType,
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glImportSemaphoreFdEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glImportSemaphoreFdEXT");
     if (it == functionMap.end()) {
@@ -15728,6 +16310,7 @@ void opengl_es_layer_glInsertEventMarkerEXT(GLsizei length, GLchar* marker) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glInsertEventMarkerEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glInsertEventMarkerEXT");
     if (it == functionMap.end()) {
@@ -15755,6 +16338,7 @@ void opengl_es_layer_glInterpolatePathsNV(GLuint resultPath, GLuint pathA, GLuin
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glInterpolatePathsNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glInterpolatePathsNV");
     if (it == functionMap.end()) {
@@ -15782,6 +16366,7 @@ void opengl_es_layer_glInvalidateFramebuffer(GLenum target, GLsizei numAttachmen
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glInvalidateFramebuffer");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glInvalidateFramebuffer");
     if (it == functionMap.end()) {
@@ -15809,6 +16394,7 @@ void opengl_es_layer_glInvalidateSubFramebuffer(GLenum target, GLsizei numAttach
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glInvalidateSubFramebuffer");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glInvalidateSubFramebuffer");
     if (it == functionMap.end()) {
@@ -15836,6 +16422,7 @@ GLboolean opengl_es_layer_glIsBuffer(GLuint buffer) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glIsBuffer");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glIsBuffer");
     if (it == functionMap.end()) {
@@ -15863,6 +16450,7 @@ GLboolean opengl_es_layer_glIsEnabled(GLenum cap) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glIsEnabled");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glIsEnabled");
     if (it == functionMap.end()) {
@@ -15890,6 +16478,7 @@ GLboolean opengl_es_layer_glIsEnabledi(GLenum target, GLuint index) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glIsEnabledi");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glIsEnabledi");
     if (it == functionMap.end()) {
@@ -15917,6 +16506,7 @@ GLboolean opengl_es_layer_glIsEnablediEXT(GLenum target, GLuint index) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glIsEnablediEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glIsEnablediEXT");
     if (it == functionMap.end()) {
@@ -15944,6 +16534,7 @@ GLboolean opengl_es_layer_glIsEnablediNV(GLenum target, GLuint index) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glIsEnablediNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glIsEnablediNV");
     if (it == functionMap.end()) {
@@ -15971,6 +16562,7 @@ GLboolean opengl_es_layer_glIsEnablediOES(GLenum target, GLuint index) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glIsEnablediOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glIsEnablediOES");
     if (it == functionMap.end()) {
@@ -15998,6 +16590,7 @@ GLboolean opengl_es_layer_glIsFenceNV(GLuint fence) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glIsFenceNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glIsFenceNV");
     if (it == functionMap.end()) {
@@ -16025,6 +16618,7 @@ GLboolean opengl_es_layer_glIsFramebuffer(GLuint framebuffer) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glIsFramebuffer");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glIsFramebuffer");
     if (it == functionMap.end()) {
@@ -16052,6 +16646,7 @@ GLboolean opengl_es_layer_glIsFramebufferOES(GLuint framebuffer) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glIsFramebufferOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glIsFramebufferOES");
     if (it == functionMap.end()) {
@@ -16079,6 +16674,7 @@ GLboolean opengl_es_layer_glIsImageHandleResidentNV(GLuint64 handle) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glIsImageHandleResidentNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glIsImageHandleResidentNV");
     if (it == functionMap.end()) {
@@ -16106,6 +16702,7 @@ GLboolean opengl_es_layer_glIsMemoryObjectEXT(GLuint memoryObject) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glIsMemoryObjectEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glIsMemoryObjectEXT");
     if (it == functionMap.end()) {
@@ -16133,6 +16730,7 @@ GLboolean opengl_es_layer_glIsPathNV(GLuint path) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glIsPathNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glIsPathNV");
     if (it == functionMap.end()) {
@@ -16160,6 +16758,7 @@ GLboolean opengl_es_layer_glIsPointInFillPathNV(GLuint path, GLuint mask, GLfloa
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glIsPointInFillPathNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glIsPointInFillPathNV");
     if (it == functionMap.end()) {
@@ -16187,6 +16786,7 @@ GLboolean opengl_es_layer_glIsPointInStrokePathNV(GLuint path, GLfloat x, GLfloa
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glIsPointInStrokePathNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glIsPointInStrokePathNV");
     if (it == functionMap.end()) {
@@ -16214,6 +16814,7 @@ GLboolean opengl_es_layer_glIsProgram(GLuint program) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glIsProgram");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glIsProgram");
     if (it == functionMap.end()) {
@@ -16241,6 +16842,7 @@ GLboolean opengl_es_layer_glIsProgramPipeline(GLuint pipeline) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glIsProgramPipeline");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glIsProgramPipeline");
     if (it == functionMap.end()) {
@@ -16268,6 +16870,7 @@ GLboolean opengl_es_layer_glIsProgramPipelineEXT(GLuint pipeline) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glIsProgramPipelineEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glIsProgramPipelineEXT");
     if (it == functionMap.end()) {
@@ -16295,6 +16898,7 @@ GLboolean opengl_es_layer_glIsQuery(GLuint id) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glIsQuery");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glIsQuery");
     if (it == functionMap.end()) {
@@ -16322,6 +16926,7 @@ GLboolean opengl_es_layer_glIsQueryEXT(GLuint id) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glIsQueryEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glIsQueryEXT");
     if (it == functionMap.end()) {
@@ -16349,6 +16954,7 @@ GLboolean opengl_es_layer_glIsRenderbuffer(GLuint renderbuffer) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glIsRenderbuffer");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glIsRenderbuffer");
     if (it == functionMap.end()) {
@@ -16376,6 +16982,7 @@ GLboolean opengl_es_layer_glIsRenderbufferOES(GLuint renderbuffer) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glIsRenderbufferOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glIsRenderbufferOES");
     if (it == functionMap.end()) {
@@ -16403,6 +17010,7 @@ GLboolean opengl_es_layer_glIsSampler(GLuint sampler) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glIsSampler");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glIsSampler");
     if (it == functionMap.end()) {
@@ -16430,6 +17038,7 @@ GLboolean opengl_es_layer_glIsSemaphoreEXT(GLuint semaphore) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glIsSemaphoreEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glIsSemaphoreEXT");
     if (it == functionMap.end()) {
@@ -16457,6 +17066,7 @@ GLboolean opengl_es_layer_glIsShader(GLuint shader) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glIsShader");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glIsShader");
     if (it == functionMap.end()) {
@@ -16484,6 +17094,7 @@ GLboolean opengl_es_layer_glIsSync(GLsync sync) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glIsSync");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glIsSync");
     if (it == functionMap.end()) {
@@ -16511,6 +17122,7 @@ GLboolean opengl_es_layer_glIsSyncAPPLE(GLsync sync) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glIsSyncAPPLE");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glIsSyncAPPLE");
     if (it == functionMap.end()) {
@@ -16538,6 +17150,7 @@ GLboolean opengl_es_layer_glIsTexture(GLuint texture) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glIsTexture");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glIsTexture");
     if (it == functionMap.end()) {
@@ -16565,6 +17178,7 @@ GLboolean opengl_es_layer_glIsTextureHandleResidentNV(GLuint64 handle) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glIsTextureHandleResidentNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glIsTextureHandleResidentNV");
     if (it == functionMap.end()) {
@@ -16592,6 +17206,7 @@ GLboolean opengl_es_layer_glIsTransformFeedback(GLuint id) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glIsTransformFeedback");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glIsTransformFeedback");
     if (it == functionMap.end()) {
@@ -16619,6 +17234,7 @@ GLboolean opengl_es_layer_glIsVertexArray(GLuint array) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glIsVertexArray");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glIsVertexArray");
     if (it == functionMap.end()) {
@@ -16646,6 +17262,7 @@ GLboolean opengl_es_layer_glIsVertexArrayOES(GLuint array) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glIsVertexArrayOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glIsVertexArrayOES");
     if (it == functionMap.end()) {
@@ -16673,6 +17290,7 @@ void opengl_es_layer_glLabelObjectEXT(GLenum type, GLuint object, GLsizei length
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glLabelObjectEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glLabelObjectEXT");
     if (it == functionMap.end()) {
@@ -16700,6 +17318,7 @@ void opengl_es_layer_glLightModelf(GLenum pname, GLfloat param) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glLightModelf");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glLightModelf");
     if (it == functionMap.end()) {
@@ -16727,6 +17346,7 @@ void opengl_es_layer_glLightModelfv(GLenum pname, GLfloat* params) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glLightModelfv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glLightModelfv");
     if (it == functionMap.end()) {
@@ -16754,6 +17374,7 @@ void opengl_es_layer_glLightModelx(GLenum pname, GLfixed param) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glLightModelx");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glLightModelx");
     if (it == functionMap.end()) {
@@ -16781,6 +17402,7 @@ void opengl_es_layer_glLightModelxOES(GLenum pname, GLfixed param) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glLightModelxOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glLightModelxOES");
     if (it == functionMap.end()) {
@@ -16808,6 +17430,7 @@ void opengl_es_layer_glLightModelxv(GLenum pname, GLfixed* param) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glLightModelxv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glLightModelxv");
     if (it == functionMap.end()) {
@@ -16835,6 +17458,7 @@ void opengl_es_layer_glLightModelxvOES(GLenum pname, GLfixed* param) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glLightModelxvOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glLightModelxvOES");
     if (it == functionMap.end()) {
@@ -16862,6 +17486,7 @@ void opengl_es_layer_glLightf(GLenum light, GLenum pname, GLfloat param) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glLightf");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glLightf");
     if (it == functionMap.end()) {
@@ -16889,6 +17514,7 @@ void opengl_es_layer_glLightfv(GLenum light, GLenum pname, GLfloat* params) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glLightfv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glLightfv");
     if (it == functionMap.end()) {
@@ -16916,6 +17542,7 @@ void opengl_es_layer_glLightx(GLenum light, GLenum pname, GLfixed param) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glLightx");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glLightx");
     if (it == functionMap.end()) {
@@ -16943,6 +17570,7 @@ void opengl_es_layer_glLightxOES(GLenum light, GLenum pname, GLfixed param) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glLightxOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glLightxOES");
     if (it == functionMap.end()) {
@@ -16970,6 +17598,7 @@ void opengl_es_layer_glLightxv(GLenum light, GLenum pname, GLfixed* params) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glLightxv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glLightxv");
     if (it == functionMap.end()) {
@@ -16997,6 +17626,7 @@ void opengl_es_layer_glLightxvOES(GLenum light, GLenum pname, GLfixed* params) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glLightxvOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glLightxvOES");
     if (it == functionMap.end()) {
@@ -17024,6 +17654,7 @@ void opengl_es_layer_glLineWidth(GLfloat width) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glLineWidth");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glLineWidth");
     if (it == functionMap.end()) {
@@ -17051,6 +17682,7 @@ void opengl_es_layer_glLineWidthx(GLfixed width) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glLineWidthx");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glLineWidthx");
     if (it == functionMap.end()) {
@@ -17078,6 +17710,7 @@ void opengl_es_layer_glLineWidthxOES(GLfixed width) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glLineWidthxOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glLineWidthxOES");
     if (it == functionMap.end()) {
@@ -17105,6 +17738,7 @@ void opengl_es_layer_glLinkProgram(GLuint program) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glLinkProgram");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glLinkProgram");
     if (it == functionMap.end()) {
@@ -17132,6 +17766,7 @@ void opengl_es_layer_glLoadIdentity(void ) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glLoadIdentity");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glLoadIdentity");
     if (it == functionMap.end()) {
@@ -17159,6 +17794,7 @@ void opengl_es_layer_glLoadMatrixf(GLfloat* m) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glLoadMatrixf");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glLoadMatrixf");
     if (it == functionMap.end()) {
@@ -17186,6 +17822,7 @@ void opengl_es_layer_glLoadMatrixx(GLfixed* m) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glLoadMatrixx");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glLoadMatrixx");
     if (it == functionMap.end()) {
@@ -17213,6 +17850,7 @@ void opengl_es_layer_glLoadMatrixxOES(GLfixed* m) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glLoadMatrixxOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glLoadMatrixxOES");
     if (it == functionMap.end()) {
@@ -17240,6 +17878,7 @@ void opengl_es_layer_glLoadPaletteFromModelViewMatrixOES(void ) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glLoadPaletteFromModelViewMatrixOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glLoadPaletteFromModelViewMatrixOES");
     if (it == functionMap.end()) {
@@ -17267,6 +17906,7 @@ void opengl_es_layer_glLogicOp(GLenum opcode) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glLogicOp");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glLogicOp");
     if (it == functionMap.end()) {
@@ -17294,6 +17934,7 @@ void opengl_es_layer_glMakeImageHandleNonResidentNV(GLuint64 handle) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMakeImageHandleNonResidentNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMakeImageHandleNonResidentNV");
     if (it == functionMap.end()) {
@@ -17321,6 +17962,7 @@ void opengl_es_layer_glMakeImageHandleResidentNV(GLuint64 handle, GLenum access)
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMakeImageHandleResidentNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMakeImageHandleResidentNV");
     if (it == functionMap.end()) {
@@ -17348,6 +17990,7 @@ void opengl_es_layer_glMakeTextureHandleNonResidentNV(GLuint64 handle) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMakeTextureHandleNonResidentNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMakeTextureHandleNonResidentNV");
     if (it == functionMap.end()) {
@@ -17375,6 +18018,7 @@ void opengl_es_layer_glMakeTextureHandleResidentNV(GLuint64 handle) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMakeTextureHandleResidentNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMakeTextureHandleResidentNV");
     if (it == functionMap.end()) {
@@ -17402,6 +18046,7 @@ void * opengl_es_layer_glMapBufferOES(GLenum target, GLenum access) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMapBufferOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMapBufferOES");
     if (it == functionMap.end()) {
@@ -17429,6 +18074,7 @@ void * opengl_es_layer_glMapBufferRange(GLenum target, GLintptr offset, GLsizeip
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMapBufferRange");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMapBufferRange");
     if (it == functionMap.end()) {
@@ -17456,6 +18102,7 @@ void * opengl_es_layer_glMapBufferRangeEXT(GLenum target, GLintptr offset, GLsiz
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMapBufferRangeEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMapBufferRangeEXT");
     if (it == functionMap.end()) {
@@ -17483,6 +18130,7 @@ void opengl_es_layer_glMaterialf(GLenum face, GLenum pname, GLfloat param) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMaterialf");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMaterialf");
     if (it == functionMap.end()) {
@@ -17510,6 +18158,7 @@ void opengl_es_layer_glMaterialfv(GLenum face, GLenum pname, GLfloat* params) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMaterialfv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMaterialfv");
     if (it == functionMap.end()) {
@@ -17537,6 +18186,7 @@ void opengl_es_layer_glMaterialx(GLenum face, GLenum pname, GLfixed param) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMaterialx");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMaterialx");
     if (it == functionMap.end()) {
@@ -17564,6 +18214,7 @@ void opengl_es_layer_glMaterialxOES(GLenum face, GLenum pname, GLfixed param) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMaterialxOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMaterialxOES");
     if (it == functionMap.end()) {
@@ -17591,6 +18242,7 @@ void opengl_es_layer_glMaterialxv(GLenum face, GLenum pname, GLfixed* param) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMaterialxv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMaterialxv");
     if (it == functionMap.end()) {
@@ -17618,6 +18270,7 @@ void opengl_es_layer_glMaterialxvOES(GLenum face, GLenum pname, GLfixed* param) 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMaterialxvOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMaterialxvOES");
     if (it == functionMap.end()) {
@@ -17645,6 +18298,7 @@ void opengl_es_layer_glMatrixFrustumEXT(GLenum mode, GLdouble left, GLdouble rig
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMatrixFrustumEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMatrixFrustumEXT");
     if (it == functionMap.end()) {
@@ -17672,6 +18326,7 @@ void opengl_es_layer_glMatrixIndexPointerOES(GLint size, GLenum type, GLsizei st
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMatrixIndexPointerOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMatrixIndexPointerOES");
     if (it == functionMap.end()) {
@@ -17699,6 +18354,7 @@ void opengl_es_layer_glMatrixLoad3x2fNV(GLenum matrixMode, GLfloat* m) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMatrixLoad3x2fNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMatrixLoad3x2fNV");
     if (it == functionMap.end()) {
@@ -17726,6 +18382,7 @@ void opengl_es_layer_glMatrixLoad3x3fNV(GLenum matrixMode, GLfloat* m) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMatrixLoad3x3fNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMatrixLoad3x3fNV");
     if (it == functionMap.end()) {
@@ -17753,6 +18410,7 @@ void opengl_es_layer_glMatrixLoadIdentityEXT(GLenum mode) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMatrixLoadIdentityEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMatrixLoadIdentityEXT");
     if (it == functionMap.end()) {
@@ -17780,6 +18438,7 @@ void opengl_es_layer_glMatrixLoadTranspose3x3fNV(GLenum matrixMode, GLfloat* m) 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMatrixLoadTranspose3x3fNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMatrixLoadTranspose3x3fNV");
     if (it == functionMap.end()) {
@@ -17807,6 +18466,7 @@ void opengl_es_layer_glMatrixLoadTransposedEXT(GLenum mode, GLdouble* m) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMatrixLoadTransposedEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMatrixLoadTransposedEXT");
     if (it == functionMap.end()) {
@@ -17834,6 +18494,7 @@ void opengl_es_layer_glMatrixLoadTransposefEXT(GLenum mode, GLfloat* m) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMatrixLoadTransposefEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMatrixLoadTransposefEXT");
     if (it == functionMap.end()) {
@@ -17861,6 +18522,7 @@ void opengl_es_layer_glMatrixLoaddEXT(GLenum mode, GLdouble* m) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMatrixLoaddEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMatrixLoaddEXT");
     if (it == functionMap.end()) {
@@ -17888,6 +18550,7 @@ void opengl_es_layer_glMatrixLoadfEXT(GLenum mode, GLfloat* m) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMatrixLoadfEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMatrixLoadfEXT");
     if (it == functionMap.end()) {
@@ -17915,6 +18578,7 @@ void opengl_es_layer_glMatrixMode(GLenum mode) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMatrixMode");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMatrixMode");
     if (it == functionMap.end()) {
@@ -17942,6 +18606,7 @@ void opengl_es_layer_glMatrixMult3x2fNV(GLenum matrixMode, GLfloat* m) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMatrixMult3x2fNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMatrixMult3x2fNV");
     if (it == functionMap.end()) {
@@ -17969,6 +18634,7 @@ void opengl_es_layer_glMatrixMult3x3fNV(GLenum matrixMode, GLfloat* m) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMatrixMult3x3fNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMatrixMult3x3fNV");
     if (it == functionMap.end()) {
@@ -17996,6 +18662,7 @@ void opengl_es_layer_glMatrixMultTranspose3x3fNV(GLenum matrixMode, GLfloat* m) 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMatrixMultTranspose3x3fNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMatrixMultTranspose3x3fNV");
     if (it == functionMap.end()) {
@@ -18023,6 +18690,7 @@ void opengl_es_layer_glMatrixMultTransposedEXT(GLenum mode, GLdouble* m) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMatrixMultTransposedEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMatrixMultTransposedEXT");
     if (it == functionMap.end()) {
@@ -18050,6 +18718,7 @@ void opengl_es_layer_glMatrixMultTransposefEXT(GLenum mode, GLfloat* m) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMatrixMultTransposefEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMatrixMultTransposefEXT");
     if (it == functionMap.end()) {
@@ -18077,6 +18746,7 @@ void opengl_es_layer_glMatrixMultdEXT(GLenum mode, GLdouble* m) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMatrixMultdEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMatrixMultdEXT");
     if (it == functionMap.end()) {
@@ -18104,6 +18774,7 @@ void opengl_es_layer_glMatrixMultfEXT(GLenum mode, GLfloat* m) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMatrixMultfEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMatrixMultfEXT");
     if (it == functionMap.end()) {
@@ -18131,6 +18802,7 @@ void opengl_es_layer_glMatrixOrthoEXT(GLenum mode, GLdouble left, GLdouble right
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMatrixOrthoEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMatrixOrthoEXT");
     if (it == functionMap.end()) {
@@ -18158,6 +18830,7 @@ void opengl_es_layer_glMatrixPopEXT(GLenum mode) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMatrixPopEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMatrixPopEXT");
     if (it == functionMap.end()) {
@@ -18185,6 +18858,7 @@ void opengl_es_layer_glMatrixPushEXT(GLenum mode) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMatrixPushEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMatrixPushEXT");
     if (it == functionMap.end()) {
@@ -18212,6 +18886,7 @@ void opengl_es_layer_glMatrixRotatedEXT(GLenum mode, GLdouble angle, GLdouble x,
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMatrixRotatedEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMatrixRotatedEXT");
     if (it == functionMap.end()) {
@@ -18239,6 +18914,7 @@ void opengl_es_layer_glMatrixRotatefEXT(GLenum mode, GLfloat angle, GLfloat x, G
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMatrixRotatefEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMatrixRotatefEXT");
     if (it == functionMap.end()) {
@@ -18266,6 +18942,7 @@ void opengl_es_layer_glMatrixScaledEXT(GLenum mode, GLdouble x, GLdouble y, GLdo
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMatrixScaledEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMatrixScaledEXT");
     if (it == functionMap.end()) {
@@ -18293,6 +18970,7 @@ void opengl_es_layer_glMatrixScalefEXT(GLenum mode, GLfloat x, GLfloat y, GLfloa
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMatrixScalefEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMatrixScalefEXT");
     if (it == functionMap.end()) {
@@ -18320,6 +18998,7 @@ void opengl_es_layer_glMatrixTranslatedEXT(GLenum mode, GLdouble x, GLdouble y, 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMatrixTranslatedEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMatrixTranslatedEXT");
     if (it == functionMap.end()) {
@@ -18347,6 +19026,7 @@ void opengl_es_layer_glMatrixTranslatefEXT(GLenum mode, GLfloat x, GLfloat y, GL
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMatrixTranslatefEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMatrixTranslatefEXT");
     if (it == functionMap.end()) {
@@ -18374,6 +19054,7 @@ void opengl_es_layer_glMaxShaderCompilerThreadsKHR(GLuint count) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMaxShaderCompilerThreadsKHR");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMaxShaderCompilerThreadsKHR");
     if (it == functionMap.end()) {
@@ -18401,6 +19082,7 @@ void opengl_es_layer_glMemoryBarrier(GLbitfield barriers) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMemoryBarrier");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMemoryBarrier");
     if (it == functionMap.end()) {
@@ -18428,6 +19110,7 @@ void opengl_es_layer_glMemoryBarrierByRegion(GLbitfield barriers) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMemoryBarrierByRegion");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMemoryBarrierByRegion");
     if (it == functionMap.end()) {
@@ -18455,6 +19138,7 @@ void opengl_es_layer_glMemoryObjectParameterivEXT(GLuint memoryObject, GLenum pn
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMemoryObjectParameterivEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMemoryObjectParameterivEXT");
     if (it == functionMap.end()) {
@@ -18482,6 +19166,7 @@ void opengl_es_layer_glMinSampleShading(GLfloat value) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMinSampleShading");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMinSampleShading");
     if (it == functionMap.end()) {
@@ -18509,6 +19194,7 @@ void opengl_es_layer_glMinSampleShadingOES(GLfloat value) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMinSampleShadingOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMinSampleShadingOES");
     if (it == functionMap.end()) {
@@ -18536,6 +19222,7 @@ void opengl_es_layer_glMultMatrixf(GLfloat* m) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMultMatrixf");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMultMatrixf");
     if (it == functionMap.end()) {
@@ -18563,6 +19250,7 @@ void opengl_es_layer_glMultMatrixx(GLfixed* m) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMultMatrixx");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMultMatrixx");
     if (it == functionMap.end()) {
@@ -18590,6 +19278,7 @@ void opengl_es_layer_glMultMatrixxOES(GLfixed* m) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMultMatrixxOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMultMatrixxOES");
     if (it == functionMap.end()) {
@@ -18617,6 +19306,7 @@ void opengl_es_layer_glMultiDrawArraysEXT(GLenum mode, GLint* first, GLsizei* co
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMultiDrawArraysEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMultiDrawArraysEXT");
     if (it == functionMap.end()) {
@@ -18644,6 +19334,7 @@ void opengl_es_layer_glMultiDrawArraysIndirectEXT(GLenum mode, void* indirect, G
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMultiDrawArraysIndirectEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMultiDrawArraysIndirectEXT");
     if (it == functionMap.end()) {
@@ -18671,6 +19362,7 @@ void opengl_es_layer_glMultiDrawElementsBaseVertexEXT(GLenum mode, GLsizei* coun
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMultiDrawElementsBaseVertexEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMultiDrawElementsBaseVertexEXT");
     if (it == functionMap.end()) {
@@ -18698,6 +19390,7 @@ void opengl_es_layer_glMultiDrawElementsBaseVertexOES(GLenum mode, GLsizei* coun
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMultiDrawElementsBaseVertexOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMultiDrawElementsBaseVertexOES");
     if (it == functionMap.end()) {
@@ -18725,6 +19418,7 @@ void opengl_es_layer_glMultiDrawElementsEXT(GLenum mode, GLsizei* count, GLenum 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMultiDrawElementsEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMultiDrawElementsEXT");
     if (it == functionMap.end()) {
@@ -18752,6 +19446,7 @@ void opengl_es_layer_glMultiDrawElementsIndirectEXT(GLenum mode, GLenum type, vo
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMultiDrawElementsIndirectEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMultiDrawElementsIndirectEXT");
     if (it == functionMap.end()) {
@@ -18779,6 +19474,7 @@ void opengl_es_layer_glMultiTexCoord4f(GLenum target, GLfloat s, GLfloat t, GLfl
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMultiTexCoord4f");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMultiTexCoord4f");
     if (it == functionMap.end()) {
@@ -18806,6 +19502,7 @@ void opengl_es_layer_glMultiTexCoord4x(GLenum texture, GLfixed s, GLfixed t, GLf
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMultiTexCoord4x");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMultiTexCoord4x");
     if (it == functionMap.end()) {
@@ -18833,6 +19530,7 @@ void opengl_es_layer_glMultiTexCoord4xOES(GLenum texture, GLfixed s, GLfixed t, 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glMultiTexCoord4xOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glMultiTexCoord4xOES");
     if (it == functionMap.end()) {
@@ -18860,6 +19558,7 @@ void opengl_es_layer_glNamedBufferStorageExternalEXT(GLuint buffer, GLintptr off
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glNamedBufferStorageExternalEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glNamedBufferStorageExternalEXT");
     if (it == functionMap.end()) {
@@ -18887,6 +19586,7 @@ void opengl_es_layer_glNamedBufferStorageMemEXT(GLuint buffer, GLsizeiptr size, 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glNamedBufferStorageMemEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glNamedBufferStorageMemEXT");
     if (it == functionMap.end()) {
@@ -18914,6 +19614,7 @@ void opengl_es_layer_glNamedFramebufferSampleLocationsfvNV(GLuint framebuffer, G
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glNamedFramebufferSampleLocationsfvNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glNamedFramebufferSampleLocationsfvNV");
     if (it == functionMap.end()) {
@@ -18941,6 +19642,7 @@ void opengl_es_layer_glNormal3f(GLfloat nx, GLfloat ny, GLfloat nz) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glNormal3f");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glNormal3f");
     if (it == functionMap.end()) {
@@ -18968,6 +19670,7 @@ void opengl_es_layer_glNormal3x(GLfixed nx, GLfixed ny, GLfixed nz) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glNormal3x");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glNormal3x");
     if (it == functionMap.end()) {
@@ -18995,6 +19698,7 @@ void opengl_es_layer_glNormal3xOES(GLfixed nx, GLfixed ny, GLfixed nz) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glNormal3xOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glNormal3xOES");
     if (it == functionMap.end()) {
@@ -19022,6 +19726,7 @@ void opengl_es_layer_glNormalPointer(GLenum type, GLsizei stride, void* pointer)
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glNormalPointer");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glNormalPointer");
     if (it == functionMap.end()) {
@@ -19049,6 +19754,7 @@ void opengl_es_layer_glObjectLabel(GLenum identifier, GLuint name, GLsizei lengt
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glObjectLabel");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glObjectLabel");
     if (it == functionMap.end()) {
@@ -19076,6 +19782,7 @@ void opengl_es_layer_glObjectLabelKHR(GLenum identifier, GLuint name, GLsizei le
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glObjectLabelKHR");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glObjectLabelKHR");
     if (it == functionMap.end()) {
@@ -19103,6 +19810,7 @@ void opengl_es_layer_glObjectPtrLabel(void* ptr, GLsizei length, GLchar* label) 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glObjectPtrLabel");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glObjectPtrLabel");
     if (it == functionMap.end()) {
@@ -19130,6 +19838,7 @@ void opengl_es_layer_glObjectPtrLabelKHR(void* ptr, GLsizei length, GLchar* labe
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glObjectPtrLabelKHR");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glObjectPtrLabelKHR");
     if (it == functionMap.end()) {
@@ -19157,6 +19866,7 @@ void opengl_es_layer_glOrthof(GLfloat l, GLfloat r, GLfloat b, GLfloat t, GLfloa
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glOrthof");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glOrthof");
     if (it == functionMap.end()) {
@@ -19184,6 +19894,7 @@ void opengl_es_layer_glOrthofOES(GLfloat l, GLfloat r, GLfloat b, GLfloat t, GLf
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glOrthofOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glOrthofOES");
     if (it == functionMap.end()) {
@@ -19211,6 +19922,7 @@ void opengl_es_layer_glOrthox(GLfixed l, GLfixed r, GLfixed b, GLfixed t, GLfixe
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glOrthox");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glOrthox");
     if (it == functionMap.end()) {
@@ -19238,6 +19950,7 @@ void opengl_es_layer_glOrthoxOES(GLfixed l, GLfixed r, GLfixed b, GLfixed t, GLf
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glOrthoxOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glOrthoxOES");
     if (it == functionMap.end()) {
@@ -19265,6 +19978,7 @@ void opengl_es_layer_glPatchParameteri(GLenum pname, GLint value) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glPatchParameteri");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glPatchParameteri");
     if (it == functionMap.end()) {
@@ -19292,6 +20006,7 @@ void opengl_es_layer_glPatchParameteriEXT(GLenum pname, GLint value) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glPatchParameteriEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glPatchParameteriEXT");
     if (it == functionMap.end()) {
@@ -19319,6 +20034,7 @@ void opengl_es_layer_glPatchParameteriOES(GLenum pname, GLint value) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glPatchParameteriOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glPatchParameteriOES");
     if (it == functionMap.end()) {
@@ -19346,6 +20062,7 @@ void opengl_es_layer_glPathCommandsNV(GLuint path, GLsizei numCommands, GLubyte*
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glPathCommandsNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glPathCommandsNV");
     if (it == functionMap.end()) {
@@ -19373,6 +20090,7 @@ void opengl_es_layer_glPathCoordsNV(GLuint path, GLsizei numCoords, GLenum coord
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glPathCoordsNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glPathCoordsNV");
     if (it == functionMap.end()) {
@@ -19400,6 +20118,7 @@ void opengl_es_layer_glPathCoverDepthFuncNV(GLenum func) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glPathCoverDepthFuncNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glPathCoverDepthFuncNV");
     if (it == functionMap.end()) {
@@ -19427,6 +20146,7 @@ void opengl_es_layer_glPathDashArrayNV(GLuint path, GLsizei dashCount, GLfloat* 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glPathDashArrayNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glPathDashArrayNV");
     if (it == functionMap.end()) {
@@ -19454,6 +20174,7 @@ GLenum opengl_es_layer_glPathGlyphIndexArrayNV(GLuint firstPathName, GLenum font
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glPathGlyphIndexArrayNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glPathGlyphIndexArrayNV");
     if (it == functionMap.end()) {
@@ -19481,6 +20202,7 @@ GLenum opengl_es_layer_glPathGlyphIndexRangeNV(GLenum fontTarget, void* fontName
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glPathGlyphIndexRangeNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glPathGlyphIndexRangeNV");
     if (it == functionMap.end()) {
@@ -19508,6 +20230,7 @@ void opengl_es_layer_glPathGlyphRangeNV(GLuint firstPathName, GLenum fontTarget,
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glPathGlyphRangeNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glPathGlyphRangeNV");
     if (it == functionMap.end()) {
@@ -19535,6 +20258,7 @@ void opengl_es_layer_glPathGlyphsNV(GLuint firstPathName, GLenum fontTarget, voi
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glPathGlyphsNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glPathGlyphsNV");
     if (it == functionMap.end()) {
@@ -19562,6 +20286,7 @@ GLenum opengl_es_layer_glPathMemoryGlyphIndexArrayNV(GLuint firstPathName, GLenu
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glPathMemoryGlyphIndexArrayNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glPathMemoryGlyphIndexArrayNV");
     if (it == functionMap.end()) {
@@ -19589,6 +20314,7 @@ void opengl_es_layer_glPathParameterfNV(GLuint path, GLenum pname, GLfloat value
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glPathParameterfNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glPathParameterfNV");
     if (it == functionMap.end()) {
@@ -19616,6 +20342,7 @@ void opengl_es_layer_glPathParameterfvNV(GLuint path, GLenum pname, GLfloat* val
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glPathParameterfvNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glPathParameterfvNV");
     if (it == functionMap.end()) {
@@ -19643,6 +20370,7 @@ void opengl_es_layer_glPathParameteriNV(GLuint path, GLenum pname, GLint value) 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glPathParameteriNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glPathParameteriNV");
     if (it == functionMap.end()) {
@@ -19670,6 +20398,7 @@ void opengl_es_layer_glPathParameterivNV(GLuint path, GLenum pname, GLint* value
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glPathParameterivNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glPathParameterivNV");
     if (it == functionMap.end()) {
@@ -19697,6 +20426,7 @@ void opengl_es_layer_glPathStencilDepthOffsetNV(GLfloat factor, GLfloat units) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glPathStencilDepthOffsetNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glPathStencilDepthOffsetNV");
     if (it == functionMap.end()) {
@@ -19724,6 +20454,7 @@ void opengl_es_layer_glPathStencilFuncNV(GLenum func, GLint ref, GLuint mask) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glPathStencilFuncNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glPathStencilFuncNV");
     if (it == functionMap.end()) {
@@ -19751,6 +20482,7 @@ void opengl_es_layer_glPathStringNV(GLuint path, GLenum format, GLsizei length, 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glPathStringNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glPathStringNV");
     if (it == functionMap.end()) {
@@ -19778,6 +20510,7 @@ void opengl_es_layer_glPathSubCommandsNV(GLuint path, GLsizei commandStart, GLsi
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glPathSubCommandsNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glPathSubCommandsNV");
     if (it == functionMap.end()) {
@@ -19805,6 +20538,7 @@ void opengl_es_layer_glPathSubCoordsNV(GLuint path, GLsizei coordStart, GLsizei 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glPathSubCoordsNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glPathSubCoordsNV");
     if (it == functionMap.end()) {
@@ -19832,6 +20566,7 @@ void opengl_es_layer_glPauseTransformFeedback(void ) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glPauseTransformFeedback");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glPauseTransformFeedback");
     if (it == functionMap.end()) {
@@ -19859,6 +20594,7 @@ void opengl_es_layer_glPixelStorei(GLenum pname, GLint param) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glPixelStorei");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glPixelStorei");
     if (it == functionMap.end()) {
@@ -19886,6 +20622,7 @@ GLboolean opengl_es_layer_glPointAlongPathNV(GLuint path, GLsizei startSegment, 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glPointAlongPathNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glPointAlongPathNV");
     if (it == functionMap.end()) {
@@ -19913,6 +20650,7 @@ void opengl_es_layer_glPointParameterf(GLenum pname, GLfloat param) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glPointParameterf");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glPointParameterf");
     if (it == functionMap.end()) {
@@ -19940,6 +20678,7 @@ void opengl_es_layer_glPointParameterfv(GLenum pname, GLfloat* params) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glPointParameterfv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glPointParameterfv");
     if (it == functionMap.end()) {
@@ -19967,6 +20706,7 @@ void opengl_es_layer_glPointParameterx(GLenum pname, GLfixed param) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glPointParameterx");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glPointParameterx");
     if (it == functionMap.end()) {
@@ -19994,6 +20734,7 @@ void opengl_es_layer_glPointParameterxOES(GLenum pname, GLfixed param) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glPointParameterxOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glPointParameterxOES");
     if (it == functionMap.end()) {
@@ -20021,6 +20762,7 @@ void opengl_es_layer_glPointParameterxv(GLenum pname, GLfixed* params) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glPointParameterxv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glPointParameterxv");
     if (it == functionMap.end()) {
@@ -20048,6 +20790,7 @@ void opengl_es_layer_glPointParameterxvOES(GLenum pname, GLfixed* params) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glPointParameterxvOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glPointParameterxvOES");
     if (it == functionMap.end()) {
@@ -20075,6 +20818,7 @@ void opengl_es_layer_glPointSize(GLfloat size) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glPointSize");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glPointSize");
     if (it == functionMap.end()) {
@@ -20102,6 +20846,7 @@ void opengl_es_layer_glPointSizePointerOES(GLenum type, GLsizei stride, void* po
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glPointSizePointerOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glPointSizePointerOES");
     if (it == functionMap.end()) {
@@ -20129,6 +20874,7 @@ void opengl_es_layer_glPointSizex(GLfixed size) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glPointSizex");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glPointSizex");
     if (it == functionMap.end()) {
@@ -20156,6 +20902,7 @@ void opengl_es_layer_glPointSizexOES(GLfixed size) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glPointSizexOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glPointSizexOES");
     if (it == functionMap.end()) {
@@ -20183,6 +20930,7 @@ void opengl_es_layer_glPolygonModeNV(GLenum face, GLenum mode) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glPolygonModeNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glPolygonModeNV");
     if (it == functionMap.end()) {
@@ -20210,6 +20958,7 @@ void opengl_es_layer_glPolygonOffset(GLfloat factor, GLfloat units) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glPolygonOffset");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glPolygonOffset");
     if (it == functionMap.end()) {
@@ -20237,6 +20986,7 @@ void opengl_es_layer_glPolygonOffsetClampEXT(GLfloat factor, GLfloat units, GLfl
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glPolygonOffsetClampEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glPolygonOffsetClampEXT");
     if (it == functionMap.end()) {
@@ -20264,6 +21014,7 @@ void opengl_es_layer_glPolygonOffsetx(GLfixed factor, GLfixed units) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glPolygonOffsetx");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glPolygonOffsetx");
     if (it == functionMap.end()) {
@@ -20291,6 +21042,7 @@ void opengl_es_layer_glPolygonOffsetxOES(GLfixed factor, GLfixed units) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glPolygonOffsetxOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glPolygonOffsetxOES");
     if (it == functionMap.end()) {
@@ -20318,6 +21070,7 @@ void opengl_es_layer_glPopDebugGroup(void ) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glPopDebugGroup");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glPopDebugGroup");
     if (it == functionMap.end()) {
@@ -20345,6 +21098,7 @@ void opengl_es_layer_glPopDebugGroupKHR(void ) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glPopDebugGroupKHR");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glPopDebugGroupKHR");
     if (it == functionMap.end()) {
@@ -20372,6 +21126,7 @@ void opengl_es_layer_glPopGroupMarkerEXT(void ) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glPopGroupMarkerEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glPopGroupMarkerEXT");
     if (it == functionMap.end()) {
@@ -20399,6 +21154,7 @@ void opengl_es_layer_glPopMatrix(void ) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glPopMatrix");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glPopMatrix");
     if (it == functionMap.end()) {
@@ -20426,6 +21182,7 @@ void opengl_es_layer_glPrimitiveBoundingBox(GLfloat minX, GLfloat minY, GLfloat 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glPrimitiveBoundingBox");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glPrimitiveBoundingBox");
     if (it == functionMap.end()) {
@@ -20453,6 +21210,7 @@ void opengl_es_layer_glPrimitiveBoundingBoxEXT(GLfloat minX, GLfloat minY, GLflo
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glPrimitiveBoundingBoxEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glPrimitiveBoundingBoxEXT");
     if (it == functionMap.end()) {
@@ -20480,6 +21238,7 @@ void opengl_es_layer_glPrimitiveBoundingBoxOES(GLfloat minX, GLfloat minY, GLflo
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glPrimitiveBoundingBoxOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glPrimitiveBoundingBoxOES");
     if (it == functionMap.end()) {
@@ -20507,6 +21266,7 @@ void opengl_es_layer_glProgramBinary(GLuint program, GLenum binaryFormat, void* 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramBinary");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramBinary");
     if (it == functionMap.end()) {
@@ -20534,6 +21294,7 @@ void opengl_es_layer_glProgramBinaryOES(GLuint program, GLenum binaryFormat, voi
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramBinaryOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramBinaryOES");
     if (it == functionMap.end()) {
@@ -20561,6 +21322,7 @@ void opengl_es_layer_glProgramParameteri(GLuint program, GLenum pname, GLint val
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramParameteri");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramParameteri");
     if (it == functionMap.end()) {
@@ -20588,6 +21350,7 @@ void opengl_es_layer_glProgramParameteriEXT(GLuint program, GLenum pname, GLint 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramParameteriEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramParameteriEXT");
     if (it == functionMap.end()) {
@@ -20615,6 +21378,7 @@ void opengl_es_layer_glProgramPathFragmentInputGenNV(GLuint program, GLint locat
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramPathFragmentInputGenNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramPathFragmentInputGenNV");
     if (it == functionMap.end()) {
@@ -20642,6 +21406,7 @@ void opengl_es_layer_glProgramUniform1f(GLuint program, GLint location, GLfloat 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform1f");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform1f");
     if (it == functionMap.end()) {
@@ -20669,6 +21434,7 @@ void opengl_es_layer_glProgramUniform1fEXT(GLuint program, GLint location, GLflo
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform1fEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform1fEXT");
     if (it == functionMap.end()) {
@@ -20696,6 +21462,7 @@ void opengl_es_layer_glProgramUniform1fv(GLuint program, GLint location, GLsizei
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform1fv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform1fv");
     if (it == functionMap.end()) {
@@ -20723,6 +21490,7 @@ void opengl_es_layer_glProgramUniform1fvEXT(GLuint program, GLint location, GLsi
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform1fvEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform1fvEXT");
     if (it == functionMap.end()) {
@@ -20750,6 +21518,7 @@ void opengl_es_layer_glProgramUniform1i(GLuint program, GLint location, GLint v0
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform1i");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform1i");
     if (it == functionMap.end()) {
@@ -20777,6 +21546,7 @@ void opengl_es_layer_glProgramUniform1i64NV(GLuint program, GLint location, GLin
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform1i64NV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform1i64NV");
     if (it == functionMap.end()) {
@@ -20804,6 +21574,7 @@ void opengl_es_layer_glProgramUniform1i64vNV(GLuint program, GLint location, GLs
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform1i64vNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform1i64vNV");
     if (it == functionMap.end()) {
@@ -20831,6 +21602,7 @@ void opengl_es_layer_glProgramUniform1iEXT(GLuint program, GLint location, GLint
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform1iEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform1iEXT");
     if (it == functionMap.end()) {
@@ -20858,6 +21630,7 @@ void opengl_es_layer_glProgramUniform1iv(GLuint program, GLint location, GLsizei
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform1iv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform1iv");
     if (it == functionMap.end()) {
@@ -20885,6 +21658,7 @@ void opengl_es_layer_glProgramUniform1ivEXT(GLuint program, GLint location, GLsi
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform1ivEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform1ivEXT");
     if (it == functionMap.end()) {
@@ -20912,6 +21686,7 @@ void opengl_es_layer_glProgramUniform1ui(GLuint program, GLint location, GLuint 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform1ui");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform1ui");
     if (it == functionMap.end()) {
@@ -20939,6 +21714,7 @@ void opengl_es_layer_glProgramUniform1ui64NV(GLuint program, GLint location, GLu
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform1ui64NV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform1ui64NV");
     if (it == functionMap.end()) {
@@ -20966,6 +21742,7 @@ void opengl_es_layer_glProgramUniform1ui64vNV(GLuint program, GLint location, GL
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform1ui64vNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform1ui64vNV");
     if (it == functionMap.end()) {
@@ -20993,6 +21770,7 @@ void opengl_es_layer_glProgramUniform1uiEXT(GLuint program, GLint location, GLui
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform1uiEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform1uiEXT");
     if (it == functionMap.end()) {
@@ -21020,6 +21798,7 @@ void opengl_es_layer_glProgramUniform1uiv(GLuint program, GLint location, GLsize
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform1uiv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform1uiv");
     if (it == functionMap.end()) {
@@ -21047,6 +21826,7 @@ void opengl_es_layer_glProgramUniform1uivEXT(GLuint program, GLint location, GLs
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform1uivEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform1uivEXT");
     if (it == functionMap.end()) {
@@ -21074,6 +21854,7 @@ void opengl_es_layer_glProgramUniform2f(GLuint program, GLint location, GLfloat 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform2f");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform2f");
     if (it == functionMap.end()) {
@@ -21101,6 +21882,7 @@ void opengl_es_layer_glProgramUniform2fEXT(GLuint program, GLint location, GLflo
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform2fEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform2fEXT");
     if (it == functionMap.end()) {
@@ -21128,6 +21910,7 @@ void opengl_es_layer_glProgramUniform2fv(GLuint program, GLint location, GLsizei
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform2fv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform2fv");
     if (it == functionMap.end()) {
@@ -21155,6 +21938,7 @@ void opengl_es_layer_glProgramUniform2fvEXT(GLuint program, GLint location, GLsi
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform2fvEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform2fvEXT");
     if (it == functionMap.end()) {
@@ -21182,6 +21966,7 @@ void opengl_es_layer_glProgramUniform2i(GLuint program, GLint location, GLint v0
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform2i");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform2i");
     if (it == functionMap.end()) {
@@ -21209,6 +21994,7 @@ void opengl_es_layer_glProgramUniform2i64NV(GLuint program, GLint location, GLin
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform2i64NV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform2i64NV");
     if (it == functionMap.end()) {
@@ -21236,6 +22022,7 @@ void opengl_es_layer_glProgramUniform2i64vNV(GLuint program, GLint location, GLs
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform2i64vNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform2i64vNV");
     if (it == functionMap.end()) {
@@ -21263,6 +22050,7 @@ void opengl_es_layer_glProgramUniform2iEXT(GLuint program, GLint location, GLint
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform2iEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform2iEXT");
     if (it == functionMap.end()) {
@@ -21290,6 +22078,7 @@ void opengl_es_layer_glProgramUniform2iv(GLuint program, GLint location, GLsizei
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform2iv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform2iv");
     if (it == functionMap.end()) {
@@ -21317,6 +22106,7 @@ void opengl_es_layer_glProgramUniform2ivEXT(GLuint program, GLint location, GLsi
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform2ivEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform2ivEXT");
     if (it == functionMap.end()) {
@@ -21344,6 +22134,7 @@ void opengl_es_layer_glProgramUniform2ui(GLuint program, GLint location, GLuint 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform2ui");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform2ui");
     if (it == functionMap.end()) {
@@ -21371,6 +22162,7 @@ void opengl_es_layer_glProgramUniform2ui64NV(GLuint program, GLint location, GLu
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform2ui64NV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform2ui64NV");
     if (it == functionMap.end()) {
@@ -21398,6 +22190,7 @@ void opengl_es_layer_glProgramUniform2ui64vNV(GLuint program, GLint location, GL
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform2ui64vNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform2ui64vNV");
     if (it == functionMap.end()) {
@@ -21425,6 +22218,7 @@ void opengl_es_layer_glProgramUniform2uiEXT(GLuint program, GLint location, GLui
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform2uiEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform2uiEXT");
     if (it == functionMap.end()) {
@@ -21452,6 +22246,7 @@ void opengl_es_layer_glProgramUniform2uiv(GLuint program, GLint location, GLsize
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform2uiv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform2uiv");
     if (it == functionMap.end()) {
@@ -21479,6 +22274,7 @@ void opengl_es_layer_glProgramUniform2uivEXT(GLuint program, GLint location, GLs
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform2uivEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform2uivEXT");
     if (it == functionMap.end()) {
@@ -21506,6 +22302,7 @@ void opengl_es_layer_glProgramUniform3f(GLuint program, GLint location, GLfloat 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform3f");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform3f");
     if (it == functionMap.end()) {
@@ -21533,6 +22330,7 @@ void opengl_es_layer_glProgramUniform3fEXT(GLuint program, GLint location, GLflo
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform3fEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform3fEXT");
     if (it == functionMap.end()) {
@@ -21560,6 +22358,7 @@ void opengl_es_layer_glProgramUniform3fv(GLuint program, GLint location, GLsizei
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform3fv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform3fv");
     if (it == functionMap.end()) {
@@ -21587,6 +22386,7 @@ void opengl_es_layer_glProgramUniform3fvEXT(GLuint program, GLint location, GLsi
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform3fvEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform3fvEXT");
     if (it == functionMap.end()) {
@@ -21614,6 +22414,7 @@ void opengl_es_layer_glProgramUniform3i(GLuint program, GLint location, GLint v0
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform3i");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform3i");
     if (it == functionMap.end()) {
@@ -21641,6 +22442,7 @@ void opengl_es_layer_glProgramUniform3i64NV(GLuint program, GLint location, GLin
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform3i64NV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform3i64NV");
     if (it == functionMap.end()) {
@@ -21668,6 +22470,7 @@ void opengl_es_layer_glProgramUniform3i64vNV(GLuint program, GLint location, GLs
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform3i64vNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform3i64vNV");
     if (it == functionMap.end()) {
@@ -21695,6 +22498,7 @@ void opengl_es_layer_glProgramUniform3iEXT(GLuint program, GLint location, GLint
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform3iEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform3iEXT");
     if (it == functionMap.end()) {
@@ -21722,6 +22526,7 @@ void opengl_es_layer_glProgramUniform3iv(GLuint program, GLint location, GLsizei
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform3iv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform3iv");
     if (it == functionMap.end()) {
@@ -21749,6 +22554,7 @@ void opengl_es_layer_glProgramUniform3ivEXT(GLuint program, GLint location, GLsi
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform3ivEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform3ivEXT");
     if (it == functionMap.end()) {
@@ -21776,6 +22582,7 @@ void opengl_es_layer_glProgramUniform3ui(GLuint program, GLint location, GLuint 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform3ui");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform3ui");
     if (it == functionMap.end()) {
@@ -21803,6 +22610,7 @@ void opengl_es_layer_glProgramUniform3ui64NV(GLuint program, GLint location, GLu
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform3ui64NV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform3ui64NV");
     if (it == functionMap.end()) {
@@ -21830,6 +22638,7 @@ void opengl_es_layer_glProgramUniform3ui64vNV(GLuint program, GLint location, GL
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform3ui64vNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform3ui64vNV");
     if (it == functionMap.end()) {
@@ -21857,6 +22666,7 @@ void opengl_es_layer_glProgramUniform3uiEXT(GLuint program, GLint location, GLui
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform3uiEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform3uiEXT");
     if (it == functionMap.end()) {
@@ -21884,6 +22694,7 @@ void opengl_es_layer_glProgramUniform3uiv(GLuint program, GLint location, GLsize
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform3uiv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform3uiv");
     if (it == functionMap.end()) {
@@ -21911,6 +22722,7 @@ void opengl_es_layer_glProgramUniform3uivEXT(GLuint program, GLint location, GLs
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform3uivEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform3uivEXT");
     if (it == functionMap.end()) {
@@ -21938,6 +22750,7 @@ void opengl_es_layer_glProgramUniform4f(GLuint program, GLint location, GLfloat 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform4f");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform4f");
     if (it == functionMap.end()) {
@@ -21965,6 +22778,7 @@ void opengl_es_layer_glProgramUniform4fEXT(GLuint program, GLint location, GLflo
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform4fEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform4fEXT");
     if (it == functionMap.end()) {
@@ -21992,6 +22806,7 @@ void opengl_es_layer_glProgramUniform4fv(GLuint program, GLint location, GLsizei
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform4fv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform4fv");
     if (it == functionMap.end()) {
@@ -22019,6 +22834,7 @@ void opengl_es_layer_glProgramUniform4fvEXT(GLuint program, GLint location, GLsi
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform4fvEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform4fvEXT");
     if (it == functionMap.end()) {
@@ -22046,6 +22862,7 @@ void opengl_es_layer_glProgramUniform4i(GLuint program, GLint location, GLint v0
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform4i");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform4i");
     if (it == functionMap.end()) {
@@ -22073,6 +22890,7 @@ void opengl_es_layer_glProgramUniform4i64NV(GLuint program, GLint location, GLin
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform4i64NV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform4i64NV");
     if (it == functionMap.end()) {
@@ -22100,6 +22918,7 @@ void opengl_es_layer_glProgramUniform4i64vNV(GLuint program, GLint location, GLs
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform4i64vNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform4i64vNV");
     if (it == functionMap.end()) {
@@ -22127,6 +22946,7 @@ void opengl_es_layer_glProgramUniform4iEXT(GLuint program, GLint location, GLint
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform4iEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform4iEXT");
     if (it == functionMap.end()) {
@@ -22154,6 +22974,7 @@ void opengl_es_layer_glProgramUniform4iv(GLuint program, GLint location, GLsizei
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform4iv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform4iv");
     if (it == functionMap.end()) {
@@ -22181,6 +23002,7 @@ void opengl_es_layer_glProgramUniform4ivEXT(GLuint program, GLint location, GLsi
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform4ivEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform4ivEXT");
     if (it == functionMap.end()) {
@@ -22208,6 +23030,7 @@ void opengl_es_layer_glProgramUniform4ui(GLuint program, GLint location, GLuint 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform4ui");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform4ui");
     if (it == functionMap.end()) {
@@ -22235,6 +23058,7 @@ void opengl_es_layer_glProgramUniform4ui64NV(GLuint program, GLint location, GLu
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform4ui64NV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform4ui64NV");
     if (it == functionMap.end()) {
@@ -22262,6 +23086,7 @@ void opengl_es_layer_glProgramUniform4ui64vNV(GLuint program, GLint location, GL
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform4ui64vNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform4ui64vNV");
     if (it == functionMap.end()) {
@@ -22289,6 +23114,7 @@ void opengl_es_layer_glProgramUniform4uiEXT(GLuint program, GLint location, GLui
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform4uiEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform4uiEXT");
     if (it == functionMap.end()) {
@@ -22316,6 +23142,7 @@ void opengl_es_layer_glProgramUniform4uiv(GLuint program, GLint location, GLsize
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform4uiv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform4uiv");
     if (it == functionMap.end()) {
@@ -22343,6 +23170,7 @@ void opengl_es_layer_glProgramUniform4uivEXT(GLuint program, GLint location, GLs
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniform4uivEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniform4uivEXT");
     if (it == functionMap.end()) {
@@ -22370,6 +23198,7 @@ void opengl_es_layer_glProgramUniformHandleui64IMG(GLuint program, GLint locatio
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniformHandleui64IMG");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniformHandleui64IMG");
     if (it == functionMap.end()) {
@@ -22397,6 +23226,7 @@ void opengl_es_layer_glProgramUniformHandleui64NV(GLuint program, GLint location
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniformHandleui64NV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniformHandleui64NV");
     if (it == functionMap.end()) {
@@ -22424,6 +23254,7 @@ void opengl_es_layer_glProgramUniformHandleui64vIMG(GLuint program, GLint locati
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniformHandleui64vIMG");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniformHandleui64vIMG");
     if (it == functionMap.end()) {
@@ -22451,6 +23282,7 @@ void opengl_es_layer_glProgramUniformHandleui64vNV(GLuint program, GLint locatio
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniformHandleui64vNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniformHandleui64vNV");
     if (it == functionMap.end()) {
@@ -22478,6 +23310,7 @@ void opengl_es_layer_glProgramUniformMatrix2fv(GLuint program, GLint location, G
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniformMatrix2fv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniformMatrix2fv");
     if (it == functionMap.end()) {
@@ -22505,6 +23338,7 @@ void opengl_es_layer_glProgramUniformMatrix2fvEXT(GLuint program, GLint location
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniformMatrix2fvEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniformMatrix2fvEXT");
     if (it == functionMap.end()) {
@@ -22532,6 +23366,7 @@ void opengl_es_layer_glProgramUniformMatrix2x3fv(GLuint program, GLint location,
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniformMatrix2x3fv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniformMatrix2x3fv");
     if (it == functionMap.end()) {
@@ -22559,6 +23394,7 @@ void opengl_es_layer_glProgramUniformMatrix2x3fvEXT(GLuint program, GLint locati
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniformMatrix2x3fvEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniformMatrix2x3fvEXT");
     if (it == functionMap.end()) {
@@ -22586,6 +23422,7 @@ void opengl_es_layer_glProgramUniformMatrix2x4fv(GLuint program, GLint location,
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniformMatrix2x4fv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniformMatrix2x4fv");
     if (it == functionMap.end()) {
@@ -22613,6 +23450,7 @@ void opengl_es_layer_glProgramUniformMatrix2x4fvEXT(GLuint program, GLint locati
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniformMatrix2x4fvEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniformMatrix2x4fvEXT");
     if (it == functionMap.end()) {
@@ -22640,6 +23478,7 @@ void opengl_es_layer_glProgramUniformMatrix3fv(GLuint program, GLint location, G
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniformMatrix3fv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniformMatrix3fv");
     if (it == functionMap.end()) {
@@ -22667,6 +23506,7 @@ void opengl_es_layer_glProgramUniformMatrix3fvEXT(GLuint program, GLint location
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniformMatrix3fvEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniformMatrix3fvEXT");
     if (it == functionMap.end()) {
@@ -22694,6 +23534,7 @@ void opengl_es_layer_glProgramUniformMatrix3x2fv(GLuint program, GLint location,
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniformMatrix3x2fv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniformMatrix3x2fv");
     if (it == functionMap.end()) {
@@ -22721,6 +23562,7 @@ void opengl_es_layer_glProgramUniformMatrix3x2fvEXT(GLuint program, GLint locati
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniformMatrix3x2fvEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniformMatrix3x2fvEXT");
     if (it == functionMap.end()) {
@@ -22748,6 +23590,7 @@ void opengl_es_layer_glProgramUniformMatrix3x4fv(GLuint program, GLint location,
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniformMatrix3x4fv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniformMatrix3x4fv");
     if (it == functionMap.end()) {
@@ -22775,6 +23618,7 @@ void opengl_es_layer_glProgramUniformMatrix3x4fvEXT(GLuint program, GLint locati
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniformMatrix3x4fvEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniformMatrix3x4fvEXT");
     if (it == functionMap.end()) {
@@ -22802,6 +23646,7 @@ void opengl_es_layer_glProgramUniformMatrix4fv(GLuint program, GLint location, G
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniformMatrix4fv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniformMatrix4fv");
     if (it == functionMap.end()) {
@@ -22829,6 +23674,7 @@ void opengl_es_layer_glProgramUniformMatrix4fvEXT(GLuint program, GLint location
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniformMatrix4fvEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniformMatrix4fvEXT");
     if (it == functionMap.end()) {
@@ -22856,6 +23702,7 @@ void opengl_es_layer_glProgramUniformMatrix4x2fv(GLuint program, GLint location,
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniformMatrix4x2fv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniformMatrix4x2fv");
     if (it == functionMap.end()) {
@@ -22883,6 +23730,7 @@ void opengl_es_layer_glProgramUniformMatrix4x2fvEXT(GLuint program, GLint locati
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniformMatrix4x2fvEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniformMatrix4x2fvEXT");
     if (it == functionMap.end()) {
@@ -22910,6 +23758,7 @@ void opengl_es_layer_glProgramUniformMatrix4x3fv(GLuint program, GLint location,
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniformMatrix4x3fv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniformMatrix4x3fv");
     if (it == functionMap.end()) {
@@ -22937,6 +23786,7 @@ void opengl_es_layer_glProgramUniformMatrix4x3fvEXT(GLuint program, GLint locati
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glProgramUniformMatrix4x3fvEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glProgramUniformMatrix4x3fvEXT");
     if (it == functionMap.end()) {
@@ -22964,6 +23814,7 @@ void opengl_es_layer_glPushDebugGroup(GLenum source, GLuint id, GLsizei length, 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glPushDebugGroup");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glPushDebugGroup");
     if (it == functionMap.end()) {
@@ -22991,6 +23842,7 @@ void opengl_es_layer_glPushDebugGroupKHR(GLenum source, GLuint id, GLsizei lengt
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glPushDebugGroupKHR");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glPushDebugGroupKHR");
     if (it == functionMap.end()) {
@@ -23018,6 +23870,7 @@ void opengl_es_layer_glPushGroupMarkerEXT(GLsizei length, GLchar* marker) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glPushGroupMarkerEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glPushGroupMarkerEXT");
     if (it == functionMap.end()) {
@@ -23045,6 +23898,7 @@ void opengl_es_layer_glPushMatrix(void ) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glPushMatrix");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glPushMatrix");
     if (it == functionMap.end()) {
@@ -23072,6 +23926,7 @@ void opengl_es_layer_glQueryCounterEXT(GLuint id, GLenum target) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glQueryCounterEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glQueryCounterEXT");
     if (it == functionMap.end()) {
@@ -23099,6 +23954,7 @@ GLbitfield opengl_es_layer_glQueryMatrixxOES(GLfixed* mantissa, GLint* exponent)
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glQueryMatrixxOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glQueryMatrixxOES");
     if (it == functionMap.end()) {
@@ -23126,6 +23982,7 @@ void opengl_es_layer_glRasterSamplesEXT(GLuint samples, GLboolean fixedsampleloc
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glRasterSamplesEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glRasterSamplesEXT");
     if (it == functionMap.end()) {
@@ -23153,6 +24010,7 @@ void opengl_es_layer_glReadBuffer(GLenum src) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glReadBuffer");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glReadBuffer");
     if (it == functionMap.end()) {
@@ -23180,6 +24038,7 @@ void opengl_es_layer_glReadBufferIndexedEXT(GLenum src, GLint index) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glReadBufferIndexedEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glReadBufferIndexedEXT");
     if (it == functionMap.end()) {
@@ -23207,6 +24066,7 @@ void opengl_es_layer_glReadBufferNV(GLenum mode) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glReadBufferNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glReadBufferNV");
     if (it == functionMap.end()) {
@@ -23234,6 +24094,7 @@ void opengl_es_layer_glReadPixels(GLint x, GLint y, GLsizei width, GLsizei heigh
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glReadPixels");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glReadPixels");
     if (it == functionMap.end()) {
@@ -23261,6 +24122,7 @@ void opengl_es_layer_glReadnPixels(GLint x, GLint y, GLsizei width, GLsizei heig
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glReadnPixels");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glReadnPixels");
     if (it == functionMap.end()) {
@@ -23288,6 +24150,7 @@ void opengl_es_layer_glReadnPixelsEXT(GLint x, GLint y, GLsizei width, GLsizei h
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glReadnPixelsEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glReadnPixelsEXT");
     if (it == functionMap.end()) {
@@ -23315,6 +24178,7 @@ void opengl_es_layer_glReadnPixelsKHR(GLint x, GLint y, GLsizei width, GLsizei h
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glReadnPixelsKHR");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glReadnPixelsKHR");
     if (it == functionMap.end()) {
@@ -23342,6 +24206,7 @@ void opengl_es_layer_glReleaseShaderCompiler(void ) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glReleaseShaderCompiler");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glReleaseShaderCompiler");
     if (it == functionMap.end()) {
@@ -23369,6 +24234,7 @@ void opengl_es_layer_glRenderbufferStorage(GLenum target, GLenum internalformat,
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glRenderbufferStorage");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glRenderbufferStorage");
     if (it == functionMap.end()) {
@@ -23396,6 +24262,7 @@ void opengl_es_layer_glRenderbufferStorageMultisample(GLenum target, GLsizei sam
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glRenderbufferStorageMultisample");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glRenderbufferStorageMultisample");
     if (it == functionMap.end()) {
@@ -23423,6 +24290,7 @@ void opengl_es_layer_glRenderbufferStorageMultisampleANGLE(GLenum target, GLsize
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glRenderbufferStorageMultisampleANGLE");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glRenderbufferStorageMultisampleANGLE");
     if (it == functionMap.end()) {
@@ -23450,6 +24318,7 @@ void opengl_es_layer_glRenderbufferStorageMultisampleAPPLE(GLenum target, GLsize
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glRenderbufferStorageMultisampleAPPLE");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glRenderbufferStorageMultisampleAPPLE");
     if (it == functionMap.end()) {
@@ -23477,6 +24346,7 @@ void opengl_es_layer_glRenderbufferStorageMultisampleEXT(GLenum target, GLsizei 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glRenderbufferStorageMultisampleEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glRenderbufferStorageMultisampleEXT");
     if (it == functionMap.end()) {
@@ -23504,6 +24374,7 @@ void opengl_es_layer_glRenderbufferStorageMultisampleIMG(GLenum target, GLsizei 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glRenderbufferStorageMultisampleIMG");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glRenderbufferStorageMultisampleIMG");
     if (it == functionMap.end()) {
@@ -23531,6 +24402,7 @@ void opengl_es_layer_glRenderbufferStorageMultisampleNV(GLenum target, GLsizei s
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glRenderbufferStorageMultisampleNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glRenderbufferStorageMultisampleNV");
     if (it == functionMap.end()) {
@@ -23558,6 +24430,7 @@ void opengl_es_layer_glRenderbufferStorageOES(GLenum target, GLenum internalform
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glRenderbufferStorageOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glRenderbufferStorageOES");
     if (it == functionMap.end()) {
@@ -23585,6 +24458,7 @@ void opengl_es_layer_glResolveDepthValuesNV(void ) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glResolveDepthValuesNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glResolveDepthValuesNV");
     if (it == functionMap.end()) {
@@ -23612,6 +24486,7 @@ void opengl_es_layer_glResolveMultisampleFramebufferAPPLE(void ) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glResolveMultisampleFramebufferAPPLE");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glResolveMultisampleFramebufferAPPLE");
     if (it == functionMap.end()) {
@@ -23639,6 +24514,7 @@ void opengl_es_layer_glResumeTransformFeedback(void ) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glResumeTransformFeedback");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glResumeTransformFeedback");
     if (it == functionMap.end()) {
@@ -23666,6 +24542,7 @@ void opengl_es_layer_glRotatef(GLfloat angle, GLfloat x, GLfloat y, GLfloat z) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glRotatef");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glRotatef");
     if (it == functionMap.end()) {
@@ -23693,6 +24570,7 @@ void opengl_es_layer_glRotatex(GLfixed angle, GLfixed x, GLfixed y, GLfixed z) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glRotatex");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glRotatex");
     if (it == functionMap.end()) {
@@ -23720,6 +24598,7 @@ void opengl_es_layer_glRotatexOES(GLfixed angle, GLfixed x, GLfixed y, GLfixed z
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glRotatexOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glRotatexOES");
     if (it == functionMap.end()) {
@@ -23747,6 +24626,7 @@ void opengl_es_layer_glSampleCoverage(GLfloat value, GLboolean invert) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glSampleCoverage");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glSampleCoverage");
     if (it == functionMap.end()) {
@@ -23774,6 +24654,7 @@ void opengl_es_layer_glSampleCoveragex(GLclampx value, GLboolean invert) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glSampleCoveragex");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glSampleCoveragex");
     if (it == functionMap.end()) {
@@ -23801,6 +24682,7 @@ void opengl_es_layer_glSampleCoveragexOES(GLclampx value, GLboolean invert) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glSampleCoveragexOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glSampleCoveragexOES");
     if (it == functionMap.end()) {
@@ -23828,6 +24710,7 @@ void opengl_es_layer_glSampleMaski(GLuint maskNumber, GLbitfield mask) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glSampleMaski");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glSampleMaski");
     if (it == functionMap.end()) {
@@ -23855,6 +24738,7 @@ void opengl_es_layer_glSamplerParameterIiv(GLuint sampler, GLenum pname, GLint* 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glSamplerParameterIiv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glSamplerParameterIiv");
     if (it == functionMap.end()) {
@@ -23882,6 +24766,7 @@ void opengl_es_layer_glSamplerParameterIivEXT(GLuint sampler, GLenum pname, GLin
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glSamplerParameterIivEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glSamplerParameterIivEXT");
     if (it == functionMap.end()) {
@@ -23909,6 +24794,7 @@ void opengl_es_layer_glSamplerParameterIivOES(GLuint sampler, GLenum pname, GLin
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glSamplerParameterIivOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glSamplerParameterIivOES");
     if (it == functionMap.end()) {
@@ -23936,6 +24822,7 @@ void opengl_es_layer_glSamplerParameterIuiv(GLuint sampler, GLenum pname, GLuint
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glSamplerParameterIuiv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glSamplerParameterIuiv");
     if (it == functionMap.end()) {
@@ -23963,6 +24850,7 @@ void opengl_es_layer_glSamplerParameterIuivEXT(GLuint sampler, GLenum pname, GLu
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glSamplerParameterIuivEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glSamplerParameterIuivEXT");
     if (it == functionMap.end()) {
@@ -23990,6 +24878,7 @@ void opengl_es_layer_glSamplerParameterIuivOES(GLuint sampler, GLenum pname, GLu
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glSamplerParameterIuivOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glSamplerParameterIuivOES");
     if (it == functionMap.end()) {
@@ -24017,6 +24906,7 @@ void opengl_es_layer_glSamplerParameterf(GLuint sampler, GLenum pname, GLfloat p
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glSamplerParameterf");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glSamplerParameterf");
     if (it == functionMap.end()) {
@@ -24044,6 +24934,7 @@ void opengl_es_layer_glSamplerParameterfv(GLuint sampler, GLenum pname, GLfloat*
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glSamplerParameterfv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glSamplerParameterfv");
     if (it == functionMap.end()) {
@@ -24071,6 +24962,7 @@ void opengl_es_layer_glSamplerParameteri(GLuint sampler, GLenum pname, GLint par
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glSamplerParameteri");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glSamplerParameteri");
     if (it == functionMap.end()) {
@@ -24098,6 +24990,7 @@ void opengl_es_layer_glSamplerParameteriv(GLuint sampler, GLenum pname, GLint* p
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glSamplerParameteriv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glSamplerParameteriv");
     if (it == functionMap.end()) {
@@ -24125,6 +25018,7 @@ void opengl_es_layer_glScalef(GLfloat x, GLfloat y, GLfloat z) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glScalef");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glScalef");
     if (it == functionMap.end()) {
@@ -24152,6 +25046,7 @@ void opengl_es_layer_glScalex(GLfixed x, GLfixed y, GLfixed z) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glScalex");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glScalex");
     if (it == functionMap.end()) {
@@ -24179,6 +25074,7 @@ void opengl_es_layer_glScalexOES(GLfixed x, GLfixed y, GLfixed z) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glScalexOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glScalexOES");
     if (it == functionMap.end()) {
@@ -24206,6 +25102,7 @@ void opengl_es_layer_glScissor(GLint x, GLint y, GLsizei width, GLsizei height) 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glScissor");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glScissor");
     if (it == functionMap.end()) {
@@ -24233,6 +25130,7 @@ void opengl_es_layer_glScissorArrayvNV(GLuint first, GLsizei count, GLint* v) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glScissorArrayvNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glScissorArrayvNV");
     if (it == functionMap.end()) {
@@ -24260,6 +25158,7 @@ void opengl_es_layer_glScissorArrayvOES(GLuint first, GLsizei count, GLint* v) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glScissorArrayvOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glScissorArrayvOES");
     if (it == functionMap.end()) {
@@ -24287,6 +25186,7 @@ void opengl_es_layer_glScissorIndexedNV(GLuint index, GLint left, GLint bottom, 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glScissorIndexedNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glScissorIndexedNV");
     if (it == functionMap.end()) {
@@ -24314,6 +25214,7 @@ void opengl_es_layer_glScissorIndexedOES(GLuint index, GLint left, GLint bottom,
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glScissorIndexedOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glScissorIndexedOES");
     if (it == functionMap.end()) {
@@ -24341,6 +25242,7 @@ void opengl_es_layer_glScissorIndexedvNV(GLuint index, GLint* v) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glScissorIndexedvNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glScissorIndexedvNV");
     if (it == functionMap.end()) {
@@ -24368,6 +25270,7 @@ void opengl_es_layer_glScissorIndexedvOES(GLuint index, GLint* v) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glScissorIndexedvOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glScissorIndexedvOES");
     if (it == functionMap.end()) {
@@ -24395,6 +25298,7 @@ void opengl_es_layer_glSelectPerfMonitorCountersAMD(GLuint monitor, GLboolean en
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glSelectPerfMonitorCountersAMD");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glSelectPerfMonitorCountersAMD");
     if (it == functionMap.end()) {
@@ -24422,6 +25326,7 @@ void opengl_es_layer_glSemaphoreParameterui64vEXT(GLuint semaphore, GLenum pname
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glSemaphoreParameterui64vEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glSemaphoreParameterui64vEXT");
     if (it == functionMap.end()) {
@@ -24449,6 +25354,7 @@ void opengl_es_layer_glSetFenceNV(GLuint fence, GLenum condition) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glSetFenceNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glSetFenceNV");
     if (it == functionMap.end()) {
@@ -24476,6 +25382,7 @@ void opengl_es_layer_glShadeModel(GLenum mode) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glShadeModel");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glShadeModel");
     if (it == functionMap.end()) {
@@ -24503,6 +25410,7 @@ void opengl_es_layer_glShaderBinary(GLsizei count, GLuint* shaders, GLenum binar
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glShaderBinary");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glShaderBinary");
     if (it == functionMap.end()) {
@@ -24530,6 +25438,7 @@ void opengl_es_layer_glShaderSource(GLuint shader, GLsizei count, GLchar** strin
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glShaderSource");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glShaderSource");
     if (it == functionMap.end()) {
@@ -24557,6 +25466,7 @@ void opengl_es_layer_glSignalSemaphoreEXT(GLuint semaphore, GLuint numBufferBarr
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glSignalSemaphoreEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glSignalSemaphoreEXT");
     if (it == functionMap.end()) {
@@ -24584,6 +25494,7 @@ void opengl_es_layer_glSignalVkFenceNV(GLuint64 vkFence) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glSignalVkFenceNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glSignalVkFenceNV");
     if (it == functionMap.end()) {
@@ -24611,6 +25522,7 @@ void opengl_es_layer_glSignalVkSemaphoreNV(GLuint64 vkSemaphore) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glSignalVkSemaphoreNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glSignalVkSemaphoreNV");
     if (it == functionMap.end()) {
@@ -24638,6 +25550,7 @@ void opengl_es_layer_glStartTilingQCOM(GLuint x, GLuint y, GLuint width, GLuint 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glStartTilingQCOM");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glStartTilingQCOM");
     if (it == functionMap.end()) {
@@ -24665,6 +25578,7 @@ void opengl_es_layer_glStencilFillPathInstancedNV(GLsizei numPaths, GLenum pathN
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glStencilFillPathInstancedNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glStencilFillPathInstancedNV");
     if (it == functionMap.end()) {
@@ -24692,6 +25606,7 @@ void opengl_es_layer_glStencilFillPathNV(GLuint path, GLenum fillMode, GLuint ma
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glStencilFillPathNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glStencilFillPathNV");
     if (it == functionMap.end()) {
@@ -24719,6 +25634,7 @@ void opengl_es_layer_glStencilFunc(GLenum func, GLint ref, GLuint mask) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glStencilFunc");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glStencilFunc");
     if (it == functionMap.end()) {
@@ -24746,6 +25662,7 @@ void opengl_es_layer_glStencilFuncSeparate(GLenum face, GLenum func, GLint ref, 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glStencilFuncSeparate");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glStencilFuncSeparate");
     if (it == functionMap.end()) {
@@ -24773,6 +25690,7 @@ void opengl_es_layer_glStencilMask(GLuint mask) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glStencilMask");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glStencilMask");
     if (it == functionMap.end()) {
@@ -24800,6 +25718,7 @@ void opengl_es_layer_glStencilMaskSeparate(GLenum face, GLuint mask) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glStencilMaskSeparate");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glStencilMaskSeparate");
     if (it == functionMap.end()) {
@@ -24827,6 +25746,7 @@ void opengl_es_layer_glStencilOp(GLenum fail, GLenum zfail, GLenum zpass) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glStencilOp");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glStencilOp");
     if (it == functionMap.end()) {
@@ -24854,6 +25774,7 @@ void opengl_es_layer_glStencilOpSeparate(GLenum face, GLenum sfail, GLenum dpfai
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glStencilOpSeparate");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glStencilOpSeparate");
     if (it == functionMap.end()) {
@@ -24881,6 +25802,7 @@ void opengl_es_layer_glStencilStrokePathInstancedNV(GLsizei numPaths, GLenum pat
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glStencilStrokePathInstancedNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glStencilStrokePathInstancedNV");
     if (it == functionMap.end()) {
@@ -24908,6 +25830,7 @@ void opengl_es_layer_glStencilStrokePathNV(GLuint path, GLint reference, GLuint 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glStencilStrokePathNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glStencilStrokePathNV");
     if (it == functionMap.end()) {
@@ -24935,6 +25858,7 @@ void opengl_es_layer_glStencilThenCoverFillPathInstancedNV(GLsizei numPaths, GLe
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glStencilThenCoverFillPathInstancedNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glStencilThenCoverFillPathInstancedNV");
     if (it == functionMap.end()) {
@@ -24962,6 +25886,7 @@ void opengl_es_layer_glStencilThenCoverFillPathNV(GLuint path, GLenum fillMode, 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glStencilThenCoverFillPathNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glStencilThenCoverFillPathNV");
     if (it == functionMap.end()) {
@@ -24989,6 +25914,7 @@ void opengl_es_layer_glStencilThenCoverStrokePathInstancedNV(GLsizei numPaths, G
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glStencilThenCoverStrokePathInstancedNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glStencilThenCoverStrokePathInstancedNV");
     if (it == functionMap.end()) {
@@ -25016,6 +25942,7 @@ void opengl_es_layer_glStencilThenCoverStrokePathNV(GLuint path, GLint reference
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glStencilThenCoverStrokePathNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glStencilThenCoverStrokePathNV");
     if (it == functionMap.end()) {
@@ -25043,6 +25970,7 @@ void opengl_es_layer_glSubpixelPrecisionBiasNV(GLuint xbits, GLuint ybits) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glSubpixelPrecisionBiasNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glSubpixelPrecisionBiasNV");
     if (it == functionMap.end()) {
@@ -25070,6 +25998,7 @@ GLboolean opengl_es_layer_glTestFenceNV(GLuint fence) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTestFenceNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTestFenceNV");
     if (it == functionMap.end()) {
@@ -25097,6 +26026,7 @@ void opengl_es_layer_glTexBuffer(GLenum target, GLenum internalformat, GLuint bu
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexBuffer");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexBuffer");
     if (it == functionMap.end()) {
@@ -25124,6 +26054,7 @@ void opengl_es_layer_glTexBufferEXT(GLenum target, GLenum internalformat, GLuint
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexBufferEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexBufferEXT");
     if (it == functionMap.end()) {
@@ -25151,6 +26082,7 @@ void opengl_es_layer_glTexBufferOES(GLenum target, GLenum internalformat, GLuint
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexBufferOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexBufferOES");
     if (it == functionMap.end()) {
@@ -25178,6 +26110,7 @@ void opengl_es_layer_glTexBufferRange(GLenum target, GLenum internalformat, GLui
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexBufferRange");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexBufferRange");
     if (it == functionMap.end()) {
@@ -25205,6 +26138,7 @@ void opengl_es_layer_glTexBufferRangeEXT(GLenum target, GLenum internalformat, G
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexBufferRangeEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexBufferRangeEXT");
     if (it == functionMap.end()) {
@@ -25232,6 +26166,7 @@ void opengl_es_layer_glTexBufferRangeOES(GLenum target, GLenum internalformat, G
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexBufferRangeOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexBufferRangeOES");
     if (it == functionMap.end()) {
@@ -25259,6 +26194,7 @@ void opengl_es_layer_glTexCoordPointer(GLint size, GLenum type, GLsizei stride, 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexCoordPointer");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexCoordPointer");
     if (it == functionMap.end()) {
@@ -25286,6 +26222,7 @@ void opengl_es_layer_glTexEnvf(GLenum target, GLenum pname, GLfloat param) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexEnvf");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexEnvf");
     if (it == functionMap.end()) {
@@ -25313,6 +26250,7 @@ void opengl_es_layer_glTexEnvfv(GLenum target, GLenum pname, GLfloat* params) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexEnvfv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexEnvfv");
     if (it == functionMap.end()) {
@@ -25340,6 +26278,7 @@ void opengl_es_layer_glTexEnvi(GLenum target, GLenum pname, GLint param) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexEnvi");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexEnvi");
     if (it == functionMap.end()) {
@@ -25367,6 +26306,7 @@ void opengl_es_layer_glTexEnviv(GLenum target, GLenum pname, GLint* params) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexEnviv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexEnviv");
     if (it == functionMap.end()) {
@@ -25394,6 +26334,7 @@ void opengl_es_layer_glTexEnvx(GLenum target, GLenum pname, GLfixed param) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexEnvx");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexEnvx");
     if (it == functionMap.end()) {
@@ -25421,6 +26362,7 @@ void opengl_es_layer_glTexEnvxOES(GLenum target, GLenum pname, GLfixed param) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexEnvxOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexEnvxOES");
     if (it == functionMap.end()) {
@@ -25448,6 +26390,7 @@ void opengl_es_layer_glTexEnvxv(GLenum target, GLenum pname, GLfixed* params) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexEnvxv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexEnvxv");
     if (it == functionMap.end()) {
@@ -25475,6 +26418,7 @@ void opengl_es_layer_glTexEnvxvOES(GLenum target, GLenum pname, GLfixed* params)
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexEnvxvOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexEnvxvOES");
     if (it == functionMap.end()) {
@@ -25502,6 +26446,7 @@ void opengl_es_layer_glTexGenfOES(GLenum coord, GLenum pname, GLfloat param) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexGenfOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexGenfOES");
     if (it == functionMap.end()) {
@@ -25529,6 +26474,7 @@ void opengl_es_layer_glTexGenfvOES(GLenum coord, GLenum pname, GLfloat* params) 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexGenfvOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexGenfvOES");
     if (it == functionMap.end()) {
@@ -25556,6 +26502,7 @@ void opengl_es_layer_glTexGeniOES(GLenum coord, GLenum pname, GLint param) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexGeniOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexGeniOES");
     if (it == functionMap.end()) {
@@ -25583,6 +26530,7 @@ void opengl_es_layer_glTexGenivOES(GLenum coord, GLenum pname, GLint* params) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexGenivOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexGenivOES");
     if (it == functionMap.end()) {
@@ -25610,6 +26558,7 @@ void opengl_es_layer_glTexGenxOES(GLenum coord, GLenum pname, GLfixed param) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexGenxOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexGenxOES");
     if (it == functionMap.end()) {
@@ -25637,6 +26586,7 @@ void opengl_es_layer_glTexGenxvOES(GLenum coord, GLenum pname, GLfixed* params) 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexGenxvOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexGenxvOES");
     if (it == functionMap.end()) {
@@ -25664,6 +26614,7 @@ void opengl_es_layer_glTexImage2D(GLenum target, GLint level, GLint internalform
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexImage2D");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexImage2D");
     if (it == functionMap.end()) {
@@ -25691,6 +26642,7 @@ void opengl_es_layer_glTexImage3D(GLenum target, GLint level, GLint internalform
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexImage3D");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexImage3D");
     if (it == functionMap.end()) {
@@ -25718,6 +26670,7 @@ void opengl_es_layer_glTexImage3DOES(GLenum target, GLint level, GLenum internal
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexImage3DOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexImage3DOES");
     if (it == functionMap.end()) {
@@ -25745,6 +26698,7 @@ void opengl_es_layer_glTexPageCommitmentEXT(GLenum target, GLint level, GLint xo
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexPageCommitmentEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexPageCommitmentEXT");
     if (it == functionMap.end()) {
@@ -25772,6 +26726,7 @@ void opengl_es_layer_glTexParameterIiv(GLenum target, GLenum pname, GLint* param
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexParameterIiv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexParameterIiv");
     if (it == functionMap.end()) {
@@ -25799,6 +26754,7 @@ void opengl_es_layer_glTexParameterIivEXT(GLenum target, GLenum pname, GLint* pa
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexParameterIivEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexParameterIivEXT");
     if (it == functionMap.end()) {
@@ -25826,6 +26782,7 @@ void opengl_es_layer_glTexParameterIivOES(GLenum target, GLenum pname, GLint* pa
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexParameterIivOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexParameterIivOES");
     if (it == functionMap.end()) {
@@ -25853,6 +26810,7 @@ void opengl_es_layer_glTexParameterIuiv(GLenum target, GLenum pname, GLuint* par
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexParameterIuiv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexParameterIuiv");
     if (it == functionMap.end()) {
@@ -25880,6 +26838,7 @@ void opengl_es_layer_glTexParameterIuivEXT(GLenum target, GLenum pname, GLuint* 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexParameterIuivEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexParameterIuivEXT");
     if (it == functionMap.end()) {
@@ -25907,6 +26866,7 @@ void opengl_es_layer_glTexParameterIuivOES(GLenum target, GLenum pname, GLuint* 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexParameterIuivOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexParameterIuivOES");
     if (it == functionMap.end()) {
@@ -25934,6 +26894,7 @@ void opengl_es_layer_glTexParameterf(GLenum target, GLenum pname, GLfloat param)
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexParameterf");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexParameterf");
     if (it == functionMap.end()) {
@@ -25961,6 +26922,7 @@ void opengl_es_layer_glTexParameterfv(GLenum target, GLenum pname, GLfloat* para
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexParameterfv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexParameterfv");
     if (it == functionMap.end()) {
@@ -25988,6 +26950,7 @@ void opengl_es_layer_glTexParameteri(GLenum target, GLenum pname, GLint param) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexParameteri");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexParameteri");
     if (it == functionMap.end()) {
@@ -26015,6 +26978,7 @@ void opengl_es_layer_glTexParameteriv(GLenum target, GLenum pname, GLint* params
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexParameteriv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexParameteriv");
     if (it == functionMap.end()) {
@@ -26042,6 +27006,7 @@ void opengl_es_layer_glTexParameterx(GLenum target, GLenum pname, GLfixed param)
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexParameterx");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexParameterx");
     if (it == functionMap.end()) {
@@ -26069,6 +27034,7 @@ void opengl_es_layer_glTexParameterxOES(GLenum target, GLenum pname, GLfixed par
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexParameterxOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexParameterxOES");
     if (it == functionMap.end()) {
@@ -26096,6 +27062,7 @@ void opengl_es_layer_glTexParameterxv(GLenum target, GLenum pname, GLfixed* para
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexParameterxv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexParameterxv");
     if (it == functionMap.end()) {
@@ -26123,6 +27090,7 @@ void opengl_es_layer_glTexParameterxvOES(GLenum target, GLenum pname, GLfixed* p
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexParameterxvOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexParameterxvOES");
     if (it == functionMap.end()) {
@@ -26150,6 +27118,7 @@ void opengl_es_layer_glTexStorage1DEXT(GLenum target, GLsizei levels, GLenum int
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexStorage1DEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexStorage1DEXT");
     if (it == functionMap.end()) {
@@ -26177,6 +27146,7 @@ void opengl_es_layer_glTexStorage2D(GLenum target, GLsizei levels, GLenum intern
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexStorage2D");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexStorage2D");
     if (it == functionMap.end()) {
@@ -26204,6 +27174,7 @@ void opengl_es_layer_glTexStorage2DEXT(GLenum target, GLsizei levels, GLenum int
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexStorage2DEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexStorage2DEXT");
     if (it == functionMap.end()) {
@@ -26231,6 +27202,7 @@ void opengl_es_layer_glTexStorage2DMultisample(GLenum target, GLsizei samples, G
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexStorage2DMultisample");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexStorage2DMultisample");
     if (it == functionMap.end()) {
@@ -26258,6 +27230,7 @@ void opengl_es_layer_glTexStorage3D(GLenum target, GLsizei levels, GLenum intern
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexStorage3D");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexStorage3D");
     if (it == functionMap.end()) {
@@ -26285,6 +27258,7 @@ void opengl_es_layer_glTexStorage3DEXT(GLenum target, GLsizei levels, GLenum int
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexStorage3DEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexStorage3DEXT");
     if (it == functionMap.end()) {
@@ -26312,6 +27286,7 @@ void opengl_es_layer_glTexStorage3DMultisample(GLenum target, GLsizei samples, G
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexStorage3DMultisample");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexStorage3DMultisample");
     if (it == functionMap.end()) {
@@ -26339,6 +27314,7 @@ void opengl_es_layer_glTexStorage3DMultisampleOES(GLenum target, GLsizei samples
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexStorage3DMultisampleOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexStorage3DMultisampleOES");
     if (it == functionMap.end()) {
@@ -26366,6 +27342,7 @@ void opengl_es_layer_glTexStorageMem2DEXT(GLenum target, GLsizei levels, GLenum 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexStorageMem2DEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexStorageMem2DEXT");
     if (it == functionMap.end()) {
@@ -26393,6 +27370,7 @@ void opengl_es_layer_glTexStorageMem2DMultisampleEXT(GLenum target, GLsizei samp
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexStorageMem2DMultisampleEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexStorageMem2DMultisampleEXT");
     if (it == functionMap.end()) {
@@ -26420,6 +27398,7 @@ void opengl_es_layer_glTexStorageMem3DEXT(GLenum target, GLsizei levels, GLenum 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexStorageMem3DEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexStorageMem3DEXT");
     if (it == functionMap.end()) {
@@ -26447,6 +27426,7 @@ void opengl_es_layer_glTexStorageMem3DMultisampleEXT(GLenum target, GLsizei samp
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexStorageMem3DMultisampleEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexStorageMem3DMultisampleEXT");
     if (it == functionMap.end()) {
@@ -26474,6 +27454,7 @@ void opengl_es_layer_glTexSubImage2D(GLenum target, GLint level, GLint xoffset, 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexSubImage2D");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexSubImage2D");
     if (it == functionMap.end()) {
@@ -26501,6 +27482,7 @@ void opengl_es_layer_glTexSubImage3D(GLenum target, GLint level, GLint xoffset, 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexSubImage3D");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexSubImage3D");
     if (it == functionMap.end()) {
@@ -26528,6 +27510,7 @@ void opengl_es_layer_glTexSubImage3DOES(GLenum target, GLint level, GLint xoffse
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTexSubImage3DOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTexSubImage3DOES");
     if (it == functionMap.end()) {
@@ -26555,6 +27538,7 @@ void opengl_es_layer_glTextureFoveationParametersQCOM(GLuint texture, GLuint lay
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTextureFoveationParametersQCOM");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTextureFoveationParametersQCOM");
     if (it == functionMap.end()) {
@@ -26582,6 +27566,7 @@ void opengl_es_layer_glTextureStorage1DEXT(GLuint texture, GLenum target, GLsize
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTextureStorage1DEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTextureStorage1DEXT");
     if (it == functionMap.end()) {
@@ -26609,6 +27594,7 @@ void opengl_es_layer_glTextureStorage2DEXT(GLuint texture, GLenum target, GLsize
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTextureStorage2DEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTextureStorage2DEXT");
     if (it == functionMap.end()) {
@@ -26636,6 +27622,7 @@ void opengl_es_layer_glTextureStorage3DEXT(GLuint texture, GLenum target, GLsize
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTextureStorage3DEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTextureStorage3DEXT");
     if (it == functionMap.end()) {
@@ -26663,6 +27650,7 @@ void opengl_es_layer_glTextureStorageMem2DEXT(GLuint texture, GLsizei levels, GL
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTextureStorageMem2DEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTextureStorageMem2DEXT");
     if (it == functionMap.end()) {
@@ -26690,6 +27678,7 @@ void opengl_es_layer_glTextureStorageMem2DMultisampleEXT(GLuint texture, GLsizei
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTextureStorageMem2DMultisampleEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTextureStorageMem2DMultisampleEXT");
     if (it == functionMap.end()) {
@@ -26717,6 +27706,7 @@ void opengl_es_layer_glTextureStorageMem3DEXT(GLuint texture, GLsizei levels, GL
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTextureStorageMem3DEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTextureStorageMem3DEXT");
     if (it == functionMap.end()) {
@@ -26744,6 +27734,7 @@ void opengl_es_layer_glTextureStorageMem3DMultisampleEXT(GLuint texture, GLsizei
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTextureStorageMem3DMultisampleEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTextureStorageMem3DMultisampleEXT");
     if (it == functionMap.end()) {
@@ -26771,6 +27762,7 @@ void opengl_es_layer_glTextureViewEXT(GLuint texture, GLenum target, GLuint orig
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTextureViewEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTextureViewEXT");
     if (it == functionMap.end()) {
@@ -26798,6 +27790,7 @@ void opengl_es_layer_glTextureViewOES(GLuint texture, GLenum target, GLuint orig
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTextureViewOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTextureViewOES");
     if (it == functionMap.end()) {
@@ -26825,6 +27818,7 @@ void opengl_es_layer_glTransformFeedbackVaryings(GLuint program, GLsizei count, 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTransformFeedbackVaryings");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTransformFeedbackVaryings");
     if (it == functionMap.end()) {
@@ -26852,6 +27846,7 @@ void opengl_es_layer_glTransformPathNV(GLuint resultPath, GLuint srcPath, GLenum
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTransformPathNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTransformPathNV");
     if (it == functionMap.end()) {
@@ -26879,6 +27874,7 @@ void opengl_es_layer_glTranslatef(GLfloat x, GLfloat y, GLfloat z) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTranslatef");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTranslatef");
     if (it == functionMap.end()) {
@@ -26906,6 +27902,7 @@ void opengl_es_layer_glTranslatex(GLfixed x, GLfixed y, GLfixed z) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTranslatex");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTranslatex");
     if (it == functionMap.end()) {
@@ -26933,6 +27930,7 @@ void opengl_es_layer_glTranslatexOES(GLfixed x, GLfixed y, GLfixed z) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glTranslatexOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glTranslatexOES");
     if (it == functionMap.end()) {
@@ -26960,6 +27958,7 @@ void opengl_es_layer_glUniform1f(GLint location, GLfloat v0) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniform1f");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniform1f");
     if (it == functionMap.end()) {
@@ -26987,6 +27986,7 @@ void opengl_es_layer_glUniform1fv(GLint location, GLsizei count, GLfloat* value)
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniform1fv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniform1fv");
     if (it == functionMap.end()) {
@@ -27014,6 +28014,7 @@ void opengl_es_layer_glUniform1i(GLint location, GLint v0) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniform1i");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniform1i");
     if (it == functionMap.end()) {
@@ -27041,6 +28042,7 @@ void opengl_es_layer_glUniform1i64NV(GLint location, GLint64EXT x) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniform1i64NV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniform1i64NV");
     if (it == functionMap.end()) {
@@ -27068,6 +28070,7 @@ void opengl_es_layer_glUniform1i64vNV(GLint location, GLsizei count, GLint64EXT*
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniform1i64vNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniform1i64vNV");
     if (it == functionMap.end()) {
@@ -27095,6 +28098,7 @@ void opengl_es_layer_glUniform1iv(GLint location, GLsizei count, GLint* value) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniform1iv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniform1iv");
     if (it == functionMap.end()) {
@@ -27122,6 +28126,7 @@ void opengl_es_layer_glUniform1ui(GLint location, GLuint v0) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniform1ui");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniform1ui");
     if (it == functionMap.end()) {
@@ -27149,6 +28154,7 @@ void opengl_es_layer_glUniform1ui64NV(GLint location, GLuint64EXT x) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniform1ui64NV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniform1ui64NV");
     if (it == functionMap.end()) {
@@ -27176,6 +28182,7 @@ void opengl_es_layer_glUniform1ui64vNV(GLint location, GLsizei count, GLuint64EX
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniform1ui64vNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniform1ui64vNV");
     if (it == functionMap.end()) {
@@ -27203,6 +28210,7 @@ void opengl_es_layer_glUniform1uiv(GLint location, GLsizei count, GLuint* value)
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniform1uiv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniform1uiv");
     if (it == functionMap.end()) {
@@ -27230,6 +28238,7 @@ void opengl_es_layer_glUniform2f(GLint location, GLfloat v0, GLfloat v1) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniform2f");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniform2f");
     if (it == functionMap.end()) {
@@ -27257,6 +28266,7 @@ void opengl_es_layer_glUniform2fv(GLint location, GLsizei count, GLfloat* value)
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniform2fv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniform2fv");
     if (it == functionMap.end()) {
@@ -27284,6 +28294,7 @@ void opengl_es_layer_glUniform2i(GLint location, GLint v0, GLint v1) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniform2i");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniform2i");
     if (it == functionMap.end()) {
@@ -27311,6 +28322,7 @@ void opengl_es_layer_glUniform2i64NV(GLint location, GLint64EXT x, GLint64EXT y)
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniform2i64NV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniform2i64NV");
     if (it == functionMap.end()) {
@@ -27338,6 +28350,7 @@ void opengl_es_layer_glUniform2i64vNV(GLint location, GLsizei count, GLint64EXT*
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniform2i64vNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniform2i64vNV");
     if (it == functionMap.end()) {
@@ -27365,6 +28378,7 @@ void opengl_es_layer_glUniform2iv(GLint location, GLsizei count, GLint* value) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniform2iv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniform2iv");
     if (it == functionMap.end()) {
@@ -27392,6 +28406,7 @@ void opengl_es_layer_glUniform2ui(GLint location, GLuint v0, GLuint v1) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniform2ui");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniform2ui");
     if (it == functionMap.end()) {
@@ -27419,6 +28434,7 @@ void opengl_es_layer_glUniform2ui64NV(GLint location, GLuint64EXT x, GLuint64EXT
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniform2ui64NV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniform2ui64NV");
     if (it == functionMap.end()) {
@@ -27446,6 +28462,7 @@ void opengl_es_layer_glUniform2ui64vNV(GLint location, GLsizei count, GLuint64EX
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniform2ui64vNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniform2ui64vNV");
     if (it == functionMap.end()) {
@@ -27473,6 +28490,7 @@ void opengl_es_layer_glUniform2uiv(GLint location, GLsizei count, GLuint* value)
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniform2uiv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniform2uiv");
     if (it == functionMap.end()) {
@@ -27500,6 +28518,7 @@ void opengl_es_layer_glUniform3f(GLint location, GLfloat v0, GLfloat v1, GLfloat
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniform3f");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniform3f");
     if (it == functionMap.end()) {
@@ -27527,6 +28546,7 @@ void opengl_es_layer_glUniform3fv(GLint location, GLsizei count, GLfloat* value)
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniform3fv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniform3fv");
     if (it == functionMap.end()) {
@@ -27554,6 +28574,7 @@ void opengl_es_layer_glUniform3i(GLint location, GLint v0, GLint v1, GLint v2) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniform3i");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniform3i");
     if (it == functionMap.end()) {
@@ -27581,6 +28602,7 @@ void opengl_es_layer_glUniform3i64NV(GLint location, GLint64EXT x, GLint64EXT y,
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniform3i64NV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniform3i64NV");
     if (it == functionMap.end()) {
@@ -27608,6 +28630,7 @@ void opengl_es_layer_glUniform3i64vNV(GLint location, GLsizei count, GLint64EXT*
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniform3i64vNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniform3i64vNV");
     if (it == functionMap.end()) {
@@ -27635,6 +28658,7 @@ void opengl_es_layer_glUniform3iv(GLint location, GLsizei count, GLint* value) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniform3iv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniform3iv");
     if (it == functionMap.end()) {
@@ -27662,6 +28686,7 @@ void opengl_es_layer_glUniform3ui(GLint location, GLuint v0, GLuint v1, GLuint v
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniform3ui");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniform3ui");
     if (it == functionMap.end()) {
@@ -27689,6 +28714,7 @@ void opengl_es_layer_glUniform3ui64NV(GLint location, GLuint64EXT x, GLuint64EXT
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniform3ui64NV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniform3ui64NV");
     if (it == functionMap.end()) {
@@ -27716,6 +28742,7 @@ void opengl_es_layer_glUniform3ui64vNV(GLint location, GLsizei count, GLuint64EX
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniform3ui64vNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniform3ui64vNV");
     if (it == functionMap.end()) {
@@ -27743,6 +28770,7 @@ void opengl_es_layer_glUniform3uiv(GLint location, GLsizei count, GLuint* value)
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniform3uiv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniform3uiv");
     if (it == functionMap.end()) {
@@ -27770,6 +28798,7 @@ void opengl_es_layer_glUniform4f(GLint location, GLfloat v0, GLfloat v1, GLfloat
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniform4f");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniform4f");
     if (it == functionMap.end()) {
@@ -27797,6 +28826,7 @@ void opengl_es_layer_glUniform4fv(GLint location, GLsizei count, GLfloat* value)
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniform4fv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniform4fv");
     if (it == functionMap.end()) {
@@ -27824,6 +28854,7 @@ void opengl_es_layer_glUniform4i(GLint location, GLint v0, GLint v1, GLint v2, G
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniform4i");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniform4i");
     if (it == functionMap.end()) {
@@ -27851,6 +28882,7 @@ void opengl_es_layer_glUniform4i64NV(GLint location, GLint64EXT x, GLint64EXT y,
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniform4i64NV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniform4i64NV");
     if (it == functionMap.end()) {
@@ -27878,6 +28910,7 @@ void opengl_es_layer_glUniform4i64vNV(GLint location, GLsizei count, GLint64EXT*
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniform4i64vNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniform4i64vNV");
     if (it == functionMap.end()) {
@@ -27905,6 +28938,7 @@ void opengl_es_layer_glUniform4iv(GLint location, GLsizei count, GLint* value) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniform4iv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniform4iv");
     if (it == functionMap.end()) {
@@ -27932,6 +28966,7 @@ void opengl_es_layer_glUniform4ui(GLint location, GLuint v0, GLuint v1, GLuint v
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniform4ui");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniform4ui");
     if (it == functionMap.end()) {
@@ -27959,6 +28994,7 @@ void opengl_es_layer_glUniform4ui64NV(GLint location, GLuint64EXT x, GLuint64EXT
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniform4ui64NV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniform4ui64NV");
     if (it == functionMap.end()) {
@@ -27986,6 +29022,7 @@ void opengl_es_layer_glUniform4ui64vNV(GLint location, GLsizei count, GLuint64EX
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniform4ui64vNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniform4ui64vNV");
     if (it == functionMap.end()) {
@@ -28013,6 +29050,7 @@ void opengl_es_layer_glUniform4uiv(GLint location, GLsizei count, GLuint* value)
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniform4uiv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniform4uiv");
     if (it == functionMap.end()) {
@@ -28040,6 +29078,7 @@ void opengl_es_layer_glUniformBlockBinding(GLuint program, GLuint uniformBlockIn
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniformBlockBinding");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniformBlockBinding");
     if (it == functionMap.end()) {
@@ -28067,6 +29106,7 @@ void opengl_es_layer_glUniformHandleui64IMG(GLint location, GLuint64 value) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniformHandleui64IMG");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniformHandleui64IMG");
     if (it == functionMap.end()) {
@@ -28094,6 +29134,7 @@ void opengl_es_layer_glUniformHandleui64NV(GLint location, GLuint64 value) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniformHandleui64NV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniformHandleui64NV");
     if (it == functionMap.end()) {
@@ -28121,6 +29162,7 @@ void opengl_es_layer_glUniformHandleui64vIMG(GLint location, GLsizei count, GLui
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniformHandleui64vIMG");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniformHandleui64vIMG");
     if (it == functionMap.end()) {
@@ -28148,6 +29190,7 @@ void opengl_es_layer_glUniformHandleui64vNV(GLint location, GLsizei count, GLuin
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniformHandleui64vNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniformHandleui64vNV");
     if (it == functionMap.end()) {
@@ -28175,6 +29218,7 @@ void opengl_es_layer_glUniformMatrix2fv(GLint location, GLsizei count, GLboolean
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniformMatrix2fv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniformMatrix2fv");
     if (it == functionMap.end()) {
@@ -28202,6 +29246,7 @@ void opengl_es_layer_glUniformMatrix2x3fv(GLint location, GLsizei count, GLboole
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniformMatrix2x3fv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniformMatrix2x3fv");
     if (it == functionMap.end()) {
@@ -28229,6 +29274,7 @@ void opengl_es_layer_glUniformMatrix2x3fvNV(GLint location, GLsizei count, GLboo
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniformMatrix2x3fvNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniformMatrix2x3fvNV");
     if (it == functionMap.end()) {
@@ -28256,6 +29302,7 @@ void opengl_es_layer_glUniformMatrix2x4fv(GLint location, GLsizei count, GLboole
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniformMatrix2x4fv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniformMatrix2x4fv");
     if (it == functionMap.end()) {
@@ -28283,6 +29330,7 @@ void opengl_es_layer_glUniformMatrix2x4fvNV(GLint location, GLsizei count, GLboo
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniformMatrix2x4fvNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniformMatrix2x4fvNV");
     if (it == functionMap.end()) {
@@ -28310,6 +29358,7 @@ void opengl_es_layer_glUniformMatrix3fv(GLint location, GLsizei count, GLboolean
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniformMatrix3fv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniformMatrix3fv");
     if (it == functionMap.end()) {
@@ -28337,6 +29386,7 @@ void opengl_es_layer_glUniformMatrix3x2fv(GLint location, GLsizei count, GLboole
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniformMatrix3x2fv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniformMatrix3x2fv");
     if (it == functionMap.end()) {
@@ -28364,6 +29414,7 @@ void opengl_es_layer_glUniformMatrix3x2fvNV(GLint location, GLsizei count, GLboo
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniformMatrix3x2fvNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniformMatrix3x2fvNV");
     if (it == functionMap.end()) {
@@ -28391,6 +29442,7 @@ void opengl_es_layer_glUniformMatrix3x4fv(GLint location, GLsizei count, GLboole
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniformMatrix3x4fv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniformMatrix3x4fv");
     if (it == functionMap.end()) {
@@ -28418,6 +29470,7 @@ void opengl_es_layer_glUniformMatrix3x4fvNV(GLint location, GLsizei count, GLboo
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniformMatrix3x4fvNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniformMatrix3x4fvNV");
     if (it == functionMap.end()) {
@@ -28445,6 +29498,7 @@ void opengl_es_layer_glUniformMatrix4fv(GLint location, GLsizei count, GLboolean
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniformMatrix4fv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniformMatrix4fv");
     if (it == functionMap.end()) {
@@ -28472,6 +29526,7 @@ void opengl_es_layer_glUniformMatrix4x2fv(GLint location, GLsizei count, GLboole
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniformMatrix4x2fv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniformMatrix4x2fv");
     if (it == functionMap.end()) {
@@ -28499,6 +29554,7 @@ void opengl_es_layer_glUniformMatrix4x2fvNV(GLint location, GLsizei count, GLboo
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniformMatrix4x2fvNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniformMatrix4x2fvNV");
     if (it == functionMap.end()) {
@@ -28526,6 +29582,7 @@ void opengl_es_layer_glUniformMatrix4x3fv(GLint location, GLsizei count, GLboole
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniformMatrix4x3fv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniformMatrix4x3fv");
     if (it == functionMap.end()) {
@@ -28553,6 +29610,7 @@ void opengl_es_layer_glUniformMatrix4x3fvNV(GLint location, GLsizei count, GLboo
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUniformMatrix4x3fvNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUniformMatrix4x3fvNV");
     if (it == functionMap.end()) {
@@ -28580,6 +29638,7 @@ GLboolean opengl_es_layer_glUnmapBuffer(GLenum target) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUnmapBuffer");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUnmapBuffer");
     if (it == functionMap.end()) {
@@ -28607,6 +29666,7 @@ GLboolean opengl_es_layer_glUnmapBufferOES(GLenum target) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUnmapBufferOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUnmapBufferOES");
     if (it == functionMap.end()) {
@@ -28634,6 +29694,7 @@ void opengl_es_layer_glUseProgram(GLuint program) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUseProgram");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUseProgram");
     if (it == functionMap.end()) {
@@ -28661,6 +29722,7 @@ void opengl_es_layer_glUseProgramStages(GLuint pipeline, GLbitfield stages, GLui
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUseProgramStages");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUseProgramStages");
     if (it == functionMap.end()) {
@@ -28688,6 +29750,7 @@ void opengl_es_layer_glUseProgramStagesEXT(GLuint pipeline, GLbitfield stages, G
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glUseProgramStagesEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glUseProgramStagesEXT");
     if (it == functionMap.end()) {
@@ -28715,6 +29778,7 @@ void opengl_es_layer_glValidateProgram(GLuint program) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glValidateProgram");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glValidateProgram");
     if (it == functionMap.end()) {
@@ -28742,6 +29806,7 @@ void opengl_es_layer_glValidateProgramPipeline(GLuint pipeline) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glValidateProgramPipeline");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glValidateProgramPipeline");
     if (it == functionMap.end()) {
@@ -28769,6 +29834,7 @@ void opengl_es_layer_glValidateProgramPipelineEXT(GLuint pipeline) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glValidateProgramPipelineEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glValidateProgramPipelineEXT");
     if (it == functionMap.end()) {
@@ -28796,6 +29862,7 @@ void opengl_es_layer_glVertexAttrib1f(GLuint index, GLfloat x) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glVertexAttrib1f");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glVertexAttrib1f");
     if (it == functionMap.end()) {
@@ -28823,6 +29890,7 @@ void opengl_es_layer_glVertexAttrib1fv(GLuint index, GLfloat* v) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glVertexAttrib1fv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glVertexAttrib1fv");
     if (it == functionMap.end()) {
@@ -28850,6 +29918,7 @@ void opengl_es_layer_glVertexAttrib2f(GLuint index, GLfloat x, GLfloat y) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glVertexAttrib2f");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glVertexAttrib2f");
     if (it == functionMap.end()) {
@@ -28877,6 +29946,7 @@ void opengl_es_layer_glVertexAttrib2fv(GLuint index, GLfloat* v) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glVertexAttrib2fv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glVertexAttrib2fv");
     if (it == functionMap.end()) {
@@ -28904,6 +29974,7 @@ void opengl_es_layer_glVertexAttrib3f(GLuint index, GLfloat x, GLfloat y, GLfloa
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glVertexAttrib3f");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glVertexAttrib3f");
     if (it == functionMap.end()) {
@@ -28931,6 +30002,7 @@ void opengl_es_layer_glVertexAttrib3fv(GLuint index, GLfloat* v) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glVertexAttrib3fv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glVertexAttrib3fv");
     if (it == functionMap.end()) {
@@ -28958,6 +30030,7 @@ void opengl_es_layer_glVertexAttrib4f(GLuint index, GLfloat x, GLfloat y, GLfloa
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glVertexAttrib4f");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glVertexAttrib4f");
     if (it == functionMap.end()) {
@@ -28985,6 +30058,7 @@ void opengl_es_layer_glVertexAttrib4fv(GLuint index, GLfloat* v) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glVertexAttrib4fv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glVertexAttrib4fv");
     if (it == functionMap.end()) {
@@ -29012,6 +30086,7 @@ void opengl_es_layer_glVertexAttribBinding(GLuint attribindex, GLuint bindingind
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glVertexAttribBinding");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glVertexAttribBinding");
     if (it == functionMap.end()) {
@@ -29039,6 +30114,7 @@ void opengl_es_layer_glVertexAttribDivisor(GLuint index, GLuint divisor) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glVertexAttribDivisor");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glVertexAttribDivisor");
     if (it == functionMap.end()) {
@@ -29066,6 +30142,7 @@ void opengl_es_layer_glVertexAttribDivisorANGLE(GLuint index, GLuint divisor) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glVertexAttribDivisorANGLE");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glVertexAttribDivisorANGLE");
     if (it == functionMap.end()) {
@@ -29093,6 +30170,7 @@ void opengl_es_layer_glVertexAttribDivisorEXT(GLuint index, GLuint divisor) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glVertexAttribDivisorEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glVertexAttribDivisorEXT");
     if (it == functionMap.end()) {
@@ -29120,6 +30198,7 @@ void opengl_es_layer_glVertexAttribDivisorNV(GLuint index, GLuint divisor) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glVertexAttribDivisorNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glVertexAttribDivisorNV");
     if (it == functionMap.end()) {
@@ -29147,6 +30226,7 @@ void opengl_es_layer_glVertexAttribFormat(GLuint attribindex, GLint size, GLenum
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glVertexAttribFormat");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glVertexAttribFormat");
     if (it == functionMap.end()) {
@@ -29174,6 +30254,7 @@ void opengl_es_layer_glVertexAttribI4i(GLuint index, GLint x, GLint y, GLint z, 
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glVertexAttribI4i");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glVertexAttribI4i");
     if (it == functionMap.end()) {
@@ -29201,6 +30282,7 @@ void opengl_es_layer_glVertexAttribI4iv(GLuint index, GLint* v) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glVertexAttribI4iv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glVertexAttribI4iv");
     if (it == functionMap.end()) {
@@ -29228,6 +30310,7 @@ void opengl_es_layer_glVertexAttribI4ui(GLuint index, GLuint x, GLuint y, GLuint
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glVertexAttribI4ui");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glVertexAttribI4ui");
     if (it == functionMap.end()) {
@@ -29255,6 +30338,7 @@ void opengl_es_layer_glVertexAttribI4uiv(GLuint index, GLuint* v) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glVertexAttribI4uiv");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glVertexAttribI4uiv");
     if (it == functionMap.end()) {
@@ -29282,6 +30366,7 @@ void opengl_es_layer_glVertexAttribIFormat(GLuint attribindex, GLint size, GLenu
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glVertexAttribIFormat");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glVertexAttribIFormat");
     if (it == functionMap.end()) {
@@ -29309,6 +30394,7 @@ void opengl_es_layer_glVertexAttribIPointer(GLuint index, GLint size, GLenum typ
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glVertexAttribIPointer");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glVertexAttribIPointer");
     if (it == functionMap.end()) {
@@ -29336,6 +30422,7 @@ void opengl_es_layer_glVertexAttribPointer(GLuint index, GLint size, GLenum type
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glVertexAttribPointer");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glVertexAttribPointer");
     if (it == functionMap.end()) {
@@ -29363,6 +30450,7 @@ void opengl_es_layer_glVertexBindingDivisor(GLuint bindingindex, GLuint divisor)
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glVertexBindingDivisor");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glVertexBindingDivisor");
     if (it == functionMap.end()) {
@@ -29390,6 +30478,7 @@ void opengl_es_layer_glVertexPointer(GLint size, GLenum type, GLsizei stride, vo
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glVertexPointer");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glVertexPointer");
     if (it == functionMap.end()) {
@@ -29417,6 +30506,7 @@ void opengl_es_layer_glViewport(GLint x, GLint y, GLsizei width, GLsizei height)
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glViewport");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glViewport");
     if (it == functionMap.end()) {
@@ -29444,6 +30534,7 @@ void opengl_es_layer_glViewportArrayvNV(GLuint first, GLsizei count, GLfloat* v)
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glViewportArrayvNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glViewportArrayvNV");
     if (it == functionMap.end()) {
@@ -29471,6 +30562,7 @@ void opengl_es_layer_glViewportArrayvOES(GLuint first, GLsizei count, GLfloat* v
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glViewportArrayvOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glViewportArrayvOES");
     if (it == functionMap.end()) {
@@ -29498,6 +30590,7 @@ void opengl_es_layer_glViewportIndexedfNV(GLuint index, GLfloat x, GLfloat y, GL
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glViewportIndexedfNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glViewportIndexedfNV");
     if (it == functionMap.end()) {
@@ -29525,6 +30618,7 @@ void opengl_es_layer_glViewportIndexedfOES(GLuint index, GLfloat x, GLfloat y, G
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glViewportIndexedfOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glViewportIndexedfOES");
     if (it == functionMap.end()) {
@@ -29552,6 +30646,7 @@ void opengl_es_layer_glViewportIndexedfvNV(GLuint index, GLfloat* v) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glViewportIndexedfvNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glViewportIndexedfvNV");
     if (it == functionMap.end()) {
@@ -29579,6 +30674,7 @@ void opengl_es_layer_glViewportIndexedfvOES(GLuint index, GLfloat* v) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glViewportIndexedfvOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glViewportIndexedfvOES");
     if (it == functionMap.end()) {
@@ -29606,6 +30702,7 @@ void opengl_es_layer_glViewportPositionWScaleNV(GLuint index, GLfloat xcoeff, GL
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glViewportPositionWScaleNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glViewportPositionWScaleNV");
     if (it == functionMap.end()) {
@@ -29633,6 +30730,7 @@ void opengl_es_layer_glViewportSwizzleNV(GLuint index, GLenum swizzlex, GLenum s
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glViewportSwizzleNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glViewportSwizzleNV");
     if (it == functionMap.end()) {
@@ -29660,6 +30758,7 @@ void opengl_es_layer_glWaitSemaphoreEXT(GLuint semaphore, GLuint numBufferBarrie
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glWaitSemaphoreEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glWaitSemaphoreEXT");
     if (it == functionMap.end()) {
@@ -29687,6 +30786,7 @@ void opengl_es_layer_glWaitSync(GLsync sync, GLbitfield flags, GLuint64 timeout)
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glWaitSync");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glWaitSync");
     if (it == functionMap.end()) {
@@ -29714,6 +30814,7 @@ void opengl_es_layer_glWaitSyncAPPLE(GLsync sync, GLbitfield flags, GLuint64 tim
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glWaitSyncAPPLE");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glWaitSyncAPPLE");
     if (it == functionMap.end()) {
@@ -29741,6 +30842,7 @@ void opengl_es_layer_glWaitVkSemaphoreNV(GLuint64 vkSemaphore) {
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glWaitVkSemaphoreNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glWaitVkSemaphoreNV");
     if (it == functionMap.end()) {
@@ -29768,6 +30870,7 @@ void opengl_es_layer_glWeightPathsNV(GLuint resultPath, GLsizei numPaths, GLuint
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glWeightPathsNV");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glWeightPathsNV");
     if (it == functionMap.end()) {
@@ -29795,6 +30898,7 @@ void opengl_es_layer_glWeightPointerOES(GLint size, GLenum type, GLsizei stride,
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glWeightPointerOES");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glWeightPointerOES");
     if (it == functionMap.end()) {
@@ -29822,6 +30926,7 @@ void opengl_es_layer_glWindowRectanglesEXT(GLenum mode, GLsizei count, GLint* bo
         }
     }
     ATRACE_NAME_IF(mEnableTrace, mDebugMessage);
+    GL_FINISH_IF(mEnableGlFinish, "glWindowRectanglesEXT");
     logMessageIf(mEnableLog, mDebugMessage);
     auto it = functionMap.find("glWindowRectanglesEXT");
     if (it == functionMap.end()) {

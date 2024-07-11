@@ -10,6 +10,8 @@
 #include <unordered_map>
 #include <android/trace.h>
 #include <inttypes.h>
+#include <fcntl.h>
+#include <unistd.h>
 #include <sys/system_properties.h>
 
 
@@ -47,6 +49,7 @@ private:
 #define _PASTE(x, y) x ## y
 #define PASTE(x, y) _PASTE(x,y)
 #define ATRACE_NAME_IF(cond, name) ScopedTrace PASTE(___tracer, __LINE__)(cond, name)
+#define GL_FINISH_IF(cond, name) ScopedFinish PASTE(___tracer, __LINE__)(cond, name)
 
 namespace {
 
@@ -57,6 +60,35 @@ bool mEnableLog = true;
 bool mEnableLogParams = true;
 bool mEnableTrace = true;
 bool mEnableIndex = true;
+bool mEnableGlFinish = false;
+
+class ScopedFinish {
+public:
+    inline ScopedFinish(bool cond, const char* name) : mFinish(cond), mFunction(name) {
+    }
+
+    inline ~ScopedFinish() {
+        if (mFinish && std::string("glFinish") != mFunction) {
+            auto it = functionMap.find("glFinish");
+            if (it == functionMap.end()) {
+                ALOGE("%s", "Unable to find functionMap entry for glFinish");
+            }
+
+            if (mEnableTrace) {
+                ATrace_beginSection("glFinish");
+            }
+            typedef void (*PFNGLFINISHPROC)(void);
+            PFNGLFINISHPROC next = reinterpret_cast<PFNGLFINISHPROC>(it->second);
+            next();
+            if (mEnableTrace) {
+                ATrace_endSection();
+            }
+        }
+    }
+private:
+    bool mFinish;
+    const char* mFunction;
+};
 
 void logMessageIf(bool cond, const char* message) {
     if (!cond) {
@@ -88,6 +120,36 @@ EGLAPI void EGLAPIENTRY opengl_es_layer_InitializeLayer(void *layer_id, PFNEGLGE
     }
     if (__system_property_get("debug.gpu.enable_index", valueBuf) > 0) {
         mEnableIndex = atoi(valueBuf) != 0;
+    }
+    if (__system_property_get("debug.gpu.enable_gl_finish", valueBuf) > 0) {
+        mEnableGlFinish = atoi(valueBuf) != 0;
+    }
+    if (__system_property_get("debug.gpu.cmdline", valueBuf) > 0) {
+        char cmdline[255];
+        char proc_path[64];
+        int fd;
+
+        strcpy(cmdline, "unknown");
+        sprintf(proc_path, "/proc/%d/cmdline", getpid());
+        fd = open(proc_path, O_RDONLY | O_CLOEXEC);
+        if (fd >= 0) {
+            ssize_t rc = read(fd, cmdline, sizeof(cmdline) - 1);
+            if (rc < 0) {
+                ALOGE("read /proc/%d/cmdline (%s)", getpid(), strerror(errno));
+            } else {
+                cmdline[rc] = 0;
+            }
+            close(fd);
+        }
+
+        if (std::string(cmdline) != valueBuf) {
+            mEnableLog = false;
+            mEnableLogParams = false;
+            mEnableTrace = false;
+            mEnableIndex = false;
+            mEnableGlFinish = false;
+            ALOGE("cmdline:[%s] does not match debug.gpu.cmdline:[%s]", cmdline, valueBuf);
+        }
     }
 
     ALOGD("opengl_es_layer_InitializeLayer called with layer_id %p, mEnableLog=%d, mEnableLogParams=%d, mEnableTrace=%d, mEnableIndex=%d", layer_id, mEnableLog, mEnableLogParams, mEnableTrace, mEnableIndex);
