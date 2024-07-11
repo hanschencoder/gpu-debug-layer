@@ -59,4 +59,8 @@ adb shell stop && adb shell start
 [debug.gpu.enable_trace]: [1]
 # 配置是否输出参数值
 [debug.gpu.log_params]: [1]
+# 配置生效的进程,默认不配置则所有进程都生效
+[debug.gpu.cmdline]: [/system/bin/surfaceflinger]
+# 对每一条 GL 指令执行 glFinish，默认为 0
+[debug.gpu.enable_gl_finish]: [1]
 ```
